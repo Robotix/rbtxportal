@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+
+{% block subject %}Promotions Successful{% endblock %}
+
+{% block content %}
+
+<p>You just promoted the following teams from round {{ from_round }} to round {{ to_round }} in {{ event_name }}.</p>
+
+<ol>
+{% for t in teams %}
+
+<li>
+  <a href="/info/{{ t.get_decorated_team_id }}">{{ t }}</a>
+</li>
+
+{% endfor %}
+</ol>
+
+<p>
+Click <a href="/promote/{{ event_code }}/{{ from_round }}">here</a> to alter your choice or <a href="/">here</a> to go back home.
+</p>
+
+{% endblock %}

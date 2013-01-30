@@ -1,0 +1,17 @@
+<html>
+  <head>
+	<title>Oops!</title>
+  </head>
+  <body>
+	<h1>Error!</h1>
+	<p>
+	  It seems that the registration software has encountered some kind of an error. The error message is:
+	</p>
+	<p>
+	  {{ error_msg }}
+	</p>
+	<p>
+	  If you're seeing this, please call me (Mallikarjun) at +91 9735311596.
+	</p>
+  </body>
+</html>

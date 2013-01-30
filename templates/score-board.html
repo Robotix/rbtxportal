@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block top %}<meta http-equiv="refresh" content="5" >{% endblock %}
+
+{% block subject %}Score-board for {{ event_name }}, round {{ round_no }} 
+{% endblock %}
+
+{% block content %}
+<table border="1" width="100%">
+<tr>
+  <th>Team</th>
+  <th>Score</th>
+</tr>
+{% for x in models %}
+<tr>
+  <td><a href="/info/{{x.team.get_decorated_team_id}}">{{ x.team.get_decorated_team_id }} ({{x.team.team_name}})</a></td>
+  <td>{{x.edited_score}}</td>
+</tr>
+{% endfor %}
+</table>
+{% endblock %}

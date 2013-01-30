@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+
+{% block subject %}
+Teams not scored yet for the round {{ round_no }}.
+{% endblock %}
+
+{% block content %}
+
+<p>The following teams don't have an entry for the first round. Please check and confirm.</p>
+
+<ol>
+{% for x in teams %}
+
+<li>
+<a href="/info/{{ x.get_decorated_team_id }}">{{ x }}</a>
+</li>
+{% endfor %}
+</ol>
+
+{% endblock %}

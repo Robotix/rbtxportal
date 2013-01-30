@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block subject %}Registration{% endblock %}
+
+{% block content %}
+<p>Complete the following form, and hit register to register a team:</p>
+<table>
+	<!--<form action="" method="post">
+		<table>
+	  {{ importform.as_table }}
+		</table>
+		<input type="submit" value="IMPORT" />
+  	</form> -->
+  <form action="" method="post">
+	<table>
+	  {{ form.as_table }} 
+	</table>
+	<input type="submit" value="REGISTER" />
+  </form>
+</table>
+{% endblock %}

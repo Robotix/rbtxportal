@@ -1,0 +1,156 @@
+{% extends "base.html" %}
+
+{% block subject %}Judgement interface for "{{ event_name }}", Round {{ round_no }}.{% endblock %}
+
+{% block content %}
+<p>This is the judging interface for the event "{{ event_name }}", round {{ round_no }}. The rest of this page should be more or less self-explanatory (assuming you know the rules. :) ). If you face difficulties, please contact me (Soumyadeep) at +91 7407651462.</p>
+{% if re_editing %}
+<p><font color="red"><strong>This team has already been scored once. Proceed only if you know what you are doing.</strong></font></p>
+{% endif %}
+{% if team %}
+<h4>Verification Info</h4>
+<table border="1">
+  <tr>
+	<th>Team Name</th>
+	<td>{{ team.team_name }}</td>
+  </tr>
+  <tr>
+	<th>College</th>
+	<td>{{ team.college }}</td>
+  </tr>
+  <tr>
+	<th>Contact Number</th>
+	<td>{{ team.number_a }}</td>
+  </tr>
+</table>
+<p></p>
+{% endif %}
+
+<p><font size="200px" color="red">0<span id="id_stopwatch"></span></font></p>
+<p>The buttons below operate the timer. Clicking on 'COPY' will copy the current value (after rounding off to the nearest second) into the 'Time taken' slot. Once you have filled up the relevant fields, you can click on 'SCORE' to calculate the running scores (based on the official formulae in Nalyani's docs). In case the calculated score is not an integer, round it off to the nearest integer and edit the score before submitting. Thus, 745.0 becomes 745, 145.4 becomes 145, 144.5 becomes 144 (units place even), 145.5 (units place odd) becomes 146 and 144.6 becomes 145.</p>
+<p> Cross-check the first few teams' scores with a calculator and call me ASAP, if there is any discrepancy.</p>
+<p> Keep the hard-copies of all scoring sheets safe.</p>
+<p>
+<input type="button" name="ssbutton" value="START / STOP" onClick="startstop()">
+<input type="button" name="reset" value="RESET" onClick="swreset()">
+<input type="button" name="reset" value="COPY" onClick="copytime()">
+<input type="button" value="SCORE" onClick="getScore()" />
+</p>
+
+<form action="" method="post" id="theOneAndOnly">
+  <input type="submit" value="SUBMIT" />
+  <p></p>
+  <table border="5" cellpadding="2">
+	{{ form.as_table }}
+  </table>
+</form>
+<script type="text/javascript">
+		function refreshTeamInfo() {
+			var selectBox = document.getElementById("id_team");
+			var idx = selectBox.selectedIndex;
+			var teamID = selectBox.options [idx].text;
+			if (teamID != "---------") {
+				window.location.href = ("/judge/{{ event_code }}/{{ round_no }}/" + teamID);
+			} else {
+				window.location.href = ("/judge/{{ event_code }}/{{ round_no }}/XX0")
+			}
+		}
+
+		function registerHandlers() {
+			var selectBox = document.getElementById("id_team");
+			selectBox.addEventListener('change', function () { refreshTeamInfo(); }, false);
+		}
+		window.onload = registerHandlers();
+var ms = 0;
+var state = 0;
+
+function startstop() {
+	if (state == 0) {
+		state = 1;
+		then = new Date();
+		then.setTime(then.getTime() - ms);
+	} else {
+		state = 0;
+		now = new Date();
+		ms = now.getTime() - then.getTime();
+		document.getElementById('id_stopwatch').innerHTML = (ms / 1000.0).toFixed(2);
+	}
+}
+
+function swreset() {
+	state = 0;
+	ms = 0;
+	document.getElementById('id_stopwatch').innerHTML = (ms / 1000.0).toFixed(2);
+}
+
+function display() {
+	setTimeout("display();", 50);
+	if (state == 1)  {now = new Date();
+					  ms = now.getTime() - then.getTime();
+					  document.getElementById('id_stopwatch').innerHTML = (ms / 1000.0).toFixed(2);
+					 }
+}
+
+function copytime() {
+	var timeEntry = document.getElementById('id_time_taken');
+	var time = Math.round(parseFloat(document.getElementById('id_stopwatch').innerHTML));
+	timeEntry.value = time;
+}
+
+function createQueryString()
+{
+	var str = '';
+	var elem = document.getElementById('theOneAndOnly').elements;
+	for (var i = 0; i < elem.length; i++) {
+		if (elem[i].type == 'text' && elem[i].name != 'edited_score') {
+			str += escape(elem[i].name);
+			str += '=';
+			str += escape(elem[i].value);
+			if (i != (elem.length - 1))
+				str += "&";
+		}
+	}
+	if (str.charAt(str.length - 1) == '&') {
+		str = str.slice(0, str.length - 1);
+	}
+	return str;
+}
+
+function ajaxRequest(){
+	var activexmodes=["Msxml2.XMLHTTP", "Microsoft.XMLHTTP"] //activeX versions to check for in IE
+	if (window.ActiveXObject){ //Test for support for ActiveXObject in IE first (as XMLHttpRequest in IE7 is broken)
+		for (var i=0; i<activexmodes.length; i++){
+			try{
+				return new ActiveXObject(activexmodes[i])
+			}
+			catch(e){
+				//suppress error
+			}
+		}
+	}
+	else if (window.XMLHttpRequest) // if Mozilla, Safari etc
+		return new XMLHttpRequest()
+	else
+		return false
+}
+
+function getScore() {
+	var toSend = createQueryString();
+	var mygetrequest = new ajaxRequest()
+	mygetrequest.onreadystatechange = function() {
+		if (mygetrequest.readyState == 4) {
+			if (mygetrequest.status == 200) {
+				document.getElementById("id_edited_score").value = mygetrequest.responseText;
+			} else {
+				alert("An error has occured making the request. The calculated value cannot be trusted.");
+			}
+		}
+	}
+	mygetrequest.open("GET", "/estimate_score/{{ event_code }}/{{ round_no }}/?" + toSend);
+	mygetrequest.send(null)
+}
+
+window.onload = display
+</script>
+
+{% endblock %}

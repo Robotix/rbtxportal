@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block subject %} Teams registered for ROBOTIX '12, {{ event_name }}. {% endblock %}
+
+{% block content %}
+<table border="1" width="100%">
+  <tr>
+	<th>
+	  Team ID
+	</th>
+	<th>
+	  Team Name
+	</th>
+	<th>
+	  College
+	</th>
+  </tr>
+  {% for t in teams %}
+  <tr>
+	<td>
+	  <a href="/info/{{ t.get_decorated_team_id }}">{{ t.get_decorated_team_id }}</a>
+	</td>
+	<td>
+	  <a href="/info/{{ t.get_decorated_team_id }}">{{ t.team_name }}</a>
+	</td>
+	<td>
+	  <a href="/info/{{ t.get_decorated_team_id }}">{{ t.college }}</a>
+	</td>
+  </tr>
+  {% endfor %}
+</table>
+{% endblock %}

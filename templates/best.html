@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block subject %}Prospects for best {{ what }} design prize.{% endblock %}
+
+{% block content %}
+<ol>
+{% for t in result %}
+<li><a href="/info/{{t.get_decorated_team_id }}">{{t.team_name}} ({{t.get_decorated_team_id}})</a>
+{% endfor %}
+</ol>
+{% endblock %}

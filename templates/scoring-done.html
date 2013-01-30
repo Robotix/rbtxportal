@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block subject %}Scoring complete for {{ team_id }}! No, don't go and have a cookie just yet. {% endblock %}
+
+{% block content %}
+	<p>Here's a summary of what just happened:</p>
+	<p>You judged team {{ team_id }}. They scored {{ score }} points, and this was recorded on the database on {{ time }}.</p>
+	{% if edited %}
+	<p><em>You also edited their scores (which should be {{ original_score }} according to the formula stored on the server), and changed it to {{ score }}.</em></p>
+	{% endif %}
+	<p>Click <a href="/judge/{{ event_code }}/{{ round_no }}/XX0">here</a> to go judge another team for {{ event_name }}, round {{ round_no }}. Click <a href="/judge/{{ event_code }}/{{ round_no }}/{{ team_id }}">here</a> to re-evaluate this team.</p>
+{% endblock %}

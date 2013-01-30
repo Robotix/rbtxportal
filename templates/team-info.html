@@ -1,0 +1,91 @@
+{% extends "base.html" %}
+
+{% block subject %} Information on team {{ team.get_decorated_team_id }} {% endblock %}
+
+{% block content %}
+
+<table border="1">
+  <tr>
+	<th>Team Name</th>
+	<td>{{ team.team_name }}</td>
+  </tr>
+  <tr>
+	<th>Registered By</th>
+	<td>{{ team.author }}</td>
+  </tr>
+  <tr>
+	<th>Registered On</th>
+	<td>{{ team.registered_on }}</td>
+  </tr>
+  <tr>
+	<th>College</th>
+	<td>{{ team.college }}</td>
+  </tr>
+  <tr>
+	<th>Primary Contact Number</th>
+	<td>{{ team.number_a }}</td>
+  </tr>
+  {% if team.number_b %}
+  <tr>
+	<th>Secondary Contact Number</th>
+	<td>{{ team.number_b }}</td>
+  </tr>
+  {% endif %}
+  {% if team.email %}
+  <tr>
+	<th>Email</th>
+	<td>{{ team.email  }}</td>
+  </tr>
+  {% endif %}
+  {% if team.participant_1 %}
+  <tr>
+	<th>First Participant</th>
+	<td>{{ team.participant_1 }}</td>
+  </tr>
+  {% endif %}
+  {% if team.participant_2 %}
+  <tr>
+	<th>Second Participant</th>
+	<td>{{ team.participant_2 }}</td>
+  </tr>
+  {% endif %}
+  {% if team.participant_3 %}
+  <tr>
+	<th>Third Participant</th>
+	<td>{{ team.participant_3 }}</td>
+  </tr>
+  {% endif %}
+  {% if team.participant_4 %}
+  <tr>
+	<th>Fourth Participant</th>
+	<td>{{ team.participant_4 }}</td>
+  </tr>
+  {% endif %}
+  {% if team.comments %}
+  <tr>
+	<th>Comments</th>
+	<td>{{ team.comments  }}</td>
+  </tr>
+  {% endif %}
+  <tr>
+	<th colspan="2">
+	  Performance
+	</th>
+  </tr>
+  <tr>
+	<th>Maximum round promoted to till now:</th>
+	<td>{{ team.promoted_to  }}</td>
+  </tr>
+  {% if team.best_mechanical_design %}
+  <td colspan="2">
+	Being considered for "Best mechanical design".
+  </td>
+  {% endif %}
+  {% if team.best_mechanical_design %}
+  <td colspan="2">
+	Being considered for "Best algorithm".
+  </td>
+  {% endif %}
+</table>
+
+{% endblock %}

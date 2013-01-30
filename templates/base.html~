@@ -1,0 +1,16 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html lang="en">
+  <head>
+    <title>Technology Robotix Society</title>
+	{% block top %}{% endblock %}
+  </head>
+  <body>
+    <h1>ROBOTIX '12</h1>
+	{% if username %}
+	<small><p align="right">You are currently logged in as {{ username }}. Click <a href="/logout">here</a> to logout, or <a href="/">here</a> to go back home. And don't forget to logout before leaving your terminal unattended. :)</p></small>
+	{% endif %}
+	<h2>{% block subject %}{% endblock %}</h2>
+    {% block content %}{% endblock %}
+    {% block footer %}{% endblock %}
+  </body>
+</html>

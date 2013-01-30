@@ -1,0 +1,16 @@
+from django.contrib import admin
+from Robotix11.eventmanager.models import *
+
+admin.site.register(Team)
+admin.site.register(StalkerFirstRound)
+admin.site.register(StalkerSecondRound)
+admin.site.register(StalkerThirdRound)
+admin.site.register(InfernoFirstRound)
+admin.site.register(InfernoSecondRound)
+admin.site.register(InfernoThirdRound)
+admin.site.register(VertigoFirstRound)
+admin.site.register(VertigoSecondRound)
+admin.site.register(VertigoThirdRound)
+admin.site.register(StasisFirstRound)
+admin.site.register(StasisSecondRound)
+admin.site.register(StasisThirdRound)

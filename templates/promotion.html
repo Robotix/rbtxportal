@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block subject %}Promotions{% endblock %}
+
+{% block content %}
+
+<p>This is the interface for the promotion of teams participating in the event {{ event_name }}, from {{ from_round }} to {{ to_round }}. Check next to the teams to be promoted to round {{ to_round }}. The teams which have not been scored for round {{ from_round }} will not be considered.</p>
+
+<p>The teams are arranged in order of decreasing scores. You can always alter your selection from this page.</p>
+
+<form action="" method="post">
+  <table border="1" width="100%">
+	<tr>
+	  <th>Team Name</th>
+	  <th>Selected?</th>
+	</tr>
+	{{ form_real.as_table }}
+  </table>
+  <p></p>
+  <input type="submit" value="SUBMIT" />
+</form>
+
+{% endblock %}
