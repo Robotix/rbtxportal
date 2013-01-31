@@ -1,5 +1,5 @@
 from django.contrib import admin
-from Robotix11.eventmanager.models import *
+from rbtxportal.eventmanager.models import *
 
 admin.site.register(Team)
 #admin.site.register(Import)
@@ -15,3 +15,6 @@ admin.site.register(AbyssThirdRound)
 admin.site.register(ACROSSFirstRound)
 admin.site.register(ACROSSSecondRound)
 admin.site.register(ACROSSThirdRound)
+admin.site.register(SeekerFirstRound)
+admin.site.register(SeekerSecondRound)
+admin.site.register(SeekerThirdRound)

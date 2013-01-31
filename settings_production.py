@@ -1,4 +1,4 @@
-# Django settings for Robotix12 project.
+# Django settings for Robotix13 project.
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -51,10 +51,10 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
 )
 
-ROOT_URLCONF = 'Robotix11.urls'
+ROOT_URLCONF = 'rbtxportal.urls'
 
 TEMPLATE_DIRS = (
-    '/home/dementor/Documents/Robotix11/templates',
+    '/home/dementor/rbtxportal/templates',
 )
 
 INSTALLED_APPS = (
@@ -65,5 +65,5 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.admin',
     'django.contrib.admindocs',
-    'Robotix11.eventmanager',
+    'rbtxportal.eventmanager',
 )

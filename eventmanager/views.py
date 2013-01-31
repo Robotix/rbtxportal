@@ -208,8 +208,8 @@ def best_mechanical_design(request):
                                              'result' : result})
 
 @login_required
-def nuke_timer(request):
-    return render_to_response('nuke_timer.html')
+def timer(request):
+    return render_to_response('timer.html')
 
 @login_required
 def score_board(request, event_code, round_no):

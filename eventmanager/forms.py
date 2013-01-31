@@ -35,86 +35,71 @@ class LumosThirdRoundForm(forms.ModelForm):
 class OverhaulFirstRoundForm(forms.ModelForm):
     class Meta:
         model = OverhaulFirstRound
-        fields = ('team', 'black_cylinders', 'white_cylinders', 'candles_put_out', 'cylinders_in_safe_zone',
-                  'fires_touched', 'fires_dropped', 'cylinder_in_contact_with_candle', 'restarts', 'timeouts', 'time_taken') + _common_fields
+        fields = ('team', 'successful_bridging', 'safe_zone', 'joints_dropped', 'bot_fallen',
+                  'time_taken','timeouts', 'restarts') + _common_fields
 
 class OverhaulSecondRoundForm(forms.ModelForm):
     class Meta:
         model = OverhaulSecondRound
-        fields = ('team', 'black_cylinders', 'white_cylinders', 'candles_put_out', 'cylinders_in_safe_zone', 
-                  'fires_touched', 'fires_dropped', 'cylinder_in_contact_with_candle', 'restarts', 'timeouts', 'time_taken') + _common_fields
+        fields = ('team', 'successful_bridging', 'victim_picked_firstChk', 'victim_picked_secondChk', 'victim_picked_thirdChk', 
+                  'red_victims', 'yellow_victims', 'green_victims', 'victims_dropped', 'joints_dropped', 'bot_fallen', 'time_taken', 'timeouts', 'restarts') + _common_fields
 
 class OverhaulThirdRoundForm(forms.ModelForm):
     class Meta:
         model = OverhaulThirdRound
-        fields = ('team', 'black_cylinders', 'white_cylinders', 'candles_put_out', 'cylinders_in_safe_zone',
-                  'fires_touched', 'fires_dropped', 'cylinder_in_contact_with_candle', 'restarts', 'timeouts', 'time_taken') + _common_fields
+        fields = ('team', 'successful_bridging', 'victim_picked_firstChk', 'victim_picked_secondChk', 'victim_picked_thirdChk', 
+                  'red_victims', 'yellow_victims', 'green_victims', 'victims_dropped', 'joints_dropped', 'bot_fallen', 'time_taken', 'timeouts', 'restarts') + _common_fields
 
 class AbyssFirstRoundForm(forms.ModelForm):
     class Meta:
         model = AbyssFirstRound
-        fields = ('team', 'cylinder1_red_zone_15', 'cylinder2_red_zone_15', 'cylinder3_red_zone_15', 'cylinder4_red_zone_15',
-                  'cylinder1_yellow_zone_10', 'cylinder2_yellow_zone_10', 'cylinder3_yellow_zone_10', 'cylinder4_yellow_zone_10',
-                  'cylinder1_green_zone_5', 'cylinder2_green_zone_5', 'cylinder3_green_zone_5', 'cylinder4_green_zone_5',
-                  'time_taken', 'self_clasping_mechanism_bonus', 'one_bounce_out_partial_score','restarts','timeouts',
-                  'outside_penalty', 'bot_falling_off_the_zipline_penalty', 'refill_penalty') + _common_fields
+        fields = ('team', 'pick_green', 'deposited_rings', 'damage_done',
+                  'time_taken', 'restarts', 'timeouts') + _common_fields
 
 class AbyssSecondRoundForm(forms.ModelForm):
     class Meta:
         model = AbyssSecondRound
-        fields = ('team', 'cylinder1_red_zone_15', 'cylinder2_red_zone_15', 'cylinder3_red_zone_15', 'cylinder4_red_zone_15',
-                  'cylinder1_yellow_zone_10', 'cylinder2_yellow_zone_10', 'cylinder3_yellow_zone_10', 'cylinder4_yellow_zone_10',
-                  'cylinder1_green_zone_5', 'cylinder2_green_zone_5', 'cylinder3_green_zone_5', 'cylinder4_green_zone_5',
-                  'clampings_done_right', 'bot_falling_off_after_clamping',     
-                  'time_taken', 'self_clasping_mechanism_bonus', 'one_bounce_out_partial_score','restarts','timeouts',
-                  'outside_penalty', 'bot_falling_off_the_zipline_penalty', 'refill_penalty') + _common_fields
+        fields = ('team', 'pick_green', 'deposited_rings', 'red_collected', 'damage_done',
+                  'time_taken', 'restarts', 'timeouts') + _common_fields
 
 class AbyssThirdRoundForm(forms.ModelForm):
     class Meta:
         model = AbyssThirdRound
-        fields = ('team', 'cylinder1_red_zone_15', 'cylinder2_red_zone_15', 'cylinder3_red_zone_15', 'cylinder4_red_zone_15',
-                  'cylinder1_yellow_zone_10', 'cylinder2_yellow_zone_10', 'cylinder3_yellow_zone_10', 'cylinder4_yellow_zone_10',
-                  'cylinder1_green_zone_5', 'cylinder2_green_zone_5', 'cylinder3_green_zone_5', 'cylinder4_green_zone_5',
-                  'clampings_done_right', 'bot_falling_off_after_clamping',  
-                  'time_taken', 'self_clasping_mechanism_bonus', 'one_bounce_out_partial_score','restarts','timeouts',
-                  'outside_penalty', 'bot_falling_off_the_zipline_penalty', 'refill_penalty') + _common_fields
+        fields = ('team', 'pick_green', 'deposited_rings', 'red_collected', 'damage_done',
+                  'time_taken', 'restarts', 'timeouts') + _common_fields
 
 class ACROSSFirstRoundForm(forms.ModelForm):
     class Meta:
         model = ACROSSFirstRound
-        fields = ('team', 'd_speed_breakers', 'd_uneven_speed_breakers', 'd_steps', 'd_hill', 'd_incline',
-                  'd_wedge', 'd_bend', 'y_water_outer_tumbler', 'num_restarts', 'num_timeouts', 
-                  'fully_autonomous', 'semi_autonomous', 'time_taken') + _common_fields  
+        fields = ('team', 'lower_correct_position', 'sense_gap', 'collision_blocker', 'collision_building', 'grids_crossed',
+                  'num_restarts', 'num_timeouts', 'time_taken' ) + _common_fields  
 
 class ACROSSSecondRoundForm(forms.ModelForm):
     class Meta:
         model = ACROSSSecondRound
-        fields = ('team', 'd_speed_breakers', 'd_uneven_speed_breakers', 'd_steps', 'd_hill', 'd_incline',
-                  'd_wedge', 'd_bend', 'y_water_outer_tumbler', 'num_restarts', 'num_timeouts', 
-                  'fully_autonomous', 'semi_autonomous', 'time_taken') + _common_fields
+        fields = ('team', 'lower_correct_position', 'sense_gap', 'collision_blocker', 'collision_building', 'grids_crossed',
+                  'num_restarts', 'num_timeouts', 'time_taken' ) + _common_fields  
 
 class ACROSSThirdRoundForm(forms.ModelForm):
     class Meta:
         model = ACROSSThirdRound
-        fields = ('team', 'd_speed_breakers', 'd_uneven_speed_breakers', 'd_steps', 'd_hill', 'd_incline',
-                  'd_wedge', 'd_bend', 'y_water_outer_tumbler', 'num_restarts', 'num_timeouts', 
-                  'fully_autonomous', 'semi_autonomous', 'time_taken') + _common_fields
+        fields = ('team', 'lower_correct_position', 'sense_gap', 'collision_blocker', 'collision_building', 'grids_crossed',
+                  'num_restarts', 'num_timeouts', 'time_taken' ) + _common_fields  
 
 class SeekerFirstRoundForm(forms.ModelForm):
     class Meta:
         model = SeekerFirstRound
-        fields = ('team', 'time_taken', 'score') + _common_fields
+        fields = ('team', 'correct_turn', 'stop_end', 'time_taken', 'wall_hits', 'restarts','time_outs_taken') + _common_fields
 
 class SeekerSecondRoundForm(forms.ModelForm):
     class Meta:
         model = SeekerSecondRound
-        fields = ('team', 'time_taken', 'score') + _common_fields
+        fields = ('team', 'correct_turn', 'stop_end', 'time_taken', 'wall_hits', 'restarts','time_outs_taken') + _common_fields
 
-"""class SeekerThirdRoundForm(forms.ModelForm):
+class SeekerThirdRoundForm(forms.ModelForm):
     class Meta:
         model = SeekerThirdRound
-        fields = ('team', 'time_taken', 'score') + _common_fields  """
- 
+        fields = ('team', 'correct_turn', 'stop_end', 'time_taken', 'wall_hits','correct_zone', 'wrong_zone', 'restarts','time_outs_taken') + _common_fields
 
 def rbtx_get_form_class_by_code_and_round(code, rnd):
     """ rbtx_get_form_class_by_code_and_round ('OV', 2) will return OverhaulSecondRoundForm etc. """
@@ -153,6 +138,8 @@ def rbtx_get_form_class_by_code_and_round(code, rnd):
             return SeekerFirstRoundForm
         elif rnd == 2:
             return SeekerSecondRoundForm
+        elif rnd == 3:
+            return SeekerThirdRoundForm
     elif code == 'AC':
         if rnd == 1:
             return ACROSSFirstRoundForm

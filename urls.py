@@ -20,5 +20,5 @@ urlpatterns = patterns('',
          (r'^promote/([a-zA-Z][a-zA-Z])/([0-9])/', promotion_interface),
          (r'^register/', register_team),
          (r'^scores/([a-zA-Z][a-zA-Z])/([0-9])/', score_board),
-         (r'^nuketimer/', nuke_timer)
+         (r'^timer/', timer)
 )
