@@ -160,7 +160,7 @@ class LumosThirdRound(_EventBase):
         return score
 
 class OverhaulFirstRound(_EventBase):
-    team = models.ForeignKey(Team, limit_choices_to = { 'event__exact' : 'LU', 'promoted_to__exact' : 1 })
+    team = models.ForeignKey(Team, limit_choices_to = { 'event__exact' : 'OV', 'promoted_to__exact' : 1 })
     
     successful_bridging = models.IntegerField(verbose_name = 'Number of successful bridging:')
     safe_zone = models.IntegerField(verbose_name = 'Robot in safe zone(0 if No 1 if Yes):')
@@ -171,22 +171,22 @@ class OverhaulFirstRound(_EventBase):
     restarts = models.IntegerField(verbose_name = 'Number of restarts taken:')
 
     def calculate_score(self):
-        total = 0
-        total = total + 150 * self.successful_bridging
-        total = total + 100 * self.safe_zone
-        total = total - 30 * self.joints_dropped
-        total = total - 50 * self.bot_fallen
-        total = total - 50 * self.timeouts
-        total = total - 100 * self.restarts 
+        score = 0
+        score = score + 150 * self.successful_bridging
+        score = score + 100 * self.safe_zone
+        score = score - 30 * self.joints_dropped
+        score = score - 50 * self.bot_fallen
+        score = score - 50 * self.timeouts
+        score = score - 100 * self.restarts 
         if self.time_taken < 180:
-            total = total + (180-self.time_taken)
-        return total
+            score = score + (180-self.time_taken)
+        return score
 
     def __unicode__(self):
         return 'First Overhaul round for team \'' + str(self.team) + '\''
 
 class OverhaulSecondRound(_EventBase):
-    team = models.ForeignKey(Team, limit_choices_to = { 'event__exact' : 'LU', 'promoted_to__exact' : 2 })
+    team = models.ForeignKey(Team, limit_choices_to = { 'event__exact' : 'OV', 'promoted_to__exact' : 2 })
     
     successful_bridging = models.IntegerField(verbose_name = 'Number of successful bridging:')
     victim_picked_firstChk = models.IntegerField(verbose_name = 'Number of victims picked at Checkpoint 1:')
@@ -203,28 +203,28 @@ class OverhaulSecondRound(_EventBase):
     restarts = models.IntegerField(verbose_name = 'Number of restarts taken:')
 
     def calculate_score(self):
-        total = 0
-        total = total + 150 * self.successful_bridging
-        total = total + 25 * self.victim_picked_firstChk
-        total = total + 25 * self.victim_picked_secondChk
-        total = total + 25 * self.victim_picked_thirdChk
-        total = total + 100 * self.red_victims
-        total = total + 75 * self.yellow_victims
-        total = total + 100 * self.green_victims
-        total = total - 30 * self.joints_dropped
-        total = total - 50 * self.bot_fallen
-        total = total - 50 * self.timeouts
-        total = total - 40 * self.victims_dropped
-        total = total - 100 * self.restarts 
+        score = 0
+        score = score + 150 * self.successful_bridging
+        score = score + 25 * self.victim_picked_firstChk
+        score = score + 25 * self.victim_picked_secondChk
+        score = score + 25 * self.victim_picked_thirdChk
+        score = score + 100 * self.red_victims
+        score = score + 75 * self.yellow_victims
+        score = score + 50 * self.green_victims
+        score = score - 30 * self.joints_dropped
+        score = score - 50 * self.bot_fallen
+        score = score - 50 * self.timeouts
+        score = score - 40 * self.victims_dropped
+        score = score - 100 * self.restarts 
         if self.time_taken < 240:
-            total = total + (240-self.time_taken)
-        return total
+            score = score + (240-self.time_taken)
+        return score
 
     def __unicode__(self):
         return 'Second Overhaul Round for Team \'' + str(self.team) + '\''
 
 class OverhaulThirdRound(_EventBase):
-    team = models.ForeignKey(Team, limit_choices_to = { 'event__exact' : 'LU', 'promoted_to__exact' : 3 })
+    team = models.ForeignKey(Team, limit_choices_to = { 'event__exact' : 'OV', 'promoted_to__exact' : 3 })
     
     successful_bridging = models.IntegerField(verbose_name = 'Number of successful bridging:')
     victim_picked_firstChk=models.IntegerField(verbose_name = 'Number of victims picked at Checkpoint 1:')
@@ -241,22 +241,22 @@ class OverhaulThirdRound(_EventBase):
     restarts = models.IntegerField(verbose_name = 'Number of restarts taken:')
 
     def calculate_score(self):
-        total = 0
-        total = total + 150 * self.successful_bridging
-        total = total + 25 * self.victim_picked_firstChk
-        total = total + 25 * self.victim_picked_secondChk
-        total = total + 25 * self.victim_picked_thirdChk
-        total = total + 100 * self.red_victims
-        total = total + 75 * self.yellow_victims
-        total = total + 100 * self.green_victims
-        total = total - 30 * self.joints_dropped
-        total = total - 50 * self.bot_fallen
-        total = total - 50 * self.timeouts
-        total = total - 40 * self.victims_dropped
-        total = total - 100 * self.restarts 
+        score = 0
+        score = score + 150 * self.successful_bridging
+        score = score + 25 * self.victim_picked_firstChk
+        score = score + 25 * self.victim_picked_secondChk
+        score = score + 25 * self.victim_picked_thirdChk
+        score = score + 100 * self.red_victims
+        score = score + 75 * self.yellow_victims
+        score = score + 100 * self.green_victims
+        score = score - 30 * self.joints_dropped
+        score = score - 50 * self.bot_fallen
+        score = score - 50 * self.timeouts
+        score = score - 40 * self.victims_dropped
+        score = score - 100 * self.restarts 
         if self.time_taken < 240:
-            total = total + (240-self.time_taken)
-        return total
+            score = score + (240-self.time_taken)
+        return score
 
     def __unicode__(self):
         return 'Third Overhaul round for team \'' + str(self.team) + '\''
@@ -273,16 +273,16 @@ class AbyssFirstRound(_EventBase):
     timeouts = models.IntegerField(verbose_name = 'Number of time-outs')
         
     def calculate_score(self):
-        total=0
+        score=0
         if self.time_taken < 240:
-            total = 240 - self.time_taken
-        total = total + 100 * self.pick_green
-        total = total + 75 * self.deposoted_rings
-        total = total - 100 * self.restarts
-        total = total - 50 * self.timeouts
-        #total = total - 75 * self.red_collected
-        total = total - 50 * self.damage_done
-        return total
+            score = 240 - self.time_taken
+        score = score + 100 * self.pick_green
+        score = score + 75 * self.deposited_rings
+        score = score - 100 * self.restarts
+        score = score - 50 * self.timeouts
+        #score = score - 75 * self.red_collected
+        score = score - 50 * self.damage_done
+        return score
 
     def __unicode__(self):
         return 'First Abyss round for team \'' + str(self.team) + '\''
@@ -299,16 +299,16 @@ class AbyssSecondRound(_EventBase):
     timeouts = models.IntegerField(verbose_name = 'Number of time-outs')
         
     def calculate_score(self):
-        total=0
+        score=0
         if self.time_taken < 240:
-            total = 240 - self.time_taken
-        total = total + 100 * self.pick_green
-        total = total + 75 * self.deposoted_rings
-        total = total - 100 * self.restarts
-        total = total - 50 * self.timeouts
-        total = total - 75 * self.red_collected
-        total = total - 50 * self.damage_done
-        return total
+            score = 240 - self.time_taken
+        score = score + 100 * self.pick_green
+        score = score + 75 * self.deposoted_rings
+        score = score - 100 * self.restarts
+        score = score - 50 * self.timeouts
+        score = score - 75 * self.red_collected
+        score = score - 50 * self.damage_done
+        return score
     def __unicode__(self):
         return 'Second Abyss round for team \'' + str(self.team) + '\''
 
@@ -324,16 +324,16 @@ class AbyssThirdRound(_EventBase):
     timeouts = models.IntegerField(verbose_name = 'Number of time-outs')
         
     def calculate_score(self):
-        total=0
+        score=0
         if self.time_taken < 240:
-            total = 240 - self.time_taken
-        total = total + 100 * self.pick_green
-        total = total + 75 * self.deposoted_rings
-        total = total - 100 * self.restarts
-        total = total - 50 * self.timeouts
-        total = total - 75 * self.red_collected
-        total = total - 50 * self.damage_done
-        return total
+            score = 240 - self.time_taken
+        score = score + 100 * self.pick_green
+        score = score + 75 * self.deposoted_rings
+        score = score - 100 * self.restarts
+        score = score - 50 * self.timeouts
+        score = score - 75 * self.red_collected
+        score = score - 50 * self.damage_done
+        return score
     def __unicode__(self):
         return 'Third Abyss round for team \'' + str(self.team) + '\''
 
@@ -349,15 +349,13 @@ class SeekerFirstRound(_EventBase):
     time_outs_taken = models.IntegerField(verbose_name='Number of time-outs')
 
     def calculate_score(self):
-        total = 0
-        total = total + 50 * self.correct_turn
-        total = total + 100* self.stop_end
-        total = total - 50 * self.restarts
-        total= total - 20 * self.wall_hits
-        total = total - 20 * self.time-outs_taken
-        total = total + 600 * self.number_of_fugitives_imprisoned
-        total = total - 450 * self.number_of_collisions
-        return self.total
+        score = 0
+        score = score + 50 * self.correct_turn
+        score = score + 100* self.stop_end
+        score = score - 50 * self.restarts
+        score= score - 20 * self.wall_hits
+        score = score - 20 * self.time_outs_taken
+        return score
 
     def __unicode__(self):
         return 'First Seeker round for team \'' + str(self.team) + '\'' 
@@ -375,15 +373,13 @@ class SeekerSecondRound(_EventBase):
     time_outs_taken = models.IntegerField(verbose_name='Number of time-outs')
 
     def calculate_score(self):
-        total = 0
-        total = total + 50 * self.correct_turn
-        total = total + 100* self.stop_end
-        total = total - 50 * self.restarts
-        total= total - 20 * self.wall_hits
-        total = total - 20 * self.time-outs_taken
-        total = total + 600 * self.number_of_fugitives_imprisoned
-        total = total - 450 * self.number_of_collisions
-        return self.total 
+        score = 0
+        score = score + 50 * self.correct_turn
+        score = score + 100* self.stop_end
+        score = score - 50 * self.restarts
+        score= score - 20 * self.wall_hits
+        score = score - 20 * self.time-outs_taken
+        return score 
 
     def __unicode__(self):
         return 'Second Seeker round for team \'' + str(self.team) + '\'' 
@@ -401,16 +397,14 @@ class SeekerThirdRound(_EventBase):
     time_outs_taken = models.IntegerField(verbose_name='Number of time-outs')
 
     def calculate_score(self):
-        total = 0
-        total = total + 50 * self.correct_turn
-        total = total + 100* self.stop_end
-        total = total - 50 * self.restarts
-        total = total - 20 * self.wall_hits
-        total = total - 100 * self.wrong_zone
-        total = total - 20 * self.time-outs_taken
-        total = total + 600 * self.number_of_fugitives_imprisoned
-        total = total - 450 * self.number_of_collisions
-        return self.total 
+        score = 0
+        score = score + 50 * self.correct_turn
+        score = score + 100* self.stop_end
+        score = score - 50 * self.restarts
+        score = score - 20 * self.wall_hits
+        score = score - 100 * self.wrong_zone
+        score = score - 20 * self.time-outs_taken
+        return score 
 
     def __unicode__(self):
         return 'Third Seeker round for team \'' + str(self.team) + '\''   
