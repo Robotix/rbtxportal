@@ -2,7 +2,7 @@ from django.contrib import admin
 from rbtxportal.eventmanager.models import *
 
 admin.site.register(Team)
-#admin.site.register(Import)
+admin.site.register(Import)
 admin.site.register(LumosFirstRound)
 admin.site.register(LumosSecondRound)
 admin.site.register(LumosThirdRound)

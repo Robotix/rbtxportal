@@ -1,5 +1,6 @@
 from datetime import datetime
 from string import upper
+import urllib2
 
 from django.contrib import auth
 from django.contrib.auth.decorators import login_required
@@ -15,15 +16,79 @@ def _construct_err(txt):
     return render_to_response('error.html', { 'error_msg' : txt })
 
 @login_required
+def import_team(request):
+    if request.method == 'POST':
+        form = ImportForm(request.POST)
+        form1 = RegisterForm(request.POST)
+        if form.is_valid():
+            model=Import(**form.cleaned_data)
+            model.author = request.user
+            model.save()
+            return render_to_response('register-team.html', { 'form' : form1, 'username' : request.user.username } )
+    else:
+        if 'last_event' in request.GET:
+            last_event = upper(request.GET ['last_event'])
+            if rbtx_is_valid_event_code(last_event):
+                form = ImportForm(initial = {'event' : last_event})
+                form1 = RegisterForm(initial = {'event' : last_event})
+            else:
+                form1 = RegisterForm()
+                form = ImportForm()
+        else:
+            form = ImportForm()
+            form1 = RegisterForm()
+    return render_to_response('import-team.html', { 'form' : form, 'username' : request.user.username })
+
+@login_required
 def register_team(request):
     if request.method == 'POST':
         form = RegisterForm(request.POST)
-        # importform = ImportForm(request.POST)
-        # if importform.is_valid():
-        # model=Import(**importform.cleaned_data)
-        # model.author = request.user
-        # model.save() 
-        # return render_to_response('register-team.html', {'importform' : importform, 'username' : request.user.username })
+        form1 = ImportForm(request.POST)
+        if form1.is_valid():
+            model=Import(**form1.cleaned_data)
+            model.author = request.user
+            model.save()
+            rnum = model.ref_num
+            req = urllib2.urlopen('http://robotix.in/registration/searchreq.php?team='+rnum+'&prop=TeamName')
+            teamName = req.read()
+            req = urllib2.urlopen('http://robotix.in/registration/searchreq.php?team='+rnum+'&prop=Event')
+            eventName = req.read() 
+            #req = urllib2.urlopen('http://robotix.in/registration/searchreq.php?team='+rnum+'&prop=College1')
+            #college1 = req.read()
+            #req = urllib2.urlopen('http://robotix.in/registration/searchreq.php?team='+rnum+'&prop=College2')
+            #college2 = req.read()
+            #req = urllib2.urlopen('http://robotix.in/registration/searchreq.php?team='+rnum+'&prop=College3')
+            #college3 = req.read()
+            #req = urllib2.urlopen('http://robotix.in/registration/searchreq.php?team='+rnum+'&prop=College4')
+            #college4 = req.read()
+            #req = urllib2.urlopen('http://robotix.in/registration/searchreq.php?team='+rnum+'&prop=Contact1')
+            #contact1 = req.read()
+            #req = urllib2.urlopen('http://robotix.in/registration/searchreq.php?team='+rnum+'&prop=Contact2')
+            #contact2 = req.read()
+            #req = urllib2.urlopen('http://robotix.in/registration/searchreq.php?team='+rnum+'&prop=Contact3')
+            #contact3 = req.read()
+            #req = urllib2.urlopen('http://robotix.in/registration/searchreq.php?team='+rnum+'&prop=Contact4')
+            #contact4 = req.read()
+            req = urllib2.urlopen('http://robotix.in/registration/searchreq.php?team='+rnum+'&prop=Email1')
+            email1 = req.read()
+            req = urllib2.urlopen('http://robotix.in/registration/searchreq.php?team='+rnum+'&prop=Email2')
+            email2 = req.read()
+            req = urllib2.urlopen('http://robotix.in/registration/searchreq.php?team='+rnum+'&prop=Email3')
+            email3 = req.read()
+            req = urllib2.urlopen('http://robotix.in/registration/searchreq.php?team='+rnum+'&prop=Email4')
+            email4 = req.read()
+            req = urllib2.urlopen('http://robotix.in/registration/searchreq.php?team='+rnum+'&prop=First')
+            name1 = req.read()
+            req = urllib2.urlopen('http://robotix.in/registration/searchreq.php?team='+rnum+'&prop=Second')
+            name2 = req.read()
+            req = urllib2.urlopen('http://robotix.in/registration/searchreq.php?team='+rnum+'&prop=Third')
+            name3 = req.read()
+            req = urllib2.urlopen('http://robotix.in/registration/searchreq.php?team='+rnum+'&prop=Fourth')
+            name4 = req.read()
+            form = RegisterForm(initial=  {'team_name':teamName, 'event':eventName, 'email_a': email1, 'email_b': email2, 'email_c': email3, 'email_d': email4, 'participant_1':name1, 'participant_2': name2 ,'participant_3': name3, 'participant_4': name4 })
+
+            return render_to_response('register-team.html', { 'form' : form, 'username' : request.user.username } )
+        #   return render_to_response('register-team.html', {'importform' : importform, 'username' : request.user.username })
         if form.is_valid():
             model = Team (**form.cleaned_data)
             model.author = request.user
@@ -40,11 +105,14 @@ def register_team(request):
             last_event = upper(request.GET ['last_event'])
             if rbtx_is_valid_event_code(last_event):
                 form = RegisterForm(initial = {'event' : last_event})
+                form1 = ImportForm(initial = {'event' : last_event})
             else:
                 form = RegisterForm()
+                form1 = ImportForm()
         else:
             form = RegisterForm()
-    return render_to_response('register-team.html', { 'form' : form, 'username' : request.user.username } )
+            form1 = ImportForm() 
+    return render_to_response('import-team.html', { 'form' : form1, 'username' : request.user.username })
 
 @login_required
 def retrieve_team_information(request, team_id):

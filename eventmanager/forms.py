@@ -4,33 +4,33 @@ from django.utils.datastructures import SortedDict
 from eventmanager.models import *
 from eventmanager.view_utils import *
 
+class ImportForm(forms.ModelForm):
+   class Meta:
+      model = Import
+
 class RegisterForm(forms.ModelForm):
     class Meta:
         model = Team
-
-#class ImportForm(forms.ModelForm):
-#   class Meta:
-#      model = Import
 
 _common_fields = ('edited_score', 'best_algorithm_design', 'best_mechanical_design', 'comments')
 
 class LumosFirstRoundForm(forms.ModelForm):
     class Meta:
         model = LumosFirstRound
-        fields = ('team', 'stationaryLight_deactivated', 'movingLight_deactivated', 'incorrect_source',
-                   'num_restarts', 'num_timeouts','max_time_to_be_allotted', 'time_taken') + _common_fields
+        fields = ('team', 'stationaryLight_deactivated', 'incorrect_source',
+                   'num_restarts', 'num_timeouts', 'time_taken') + _common_fields
 
 class LumosSecondRoundForm(forms.ModelForm):
     class Meta:
         model = LumosSecondRound
         fields = ('team', 'stationaryLight_deactivated', 'movingLight_deactivated', 'incorrect_source',
-                   'num_restarts', 'num_timeouts','max_time_to_be_allotted', 'time_taken') + _common_fields
+                   'num_restarts', 'num_timeouts', 'time_taken') + _common_fields
 
 class LumosThirdRoundForm(forms.ModelForm):
     class Meta:
         model = LumosThirdRound
         fields = ('team', 'stationaryLight_deactivated', 'movingLight_deactivated', 'incorrect_source',
-                   'num_restarts', 'num_timeouts','max_time_to_be_allotted', 'time_taken') + _common_fields
+                   'num_restarts', 'num_timeouts','time_taken') + _common_fields
 
 class OverhaulFirstRoundForm(forms.ModelForm):
     class Meta:
@@ -71,7 +71,7 @@ class AbyssThirdRoundForm(forms.ModelForm):
 class ACROSSFirstRoundForm(forms.ModelForm):
     class Meta:
         model = ACROSSFirstRound
-        fields = ('team', 'lower_correct_position', 'sense_gap', 'collision_blocker', 'collision_building', 'grids_crossed',
+        fields = ('team', 'lower_correct_position', 'sense_gap', 'collision_building', 'grids_crossed',
                   'num_restarts', 'num_timeouts', 'time_taken' ) + _common_fields  
 
 class ACROSSSecondRoundForm(forms.ModelForm):

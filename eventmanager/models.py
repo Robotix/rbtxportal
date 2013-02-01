@@ -25,12 +25,13 @@ def rbtx_is_valid_event_code(code):
             return True
     return False
 
-#class Import(models.Model):
- #   ref_num = models.IntegerField(blank = True, verbose_name='Reference Number:')
+class Import(models.Model):
+    ref_num = models.CharField(max_length = 255,blank= False, verbose_name='Reference Number:')
 
 class Team(models.Model):
     """ Represents one team, to take part in one event. """
 
+    #ref_num = models.CharField(max_length = 255,blank= False, verbose_name='Reference Number:')
     team_name = models.CharField(max_length = 255, verbose_name = 'Team Name')
     author = models.ForeignKey(User, editable = False)
 
@@ -38,15 +39,25 @@ class Team(models.Model):
     team_id = models.IntegerField(blank = True, verbose_name = 'Team ID', editable = False, default = 0)
     event = models.CharField(max_length = 2, choices = EVENT_CHOICES, verbose_name = 'Event')
 
-    college = models.CharField(max_length = 255, verbose_name = 'College')
-    number_a = models.CharField(max_length = 15, verbose_name = 'Primary Contact Number')
-    number_b = models.CharField(max_length = 15, blank = True, verbose_name = 'Secondary Contact Number')
-    email = models.EmailField(verbose_name = 'Contact Email', blank = True)
-
     participant_1 = models.CharField(max_length = 255, verbose_name = 'First Participant')
+    #number_a = models.CharField(max_length = 15, verbose_name = 'Contact Number 1')
+    email_a = models.EmailField(verbose_name = 'Contact Email', blank = True)
+    #college_1 = models.CharField(max_length = 255, verbose_name = 'College')
+    
     participant_2 = models.CharField(max_length = 255, blank = True, verbose_name = 'Second Participant')
+    #number_b = models.CharField(max_length = 15, blank = True, verbose_name = 'Contact Number 2')
+    email_b = models.EmailField(verbose_name = 'Contact Email', blank = True)
+    #college_2 = models.CharField(max_length = 255, blank = True, verbose_name = 'College')
+
     participant_3 = models.CharField(max_length = 255, blank = True, verbose_name = 'Third Participant')
+    #number_c = models.CharField(max_length = 15, blank = True, verbose_name = 'Contact Number 3')
+    email_c = models.EmailField(verbose_name = 'Contact Email', blank = True)
+    #college_3 = models.CharField(max_length = 255, blank = True, verbose_name = 'College')
+
     participant_4 = models.CharField(max_length = 255, blank = True, verbose_name = 'Fourth Participant')
+    #number_d = models.CharField(max_length = 15, blank = True, verbose_name = 'Contact Number 4')
+    email_d = models.EmailField(verbose_name = 'Contact Email', blank = True)
+    #college_4 = models.CharField(max_length = 255, blank = True, verbose_name = 'College')
 
     registered_on = models.DateTimeField(auto_now_add = True)
 
@@ -90,22 +101,22 @@ class LumosFirstRound(_EventBase):
     team = models.ForeignKey(Team, limit_choices_to = {'event__exact': 'LU', 'promoted_to__exact' : 1 })
     
     stationaryLight_deactivated = models.IntegerField(verbose_name = 'Number of Stationary Light Sources Deactivated:')
-    movingLight_deactivated = models.IntegerField(verbose_name = 'Number of Moving Light Sources Deactivated:')
+    #movingLight_deactivated = models.IntegerField(verbose_name = 'Number of Moving Light Sources Deactivated:')
     incorrect_source=models.IntegerField(verbose_name='Number of times bot hits deactivated source:')
     num_restarts = models.IntegerField(verbose_name = 'Number of Restarts:')
     num_timeouts = models.IntegerField(verbose_name = 'Number of Time-Outs:')
-    max_time_to_be_allotted = models.IntegerField(verbose_name = 'Alotted Run-Time(in s):')
+    #max_time_to_be_allotted = models.IntegerField(verbose_name = 'Alotted Run-Time(in s):')
     time_taken = models.IntegerField()
 
     def calculate_score(self):
-        score = 0 
+        score = 500 
         score = score + 80 * self.stationaryLight_deactivated
-        score = score + 120 * self.movingLight_deactivated
-        score = score - 75 * self.incorrect_source 
+       # score = score + 120 * self.movingLight_deactivated
+        score = score - 30 * self.incorrect_source 
         score = score - 50 * self.num_restarts
         score = score - 20 * self.num_timeouts
-        if self.max_time_to_be_allotted > self.time_taken:
-	       score = score + ((self.max_time_to_be_allotted-self.time_taken)/2)
+        if 300 > self.time_taken:
+	       score = score + ((300-self.time_taken)/2)
         return score
 
     def __unicode__(self):
@@ -120,18 +131,18 @@ class LumosSecondRound(_EventBase):
     incorrect_source=models.IntegerField(verbose_name='Number of times bot hits deactivated source:')
     num_restarts = models.IntegerField(verbose_name = 'Number of Restarts:')
     num_timeouts = models.IntegerField(verbose_name = 'Number of Time-Outs:')
-    max_time_to_be_allotted = models.IntegerField(verbose_name = 'Alotted Run-Time(in s)')
+    #max_time_to_be_allotted = models.IntegerField(verbose_name = 'Alotted Run-Time(in s)')
     time_taken = models.IntegerField()
 
     def calculate_score(self):
-        score = 0 
+        score = 500 
         score = score + 80 * self.stationaryLight_deactivated
         score = score + 120 * self.movingLight_deactivated
-        score = score - 75 * self.incorrect_source 
+        score = score - 30 * self.incorrect_source 
         score = score - 50 * self.num_restarts
         score = score - 20 * self.num_timeouts
-        if self.max_time_to_be_allotted > self.time_taken:
-	       score = score + ((max_time_to_be_allotted-time_taken)/2)
+        if 420 > self.time_taken:
+	       score = score + ((420-self.time_taken)/2)
         return score
 
     def __unicode__(self):
@@ -145,18 +156,18 @@ class LumosThirdRound(_EventBase):
     incorrect_source=models.IntegerField(verbose_name='Number of times bot hits deactivated source:')
     num_restarts = models.IntegerField(verbose_name = 'Number of Restarts:')
     num_timeouts = models.IntegerField(verbose_name = 'Number of Time-Outs:')
-    max_time_to_be_allotted = models.IntegerField(verbose_name = 'Alotted Run-Time(in s)')
+    #max_time_to_be_allotted = models.IntegerField(verbose_name = 'Alotted Run-Time(in s)')
     time_taken = models.IntegerField()
 
     def calculate_score(self):
-        score = 0 
+        score = 500 
         score = score + 80 * self.stationaryLight_deactivated
         score = score + 120 * self.movingLight_deactivated
-        score = score - 75 * self.incorrect_source 
+        score = score - 30 * self.incorrect_source 
         score = score - 50 * self.num_restarts
         score = score - 20 * self.num_timeouts
-        if self.max_time_to_be_allotted > self.time_taken:
-	       score = score + ((max_time_to_be_allotted-time_taken)/2)
+        if 420 > self.time_taken:
+	       score = score + ((420-time_taken)/2)
         return score
 
 class OverhaulFirstRound(_EventBase):
@@ -415,7 +426,7 @@ class ACROSSFirstRound(_EventBase):
     
     lower_correct_position = models.IntegerField(verbose_name = 'Number of times lower bot positioned correctly:')
     sense_gap = models.IntegerField(verbose_name = 'Number of times upper bot sensed gap:')
-    collision_blocker=models.IntegerField(verbose_name= 'Number of collisions with path blocekr:')
+    #collision_blocker=models.IntegerField(verbose_name= 'Number of collisions with path blocker:')
     collision_building = models.IntegerField(verbose_name= 'Number of collisions with buildings:')
     grids_crossed = models.IntegerField(verbose_name= 'Number of times grids crossed grazing the wall:')
     num_restarts = models.IntegerField(verbose_name = 'Number of restarts')
@@ -425,15 +436,15 @@ class ACROSSFirstRound(_EventBase):
 
     def calculate_score(self):
         score = 500
-        score = score + 150*self.lower_correct_position
-        score = score + 75*self.sense_gap
-        score = score - 15*self.collision_blocker
-        score = score - 15*self.collision_building
-        score = score - 30*self.grids_crossed
+        score = score + 150 * self.lower_correct_position
+        score = score + 75 * self.sense_gap
+     #   score = score - 15 * self.collision_blocker
+        score = score - 15 * self.collision_building
+        score = score - 40 * self.grids_crossed
         score = score - 40 * self. num_timeouts
         score = score - 60 * self.num_restarts
         if self.time_taken < 480:
-            score= score + (480 - self.time_taken)
+            score= score + ((480 - self.time_taken)/4)
         return score
 
     def __unicode__(self):
@@ -457,11 +468,11 @@ class ACROSSSecondRound(_EventBase):
         score = score + 75*self.sense_gap
         score = score - 15*self.collision_blocker
         score = score - 15*self.collision_building
-        score = score - 30*self.grids_crossed
+        score = score - 40*self.grids_crossed
         score = score - 40 * self. num_timeouts
         score = score - 60 * self.num_restarts
         if self.time_taken < 600:
-            score= score + (600 - self.time_taken)
+            score= score + ((600 - self.time_taken)/4)
         return score
 
 def __unicode__(self):
@@ -485,11 +496,11 @@ class ACROSSThirdRound(_EventBase):
         score = score + 75*self.sense_gap
         score = score - 15*self.collision_blocker
         score = score - 15*self.collision_building
-        score = score - 30*self.grids_crossed
+        score = score - 40*self.grids_crossed
         score = score - 40 * self. num_timeouts
         score = score - 60 * self.num_restarts
         if self.time_taken < 600:
-            score= score + (600 - self.time_taken)
+            score= score + ((600 - self.time_taken)/4)
         return score
 
     def __unicode__(self):
