@@ -1,0 +1,58 @@
+@font-face {
+    font-family: 'BigNoodle';
+    src: url('big_noodle_titling.ttf');
+}
+
+#content {
+	width: 900px;
+	margin: 75 auto;
+	border-bottom-right-radius: 20px;
+	border-bottom-left-radius: 20px;
+	overflow: auto;
+	background-color:rgba(255,255,255,0.9);
+	border: 1px solid #000;
+}
+#content .prb-holder {
+	border: 1px solid #ddd;
+	border-radius: 10px;
+	box-shadow: 2px 2px 2px #eee;
+	margin-bottom: 20px;
+	font-family: Arial;
+	position: relative;
+}
+#content .prb-holder h2 {
+	padding: 20px;
+	font-family: 'BigNoodle';
+	font-size: 30pt;
+	letter-spacing: 2px;
+	background: #ddd;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+}
+#content .prb-holder .prb-statement {
+	padding: 20px;
+}
+#content .prb-holder .prb-statement .prb-meta {
+	color: #999;
+	font-family: 'BigNoodle';
+	font-size: 18pt;
+	letter-spacing: 2px;
+}
+.gen-btn-right {
+	/*position: absolute;*/
+	/*bottom: 20px;*/
+	right: 500px;
+	color: #fff;
+	padding: 100px;
+	background: #5AA166;
+	text-decoration: none;
+	font-family: 'BigNoodle';
+	letter-spacing: 2px;
+	font-size: 30pt;
+	border-radius: 10px;
+	border: 2px solid #1F3824;
+}
+
+.gen-btn-right:hover {
+	background: #1F3824;
+}

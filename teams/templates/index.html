@@ -1,0 +1,26 @@
+{% load staticfiles %}
+
+<html>
+<head>
+	<title>{% block title %}Robotix2015{% endblock %}</title>
+	<link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="{% static 'index.css' %}" />
+</head>
+<body bgcolor="black">
+		<img src="{% static 'rbtx.png' %}" width="250" style="float: left;" />
+		<img src="{% static 'KTJLogo.png' %}" width="250" style="float: right;" />
+		<br>
+	{% block content %}
+	<div id="content">
+
+		<form action="{% url 'submit' %}" method="post">
+			{% csrf_token %}
+		
+		<input type="submit" value="Vote" />
+		
+	</div>
+
+	{% endblock %}
+	</div>
+</body>
+</html>
