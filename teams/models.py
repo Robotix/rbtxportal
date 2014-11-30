@@ -13,6 +13,7 @@ class Team(models.Model):
     id = models.AutoField(primary_key=True)
     event = models.CharField(max_length=3)
     participants = models.ManyToManyField(Participant)
-
+    status = models.CharField(max_length=50, default= '')
+    
     def getTeamID(self):
         return '%s-%s' %(self.event, self.id)
