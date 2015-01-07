@@ -1,26 +1,18 @@
-{% load staticfiles %}
-
 <html>
+<! This registration portal was made by Aditya Narayan. Contact: narayanaditya95@gmail.com>
 <head>
-	<title>{% block title %}Robotix2015{% endblock %}</title>
+	<title>Robotix 2015</title>
+	{% load staticfiles %}
 	<link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="{% static 'index.css' %}" />
 </head>
-<body bgcolor="black">
+<body>
+
+	<div id="header">
 		<img src="{% static 'rbtx.png' %}" width="250" style="float: left;" />
 		<img src="{% static 'KTJLogo.png' %}" width="250" style="float: right;" />
-		<br>
+	</div>
 	{% block content %}
-	<div id="content">
-
-		<form action="{% url 'submit' %}" method="post">
-			{% csrf_token %}
-		
-		<input type="submit" value="Vote" />
-		
-	</div>
-
 	{% endblock %}
-	</div>
 </body>
 </html>
