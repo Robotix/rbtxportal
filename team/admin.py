@@ -3,4 +3,8 @@ from team.models import Team
 
 # Register your models here.
 
-admin.site.register(Team)
+class TeamAdmin(admin.ModelAdmin):
+    list_display = ('id', 'event', 'certificate_given')
+    list_filter = ['id', 'event', 'certificate_given']
+
+admin.site.register(Team, TeamAdmin)
