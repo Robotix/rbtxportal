@@ -5,11 +5,45 @@
 	<span style="font-family: 'BigNoodle'; font-size: 18pt;"><b>Register your team here:</b></span><br><br>
 	<form method="post" action="{% url 'team:register' %}">
     {% csrf_token %}
-    <table width="100%">
-    {{ form.as_table }}
-    </table>
-    <input type="submit" value="Register" style="height:40px; width:100px;"/>
+        <table width="100%">
+        {{ form.as_table }}
+        </table>
+        <div style="text-align: center">
+            <input type="submit" value="Register" style="height:40px; width:100px;"/>
+        </div>
 	</form>
 	<a class="gen-btn1" style="top:40%; left:75%;" href="{% url 'index' %}">HOMEPAGE</a>
+
+    <script>
+        function showFields() {
+            var val = $("#opt option:selected").val();
+            if (val == 1) {
+                $("#one").css({'display': 'block'});
+                $("#two").css({'display': 'none'});
+                $("#three").css({'display': 'none'});
+                $("#four").css({'display': 'none'});
+            } else if (val == 2) {
+                $("#one").css({'display': 'block'});
+                $("#two").css({'display': 'block'});
+                $("#three").css({'display': 'none'});
+                $("#four").css({'display': 'none'});
+            } else if (val == 3) {
+                $("#one").css({'display': 'block'});
+                $("#two").css({'display': 'block'});
+                $("#three").css({'display': 'block'});
+                $("#four").css({'display': 'none'});
+            } else if (val == 4) {
+                $("#one").css({'display': 'block'});
+                $("#two").css({'display': 'block'});
+                $("#three").css({'display': 'block'});
+                $("#four").css({'display': 'block'});
+            } else {
+                $("#one").css({'display': 'none'});
+                $("#two").css({'display': 'none'});
+                $("#three").css({'display': 'none'});
+                $("#four").css({'display': 'none'});
+            }
+        }
+    </script>
 </div>
 {% endblock %}

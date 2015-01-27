@@ -18,12 +18,12 @@ def register(request):
                 street = form.cleaned_data['street'],
                 locality = form.cleaned_data['locality'],
                 city = form.cleaned_data['city'],
-                college = form.cleaned_data['college'],
+                state = form.cleaned_data['state'],
                 pin = form.cleaned_data['pin'],
             	)
             team_object.save()
             for i in range(int(team_object.participant_number)):
-                team_object.participant.add(get_object_or_404(Participant, id = form.cleaned_data['participant_id_%d' %(i)]))
+                team_object.participant.add(get_object_or_404(Participant, id = form.cleaned_data['participant_no_%d' %(i)]))
             return HttpResponseRedirect(reverse('team:status', args=(team_object.id,)))
     else:
         form = TeamForm()

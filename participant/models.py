@@ -45,7 +45,7 @@ class ParticipantForm(ModelForm):
         widgets = {
             'firstName': TextInput(attrs={'required':'True', 'placeholder':'First Name','size':'50'}),
             'lastName': TextInput(attrs={'required':'True', 'placeholder':'Last Name','size':'50'}),
-            'mobileNo': TextInput(attrs={'required':'True', 'placeholder':'10 digit Mobile Number','maxlength':'10', 'size':'50'}),
+            'mobileNo': TextInput(attrs={'required':'True', 'pattern':'[7-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]', 'title':'Enter 10 digit valid mobile number','placeholder':'10 digit Mobile Number','maxlength':'10', 'size':'50'}),
             'emailID': EmailInput(attrs={'required':'True', 'placeholder':'email@domain.com','size':'50'}),
             'college': TextInput(attrs={'required':'True', 'placeholder':'College','size':'50'}),
         }

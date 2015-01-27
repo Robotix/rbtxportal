@@ -12,6 +12,7 @@ STATES_CHOICES = [
     ('IN-AS' , 'Assam'),
     ('IN-BR' , 'Bihar'),
     ('IN-CT' , 'Chhattisgarh'),
+    ('IN-DL' , 'Delhi'),
     ('IN-GA' , 'Goa'),
     ('IN-GJ' , 'Gujarat'),
     ('IN-HR' , 'Haryana'),
@@ -40,31 +41,30 @@ STATES_CHOICES = [
     ('IN-CH' , 'Chandigarh'),
     ('IN-DN' , 'Dadra and Nagar Haveli'),
     ('IN-DD' , 'Daman and Diu'),
-    ('IN-DL' , 'Delhi'),
     ('IN-LD' , 'Lakshadweep'),
     ('IN-PY' , 'Puducherry'),
 ]
 
-EVENT_CHOICES = [
+EVENT_CHOICES = (
 	('CA' , 'Cascade'),
 	('SK' , 'SkyFall'),
 	('MI' , 'MineField'),
 	('ST' , 'StepUp'),
 	('AU' , 'Aug-Hit'),
-	('SU' , 'Sudocode'),
-]
+)
 
 
-PARTICIPATION_CHOICES = [
-    (0 , 'Select'),
+PARTICIPATION_CHOICES = (
+    (0 , '------'),
     (1 , 'One'),
     (2 , 'Two'),
     (3 , 'Three'),
     (4 , 'Four'),
-]
+)
 
 class Team(models.Model):
-    number = models.IntegerField(blank=False)
+    number = models.IntegerField(
+        blank=False)
     participant_number = models.IntegerField(
         choices=PARTICIPATION_CHOICES,
         blank=False,)
@@ -101,20 +101,24 @@ class TeamForm(forms.Form):
         widget = forms.Select,
         choices = EVENT_CHOICES)
     number_of_participants = forms.ChoiceField(
-        widget = forms.Select, 
+        widget = forms.Select(attrs={'id':'opt', 'onchange':'showFields()'}), 
         choices = PARTICIPATION_CHOICES)
-    participant_id_1 = forms.IntegerField(
+    participant_no_1 = forms.IntegerField(
+        label= 'Enter participant IDs', 
         required = True,
-        widget = forms.TextInput(attrs={'id':'1', 'required':'True', 'placeholder':'required', 'size':'20'}))
-    participant_id_2 = forms.IntegerField(
+        widget = forms.TextInput(attrs={'id':'one', 'style':'display: none;', 'title':'Please select at least one participant', 'x-moz-errormessage':'Select at least one participant', 'required':'True', 'placeholder':'required', 'size':'20'}))
+    participant_no_2 = forms.IntegerField(
+        label= '', 
         required = False,
-        widget = forms.TextInput(attrs={'id':'2', 'placeholder':'optional', 'size':'20'}))
-    participant_id_3 = forms.IntegerField(
+        widget = forms.TextInput(attrs={'id':'two', 'style':'display: none;', 'placeholder':'required', 'size':'20'}))
+    participant_no_3 = forms.IntegerField(
+        label= '', 
         required = False,
-        widget = forms.TextInput(attrs={'id':'3', 'placeholder':'optional', 'size':'20'}))
-    participant_id_4 = forms.IntegerField(
+        widget = forms.TextInput(attrs={'id':'three', 'style':'display: none;', 'placeholder':'required', 'size':'20'}))
+    participant_no_4 = forms.IntegerField(
+        label= '', 
         required = False,
-        widget = forms.TextInput(attrs={'id':'4', 'placeholder':'optional', 'size':'20'}))    
+        widget = forms.TextInput(attrs={'id':'four', 'style':'display: none;', 'placeholder':'required', 'size':'20'}))    
     street = forms.CharField(
         required = True,
         widget = forms.TextInput(attrs={'required':'True', 'placeholder':'Complete', 'size':'75'}))
@@ -124,12 +128,12 @@ class TeamForm(forms.Form):
     city = forms.CharField(
         required = True,
         widget = forms.TextInput(attrs={'required':'True', 'placeholder':'Address','size':'75'}))
+    pin = forms.IntegerField(
+        required = True,
+        widget = forms.TextInput(attrs={'required':'True', 'pattern':'[0-9][0-9][0-9][0-9][0-9][0-9]', 'title':'Enter 6 digit PIN', 'placeholder':'Required','size':'20'}))
     state = forms.ChoiceField(
         widget = forms.Select, 
         choices = STATES_CHOICES)
-    pin = forms.IntegerField(
-        required = True,
-        widget = forms.TextInput(attrs={'required':'True', 'placeholder':'Required','size':'20'}))
 
 
 class FindForm(forms.Form):
