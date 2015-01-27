@@ -1,0 +1,15 @@
+{% extends 'fms/base_site.html' %}
+
+{% block header %}
+Participant Registration
+{% endblock %}
+
+{% block content %}
+<div id="content" width="100%">
+<p>
+{{ content }}
+<a class="gen-btn1" style="top:16%; left:60%;" href="{% url 'index' %}">HOMEPAGE</a>
+<a class="gen-btn1" style="top:16%; left:75%;" href="{% url 'participant:register' %}">REGISTER AGAIN</a>
+</p>
+</div>
+{% endblock %}

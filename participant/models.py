@@ -1,47 +1,18 @@
+from django import forms
 from django.db import models
-from django.forms import ModelForm, Textarea, TextInput
+from django.forms import ModelForm, TextInput, NumberInput, EmailInput
 from django.utils.translation import ugettext_lazy as _
+from simple_history.models import HistoricalRecords
 
 # Create your models here.
 
-STATES_CHOICES = [
-    ('IN-AP' , 'Andhra Pradesh'),
-    ('IN-AR' , 'Arunachal Pradesh'),
-    ('IN-AS' , 'Assam'),
-    ('IN-BR' , 'Bihar'),
-    ('IN-CT' , 'Chhattisgarh'),
-    ('IN-GA' , 'Goa'),
-    ('IN-GJ' , 'Gujarat'),
-    ('IN-HR' , 'Haryana'),
-    ('IN-HP' , 'Himachal Pradesh'),
-    ('IN-JK' , 'Jammu and Kashmir'),
-    ('IN-JH' , 'Jharkhand'),
-    ('IN-KA' , 'Karnataka'),
-    ('IN-KL' , 'Kerala'),
-    ('IN-MP' , 'Madhya Pradesh'),
-    ('IN-MH' , 'Maharashtra'),
-    ('IN-MN' , 'Manipur'),
-    ('IN-ML' , 'Meghalaya'),
-    ('IN-MZ' , 'Mizoram'),
-    ('IN-NL' , 'Nagaland'),
-    ('IN-OR' , 'Odisha'),
-    ('IN-PB' , 'Punjab'),
-    ('IN-RJ' , 'Rajasthan'),
-    ('IN-SK' , 'Sikkim'),
-    ('IN-TN' , 'Tamil Nadu'),
-    ('IN-TG' , 'Telangana'),
-    ('IN-TR' , 'Tripura'),
-    ('IN-UT' , 'Uttarakhand'),
-    ('IN-UP' , 'Uttar Pradesh'),
-    ('IN-WB' , 'West Bengal'),
-    ('IN-AN' , 'Andaman and Nicobar Islands'),
-    ('IN-CH' , 'Chandigarh'),
-    ('IN-DN' , 'Dadra and Nagar Haveli'),
-    ('IN-DD' , 'Daman and Diu'),
-    ('IN-DL' , 'Delhi'),
-    ('IN-LD' , 'Lakshadweep'),
-    ('IN-PY' , 'Puducherry'),
-]
+YEAR_CHOICES = (
+    (1,'First'),
+    (2,'Second'), 
+    (3,'Third'), 
+    (4,'Fourth'),
+    (5,'Fifth'),
+)
 
 class Participant(models.Model):
     id = models.AutoField(primary_key=True)
@@ -51,43 +22,36 @@ class Participant(models.Model):
         max_digits=13,
         decimal_places=0,
         blank=False)
-    emailID= models.EmailField(blank=False)
-    college = models.CharField(max_length=100, blank=False)
-    street = models.CharField(max_length=100, blank=False)
-    locality = models.CharField(max_length=100, blank=False)
-    city = models.CharField(max_length=100, blank=False)
-    state = models.CharField(
-        max_length=5,
-        choices= STATES_CHOICES, 
-        blank=False)
-    pin = models.DecimalField(
-        max_digits=6,
-        decimal_places=0,
-        blank=False)
-
+    emailID = models.EmailField(blank=False)
+    year = models.IntegerField(blank=False, choices=YEAR_CHOICES)
+    college = models.CharField(max_length=255, blank=False)
+    history = HistoricalRecords()
+    
     def __unicode__(self):
-        return 'Participant ' + str(id)
+        return str(self.id) + '-' + self.firstName + ' ' + self.lastName
 
 class ParticipantForm(ModelForm):
     class Meta:
         model = Participant
         fields= '__all__'
         labels = {
-            'firstName': _('First name'),
-            'lastName': _('Last name'),
+            'firstName': _('First Name'),
+            'lastName': _('Last Name'),
             'mobileNo': _('Mobile Number'),
             'emailID': _('EMail ID'),
+            'year': _('Year of Study'),
             'college': _('College'),
-            'street': _('Street'),
-            'locality': _('Locality'),
-            'city': _('City'),
         }
         widgets = {
-            'firstName': TextInput(attrs={'required':'True'}),
-            'lastName': TextInput(attrs={'required':'True'}),
-            'mobileNo': TextInput(attrs={'required':'True'}),
-            'college': TextInput(attrs={'required':'True'}),
-            'street': TextInput(attrs={'required':'True'}),
-            'locality': TextInput(attrs={'required':'True'}),
-            'city': TextInput(attrs={'required':'True'}),
+            'firstName': TextInput(attrs={'required':'True', 'placeholder':'First Name','size':'50'}),
+            'lastName': TextInput(attrs={'required':'True', 'placeholder':'Last Name','size':'50'}),
+            'mobileNo': TextInput(attrs={'required':'True', 'placeholder':'10 digit Mobile Number','maxlength':'10', 'size':'50'}),
+            'emailID': EmailInput(attrs={'required':'True', 'placeholder':'email@domain.com','size':'50'}),
+            'college': TextInput(attrs={'required':'True', 'placeholder':'College','size':'50'}),
         }
+
+class FindForm(forms.Form):
+    participant_mobile = forms.IntegerField(
+        required = True,
+        label='',
+        widget = TextInput(attrs={'required':'True', 'placeholder':'Enter your 10 digit Mobile Number','maxlength':'10', 'size':'50'}))

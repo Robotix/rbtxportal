@@ -1,0 +1,15 @@
+{% extends 'fms/base_site.html' %}
+
+{% block content %}
+<div id="content">
+	<span style="font-family: 'BigNoodle'; font-size: 18pt;"><b>Register your team here:</b></span><br><br>
+	<form method="post" action="{% url 'team:register' %}">
+    {% csrf_token %}
+    <table width="100%">
+    {{ form.as_table }}
+    </table>
+    <input type="submit" value="Register" style="height:40px; width:100px;"/>
+	</form>
+	<a class="gen-btn1" style="top:40%; left:75%;" href="{% url 'index' %}">HOMEPAGE</a>
+</div>
+{% endblock %}

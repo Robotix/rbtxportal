@@ -1,15 +1,18 @@
 from django.contrib import admin
 from team.models import Participant
+from simple_history.admin import SimpleHistoryAdmin
 
 # Register your models here.
 
-class ParticipantAdmin(admin.ModelAdmin):
+class ParticipantAdmin(SimpleHistoryAdmin):
     list_display = (
         'id',
         'firstName',
         'lastName',
         'mobileNo',
-        'emailID',)
+        'emailID',
+        'year',
+        'college')
     list_filter = (
         'id',
         'firstName',

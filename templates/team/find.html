@@ -1,0 +1,22 @@
+{% extends 'fms/base_site.html' %}
+
+{% block header %}
+Participant Registration
+{% endblock %}
+
+{% block content %}
+<div id="content" width="100%">
+<p>
+	<span style="font-family: 'BigNoodle'; font-size: 18pt;"><b>Get your Team ID:</b></span><br><br>
+	<form method="post" action="{% url 'team:find' %}">
+    {% csrf_token %}
+    <table width="100%">
+    {{ form.as_table }}
+    </table>
+    <br /><br />
+    <input type="submit" value="Find" style="height:40px; width:100px;"/>
+	</form>
+	<a class="gen-btn1" style="top:27%; left:75%;" href="{% url 'index' %}">HOMEPAGE</a>
+</p>
+</div>
+{% endblock %}

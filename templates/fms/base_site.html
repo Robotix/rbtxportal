@@ -1,18 +1,20 @@
 <html>
 <! This registration portal was made by Aditya Narayan. Contact: narayanaditya95@gmail.com>
 <head>
-	<title>Robotix 2015</title>
+	<title>Registration Portal</title>
 	{% load staticfiles %}
-	<link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="{% static 'index.css' %}" />
 </head>
 <body>
-
 	<div id="header">
-		<img src="{% static 'rbtx.png' %}" width="250" style="float: left;" />
-		<img src="{% static 'KTJLogo.png' %}" width="250" style="float: right;" />
+		<a href="{% url 'index' %}"><img src="{% static 'rbtx.png' %}" width="250" style="float: left;" /></a>
+		<h1>{% block header %}{% endblock %}</h1>
+		<a href="{% url 'index' %}"><img src="{% static 'KTJLogo.png' %}" width="250" style="float: right;" /></a>
 	</div>
+	<p>
 	{% block content %}
+		{{ content }}
 	{% endblock %}
+	</p>
 </body>
 </html>

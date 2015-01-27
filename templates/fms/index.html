@@ -1,8 +1,13 @@
 {% extends 'fms/base_site.html' %}
 
+{% block header %}
+Registration Portal
+{% endblock %}
+
 {% block content %}
-	<p>
-		<a class="gen-btn1" href="{% url 'participant:register' %}">REGISTER YOURSELF</a>
-		<a class="gen-btn2" href="{% url 'team:register' %}">REGISTER YOUR TEAM</a>
-	</p>
+	<a class="gen-btn1" style="top:25%; left:26.5%;"href="{% url 'participant:register' %}">REGISTER YOURSELF</a><br>
+	<a class="gen-btn1" style="top:25%; left:50%;"href="{% url 'team:register' %}">REGISTER YOUR TEAM</a><br>
+	<a class="gen-btn1" style="top:45%; left:25%;" href="{% url 'participant:find' %}">FORGOT PARTICIPANT ID?</a><br>
+	<a class="gen-btn1" style="top:45%; left:51%;" href="{% url 'team:find' %}">FORGOT TEAM ID?</a><br>
+	<a class="gen-btn1" style="top:90%; left:90%;" href="{% url 'admin:index' %}">TEAM LOGIN</a><br>
 {% endblock %}
