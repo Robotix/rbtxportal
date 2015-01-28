@@ -40,7 +40,10 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'team',
     'participant',
+    'cascade_round_one',
+    'cascade_round_two',
     'simple_history',
+    'tekextensions',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -57,6 +60,7 @@ MIDDLEWARE_CLASSES = (
 TEMPLATE_CONTEXT_PROCESSORS = (
     'django.contrib.auth.context_processors.auth',
     'django.core.context_processors.request',
+    'tekextensions.context_processors.admin_media_prefix',
 )
 
 ROOT_URLCONF = 'fms.urls'

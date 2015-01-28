@@ -23,7 +23,7 @@ def register(request):
             	)
             team_object.save()
             for i in range(int(team_object.participant_number)):
-                team_object.participant.add(get_object_or_404(Participant, id = form.cleaned_data['participant_no_%d' %(i)]))
+                team_object.participant.add(get_object_or_404(Participant, id = form.cleaned_data['participant_no_%d' %(i+1)]))
             return HttpResponseRedirect(reverse('team:status', args=(team_object.id,)))
     else:
         form = TeamForm()

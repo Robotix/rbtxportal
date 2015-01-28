@@ -3,6 +3,8 @@ from django.db import models
 from participant.models import Participant
 from django.utils.translation import ugettext_lazy as _
 from simple_history.models import HistoricalRecords
+from cascade_round_one.models import Cascade_round_one
+from cascade_round_two.models import Cascade_round_two
 
 # Create your models here.
 
@@ -73,7 +75,10 @@ class Team(models.Model):
     	choices=EVENT_CHOICES,
     	blank=False)
     participant = models.ManyToManyField(Participant)
-    # Address
+
+    '''
+        Address Fields.
+        '''
     street = models.CharField(
         max_length=100, 
         blank=False)
@@ -87,14 +92,32 @@ class Team(models.Model):
         max_digits=6,
         decimal_places=0,
         blank=False)
+
     certificate_given = models.BooleanField(
         default=False)
     verified = models.BooleanField(
         default=False)
     history = HistoricalRecords()
-    
+
+    '''
+        Relational database entries for storing scores for each round.
+        '''
+    cascade_round_one = models.ForeignKey(
+        Cascade_round_one,
+        null = True,
+        blank = True,)
+    qualify_round_one = models.BooleanField(
+        default = False,)
+    cascade_round_two = models.ForeignKey(
+        Cascade_round_two,
+        null = True,
+        blank = True,)
+    qualify_round_two = models.BooleanField(
+        default = False)
+        
     def __unicode__(self):
         return '%s-%s' %(self.event, self.number)
+
 
 class TeamForm(forms.Form):
     event = forms.ChoiceField(
@@ -130,10 +153,16 @@ class TeamForm(forms.Form):
         widget = forms.TextInput(attrs={'required':'True', 'placeholder':'Address','size':'75'}))
     pin = forms.IntegerField(
         required = True,
-        widget = forms.TextInput(attrs={'required':'True', 'pattern':'[0-9][0-9][0-9][0-9][0-9][0-9]', 'title':'Enter 6 digit PIN', 'placeholder':'Required','size':'20'}))
+        widget = forms.TextInput(attrs={'required':'True', 'pattern':'[1-9][0-9][0-9][0-9][0-9][0-9]', 'title':'Enter 6 digit PIN', 'placeholder':'Required','size':'20'}))
     state = forms.ChoiceField(
         widget = forms.Select, 
         choices = STATES_CHOICES)
+
+    class Meta:
+        fieldsets = [
+            (_('Team Info'), {'fields': ('event', 'number_of_participants', 'participant_no_1', 'participant_no_2', 'participant_no_3', 'participant_no_4')}),
+            (_('Address'), {'fields': ('street','locality', 'city', 'pin', 'state')}),
+        ]
 
 
 class FindForm(forms.Form):
