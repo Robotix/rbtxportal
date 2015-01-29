@@ -2,6 +2,8 @@ from django.contrib import admin
 from django import forms
 from team.models import Team
 from simple_history.admin import SimpleHistoryAdmin
+from import_export import resources
+from import_export.admin import ImportExportModelAdmin
 from tekextensions.widgets import SelectWithPopUp
 from cascade_round_one.models import Cascade_round_one
 from cascade_round_two.models import Cascade_round_two
@@ -15,13 +17,19 @@ class TeamAdminForm(forms.ModelForm):
         model = Team
         fields = '__all__'
 
-class TeamAdmin(SimpleHistoryAdmin):
+class TeamResource(resources.ModelResource):
+
+    class Meta:
+        model = Team
+
+class TeamAdmin(SimpleHistoryAdmin, ImportExportModelAdmin):
     form = TeamAdminForm
-    list_display = ('__unicode__', 'event', 'number', 'certificate_given', 'verified' )
+    resource_class = TeamResource
+    list_display = ('__unicode__', 'event', 'number', 'certificate_given', 'verified', '__participant_names__' )
     list_filter = ['event', 'certificate_given', 'verified']
     fieldsets = (
         ('Team Info', {
-            'fields': ('event','number','participant_number','participant')
+            'fields': ('event','number','participant_number','participant', 'certificate_given', 'verified')
         }),
         ('Address', {
             'classes': ('collapse',),

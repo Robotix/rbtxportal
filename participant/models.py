@@ -1,6 +1,5 @@
 from django import forms
 from django.db import models
-from django.forms import ModelForm, TextInput, NumberInput, EmailInput
 from django.utils.translation import ugettext_lazy as _
 from simple_history.models import HistoricalRecords
 
@@ -25,12 +24,19 @@ class Participant(models.Model):
     emailID = models.EmailField(blank=False)
     year = models.IntegerField(blank=False, choices=YEAR_CHOICES)
     college = models.CharField(max_length=255, blank=False)
+
     history = HistoricalRecords()
     
+    def __team__(self):
+        team_str = ''
+        for i in self.team.all():
+            team_str += (i.__unicode__()+', ')
+        return team_str
+
     def __unicode__(self):
         return str(self.id) + '-' + self.firstName + ' ' + self.lastName
 
-class ParticipantForm(ModelForm):
+class ParticipantForm(forms.ModelForm):
     class Meta:
         model = Participant
         fields= '__all__'
@@ -43,15 +49,15 @@ class ParticipantForm(ModelForm):
             'college': _('College'),
         }
         widgets = {
-            'firstName': TextInput(attrs={'required':'True', 'placeholder':'First Name','size':'50'}),
-            'lastName': TextInput(attrs={'required':'True', 'placeholder':'Last Name','size':'50'}),
-            'mobileNo': TextInput(attrs={'required':'True', 'pattern':'[7-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]', 'title':'Enter 10 digit valid mobile number','placeholder':'10 digit Mobile Number','maxlength':'10', 'size':'50'}),
-            'emailID': EmailInput(attrs={'required':'True', 'placeholder':'email@domain.com','size':'50'}),
-            'college': TextInput(attrs={'required':'True', 'placeholder':'College','size':'50'}),
+            'firstName': forms.TextInput(attrs={'required':'True', 'placeholder':'First Name','size':'50'}),
+            'lastName': forms.TextInput(attrs={'required':'True', 'placeholder':'Last Name','size':'50'}),
+            'mobileNo': forms.TextInput(attrs={'required':'True', 'pattern':'[7-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]', 'title':'Enter 10 digit valid mobile number','placeholder':'10 digit Mobile Number','maxlength':'10', 'size':'50'}),
+            'emailID': forms.EmailInput(attrs={'required':'True', 'placeholder':'email@domain.com','size':'50'}),
+            'college': forms.TextInput(attrs={'required':'True', 'placeholder':'College','size':'50'}),
         }
 
 class FindForm(forms.Form):
     participant_mobile = forms.IntegerField(
         required = True,
         label='',
-        widget = TextInput(attrs={'required':'True', 'placeholder':'Enter your 10 digit Mobile Number','maxlength':'10', 'size':'50'}))
+        widget = forms.TextInput(attrs={'required':'True', 'placeholder':'Enter your 10 digit Mobile Number','maxlength':'10', 'size':'50'}))

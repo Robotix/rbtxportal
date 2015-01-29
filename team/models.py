@@ -49,9 +49,9 @@ STATES_CHOICES = [
 
 EVENT_CHOICES = (
 	('CA' , 'Cascade'),
-	('SK' , 'SkyFall'),
-	('MI' , 'MineField'),
-	('ST' , 'StepUp'),
+	('SF' , 'SkyFall'),
+	('MF' , 'MineField'),
+	('SU' , 'StepUp'),
 	('AU' , 'Aug-Hit'),
 )
 
@@ -74,7 +74,7 @@ class Team(models.Model):
     	max_length=3,
     	choices=EVENT_CHOICES,
     	blank=False)
-    participant = models.ManyToManyField(Participant)
+    participant = models.ManyToManyField(Participant, related_name='team')
 
     '''
         Address Fields.
@@ -117,6 +117,12 @@ class Team(models.Model):
         
     def __unicode__(self):
         return '%s-%s' %(self.event, self.number)
+
+    def __participant_names__(self):
+        names = ''
+        for i in self.participant.all():
+            names += (i.__unicode__() + ', ')
+        return names
 
 
 class TeamForm(forms.Form):
