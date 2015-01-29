@@ -18,10 +18,7 @@ class ParticipantAdmin(SimpleHistoryAdmin, ImportExportModelAdmin):
         'college',
         '__team__')
     list_filter = (
-        'id',
-        'firstName',
-        'lastName',
-        'mobileNo',
-        'emailID',)
+        'college',
+        'year')
 
 admin.site.register(Participant, ParticipantAdmin)
