@@ -23,7 +23,7 @@ def find(request):
     if request.method == 'POST':
         form = FindForm(request.POST)
         if form.is_valid():
-            participant_object = get_object_or_404(Participant, mobileNo= request.POST['mobile'])
+            participant_object = get_object_or_404(Participant, mobileNo= form.cleaned_data['participant_mobile'])
             return HttpResponseRedirect(reverse('participant:status', args=(participant_object.id,)))
     else:
         form = FindForm()
@@ -31,19 +31,6 @@ def find(request):
         request,
         'participant/find.html',
         {'form': form})
-
-def search(request):
-    if request.method == 'POST':
-        try:
-            participant_object = get_object_or_404(Participant, mobileNo= request.POST['mobile'])
-            return HttpResponseRedirect(reverse('participant:status', args=(participant_object.id,)))
-        except:
-            return render(
-                request,
-                'participant/status.html',
-                { 'content': 'You have registered more than once. Contact the helpdesk.'})
-    else:
-        return Http404
 
 def status(request, id):
     participant_object = get_object_or_404(Participant, id=id)

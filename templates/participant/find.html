@@ -8,7 +8,7 @@ Participant Registration
 <div id="content" width="100%">
 <p>
 	<span style="font-family: 'BigNoodle'; font-size: 18pt;"><b>Get your Participant ID:</b></span><br><br>
-	<form method="post" action="{% url 'participant:search' %}">
+	<form method="post" action="{% url 'participant:find' %}">
     {% csrf_token %}
     <table width="100%">
     {{ form.as_table }}
