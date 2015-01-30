@@ -3,8 +3,6 @@ from django.db import models
 from participant.models import Participant
 from django.utils.translation import ugettext_lazy as _
 from simple_history.models import HistoricalRecords
-from cascade_round_one.models import Cascade_round_one
-from cascade_round_two.models import Cascade_round_two
 
 # Create your models here.
 
@@ -100,21 +98,22 @@ class Team(models.Model):
     history = HistoricalRecords()
 
     '''
-        Relational database entries for storing scores for each round.
+        Database entries for storing scores for each round.
         '''
-    cascade_round_one = models.ForeignKey(
-        Cascade_round_one,
+    round_one = models.IntegerField(
         null = True,
         blank = True,)
     qualify_round_one = models.BooleanField(
         default = False,)
-    cascade_round_two = models.ForeignKey(
-        Cascade_round_two,
+    round_two = models.IntegerField(
         null = True,
         blank = True,)
     qualify_round_two = models.BooleanField(
         default = False)
-        
+    round_three = models.IntegerField(
+        null = True,
+        blank = True)
+
     def __unicode__(self):
         return '%s-%s' %(self.event, self.number)
 

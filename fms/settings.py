@@ -39,8 +39,6 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'team',
     'participant',
-    'cascade_round_one',
-    'cascade_round_two',
     'simple_history',
     'tekextensions',
     'import_export',
