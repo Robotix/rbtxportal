@@ -24,7 +24,7 @@ class TeamAdmin(SimpleHistoryAdmin, ImportExportModelAdmin):
     # form = TeamAdminForm
     resource_class = TeamResource
     list_display = ('__unicode__', 'event', 'number', 'verified', 'round_one','qualify_round_one', 'round_two', 'qualify_round_two', 'round_three', 'certificate_given', '__participant_names__' )
-    list_filter = ['event', 'certificate_given', 'verified', 'qualify_round_one', 'qualify_round_two']
+    list_filter = ['event', 'certificate_given', 'verified', 'qualify_round_one', 'qualify_round_two',]
     fieldsets = (
         ('Team Info', {
             'fields': ('event','number','participant_number','participant', 'certificate_given', 'verified')

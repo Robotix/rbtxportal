@@ -120,7 +120,7 @@ class Team(models.Model):
     def __participant_names__(self):
         names = ''
         for i in self.participant.all():
-            names += (i.__unicode__() + ', ')
+            names += '%s-%s-%s || ' %(i.__unicode__(), str(i.mobileNo), i.college)
         return names
 
 
