@@ -6,6 +6,7 @@ from os.path import join, abspath, dirname
 here = lambda *x: join(abspath(dirname(__file__)), *x)
 PROJECT_ROOT = here("..")
 root = lambda *x: join(abspath(PROJECT_ROOT), *x)
+BASE_DIR = root("..")
 
 sys.path.insert(0, root('apps'))
 
@@ -16,7 +17,7 @@ SECRET_KEY = 'ryewpidEc2ryewpidEc2'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 ADMINS = (
     ('Aditya Narayan', 'aditya.narayan@robotix.in'),
@@ -24,16 +25,23 @@ ADMINS = (
 MANAGERS = ADMINS
 
 INSTALLED_APPS = (
-    'grappelli',
+    'import_export',
+    'jet.dashboard',
+    'jet',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'django.contrib.staticfiles'
+    'django.contrib.staticfiles',
+    'debug_toolbar',
 )
 
-PROJECT_APPS = ()
+PROJECT_APPS = (
+    'participant',
+    'team',
+    'miscellaneous',
+)
 
 INSTALLED_APPS += PROJECT_APPS
 
@@ -100,3 +108,12 @@ TEMPLATES = [
         },
     }
 ]
+
+CACHES = {
+    'default': {
+        'BACKEND': 'django.core.cache.backends.memcached.PyLibMCCache',
+        'LOCATION': '127.0.0.1:11211',
+    }
+}
+
+ADMIN_URL = ''
