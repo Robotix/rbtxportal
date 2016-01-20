@@ -1,11 +1,13 @@
 from django.contrib import admin
-from import_export.admin import ImportExportModelAdmin
+
+from import_export.admin import ExportMixin
+from jet.filters import RelatedFieldAjaxListFilter
 
 from .models import Participant
 
 
 @admin.register(Participant)
-class ParticipantAdmin(ImportExportModelAdmin, admin.ModelAdmin):
+class ParticipantAdmin(ExportMixin, admin.ModelAdmin):
     fieldsets = (
         (None, {
             'fields': (('first_name', 'last_name'),),
@@ -21,7 +23,7 @@ class ParticipantAdmin(ImportExportModelAdmin, admin.ModelAdmin):
         }),
     )
     list_filter = [
-        'college__name',
+        ('college', RelatedFieldAjaxListFilter),
         'college__state',
         'year',
     ]

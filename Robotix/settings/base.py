@@ -25,6 +25,7 @@ ADMINS = (
 MANAGERS = ADMINS
 
 INSTALLED_APPS = (
+    'django_object_actions',
     'import_export',
     'jet.dashboard',
     'jet',
@@ -34,7 +35,6 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'debug_toolbar',
 )
 
 PROJECT_APPS = (
@@ -63,7 +63,7 @@ WSGI_APPLICATION = 'Robotix.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': 'Robotix_test.db',
+        'NAME': 'Robotix2016.db',
         'USER': '',
         'PASSWORD': '',
         'HOST': '',
@@ -115,5 +115,3 @@ CACHES = {
         'LOCATION': '127.0.0.1:11211',
     }
 }
-
-ADMIN_URL = ''

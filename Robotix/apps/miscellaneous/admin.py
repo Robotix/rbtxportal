@@ -1,17 +1,20 @@
 from django.contrib import admin
 
+from import_export.admin import ExportMixin
+
 from .models import *
 
 
 @admin.register(College)
-class CollegeAdmin(admin.ModelAdmin):
+class CollegeAdmin(ExportMixin, admin.ModelAdmin):
     list_display = [
         'name',
+        'abbv',
         'city',
-        'state',
     ]
     search_fields = [
         'name',
+        'abbv',
     ]
     list_filter = [
         'city',
@@ -20,7 +23,7 @@ class CollegeAdmin(admin.ModelAdmin):
 
 
 @admin.register(State)
-class StateAdmin(admin.ModelAdmin):
+class StateAdmin(ExportMixin, admin.ModelAdmin):
     list_filter = [
         'country__name',
     ]
@@ -35,5 +38,5 @@ class StateAdmin(admin.ModelAdmin):
 
 
 @admin.register(Country)
-class CountryAdmin(admin.ModelAdmin):
+class CountryAdmin(ExportMixin, admin.ModelAdmin):
     pass

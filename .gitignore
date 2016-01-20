@@ -70,3 +70,5 @@ node_modules/
 # bower packages
 Robotix/assets-src/vendor/
 .sass-cache/
+
+Robotix_test.db

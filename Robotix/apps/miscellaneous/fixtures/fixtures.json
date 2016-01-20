@@ -216,7 +216,7 @@
         "model":"miscellaneous.state",
         "pk":25,
         "fields":{
-            "name":"Orissa",
+            "name":"Odisha",
             "country":1
         }
     },
@@ -306,6 +306,14 @@
         "fields":{
             "name":"Pondicherry",
             "country":1
+        }
+    },
+    {
+        "model":"miscellaneous.state",
+        "pk":36,
+        "fields":{
+            "name":"Nepal",
+            "country":2
         }
     }
 ]

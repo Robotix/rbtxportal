@@ -2,7 +2,7 @@ from django.db import models
 from django.core.exceptions import ValidationError
 
 from participant.models import Participant
-from miscellaneous.models import College, State
+from miscellaneous.models import College, State, Country
 
 
 class Team(models.Model):
@@ -18,6 +18,9 @@ class Team(models.Model):
     locality    = models.CharField(max_length=100, blank=False)
     city        = models.CharField(max_length=100, blank=False)
     state       = models.ForeignKey(State)
+    country     = models.ForeignKey(Country,
+        default=1
+    )
     pin         = models.IntegerField(blank=False)
 
     certificate = models.BooleanField(
@@ -36,7 +39,7 @@ class Team(models.Model):
     )
     qualify_round_one = models.BooleanField(
         default = False,
-        verbose_name='Qualified Round One'
+        verbose_name='Qualified for Round Two'
     )
     round_two = models.IntegerField(
         null=True,
@@ -45,7 +48,7 @@ class Team(models.Model):
     )
     qualify_round_two = models.BooleanField(
         default = False,
-        verbose_name='Qualified Round Two'
+        verbose_name='Qualified for Round Three'
     )
     round_three = models.IntegerField(
         null=True,
@@ -65,37 +68,32 @@ class DroidBlitz(Team):
     max_team_size = 5
 
     class Meta:
-        verbose_name = 'Droid Blitz'
-        verbose_name_plural = verbose_name
+        verbose_name = 'Droid Blitz Team'
 
 
 class Summit(Team):
     event = 'SM'
 
     class Meta:
-        verbose_name = 'Summit'
-        verbose_name_plural = verbose_name
+        verbose_name = 'Summit Team'
 
 
 class Sherlock(Team):
     event = 'SK'
 
     class Meta:
-        verbose_name = 'Sherlock'
-        verbose_name_plural = verbose_name
+        verbose_name = 'Sherlock Team'
 
 
 class Sheldon(Team):
     event ='SD'
 
     class Meta:
-        verbose_name = 'S.H.E.L.D.O.N.'
-        verbose_name_plural = verbose_name
+        verbose_name = 'S.H.E.L.D.O.N. Team'
 
 
 class Warehouse(Team):
     event = 'WR'
 
     class Meta:
-        verbose_name = 'Warehouse'
-        verbose_name_plural = verbose_name
+        verbose_name = 'Warehouse Team'
