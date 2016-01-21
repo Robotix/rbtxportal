@@ -24,7 +24,9 @@ class Participant(models.Model):
         choices=YEAR_CHOICES,
         verbose_name='Year of study'
     )
-    college     = models.ForeignKey(College)
+    college     = models.ForeignKey(College,
+        help_text='Select others if you cannot find your college'
+    )
 
     @property
     def name(self):

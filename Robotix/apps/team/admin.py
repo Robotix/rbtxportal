@@ -14,12 +14,13 @@ class TeamForm(forms.ModelForm):
         model = Team
         fields = '__all__'
 
-    def clean(self):
+    def clean_participant(self):
         if self.cleaned_data['participant'].count() > self.Meta.model.max_team_size:
             raise forms.ValidationError(
                 'Max team size is '+str(self.Meta.model.max_team_size),
                 code='invalid'
             )
+        return self.cleaned_data['participant']
 
 
 @admin.register(Summit)
@@ -29,10 +30,10 @@ class TeamForm(forms.ModelForm):
 @admin.register(DroidBlitz)
 class TeamAdmin(ExportMixin, DjangoObjectActions, admin.ModelAdmin):
     search_fields = [
-        '=participants__first_name',
-        '=participants__last_name',
-        'participants__email',
-        'participants__mobile',
+        '=participant__first_name',
+        '=participant__last_name',
+        'participant__email',
+        'participant__mobile',
     ]
     actions = [
         'verify',
@@ -60,6 +61,7 @@ class TeamAdmin(ExportMixin, DjangoObjectActions, admin.ModelAdmin):
                     ('state', 'country'),
                 ),
                 'classes': ('wide'),
+                'description': 'Enter the complete address. We may have to post certificates to this address.',
             }),
             ('Scoring', {
                 'fields': (
