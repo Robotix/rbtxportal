@@ -14,6 +14,12 @@ class Team(models.Model):
     )
     max_team_size = 4
 
+    name        = models.CharField(
+        max_length=50,
+        blank=False,
+        verbose_name='Receiver\'s Name',
+        help_text='Provide Team leader\'s or caretaker\'s full name'
+    )
     street      = models.CharField(max_length=100, blank=False)
     locality    = models.CharField(max_length=100, blank=False)
     city        = models.CharField(max_length=100, blank=False)

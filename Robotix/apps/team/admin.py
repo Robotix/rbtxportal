@@ -54,6 +54,7 @@ class TeamAdmin(ExportMixin, DjangoObjectActions, admin.ModelAdmin):
             }),
             ('Complete Postal Address', {
                 'fields': (
+                    ('name',),
                     ('street', 'locality'),
                     ('city', 'pin'),
                     ('state', 'country'),
@@ -82,7 +83,7 @@ class TeamAdmin(ExportMixin, DjangoObjectActions, admin.ModelAdmin):
     def get_list_display(self, request, obj=None, **kwargs):
         list_display = [
             'round_one',
-            'qualify_round_two',
+            'qualify_round_one',
             'round_two',
             'qualify_round_two',
             'round_three',

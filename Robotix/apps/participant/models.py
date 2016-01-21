@@ -6,8 +6,8 @@ from .utils import *
 
 
 class Participant(models.Model):
-    first_name  = models.CharField(max_length=50, blank= False)
-    last_name   = models.CharField(max_length=50, blank=False)
+    first_name  = models.CharField(max_length=50, blank=False)
+    last_name   = models.CharField(max_length=50, blank=True)
     mobile      = models.BigIntegerField(
         blank=False,
         verbose_name='Mobile Number',

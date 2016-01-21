@@ -31,6 +31,7 @@ class ParticipantAdmin(ExportMixin, admin.ModelAdmin):
         'name',
         'email',
         'mobile',
+        'college',
     ]
     search_fields = [
         '=first_name',
