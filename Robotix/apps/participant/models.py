@@ -30,7 +30,7 @@ class Participant(models.Model):
 
     @property
     def name(self):
-        return '{} {}'.format(self.first_name, self.last_name)
+        return '{} {}'.format(self.first_name, self.last_name).title()
 
     @staticmethod
     def autocomplete_search_fields():
