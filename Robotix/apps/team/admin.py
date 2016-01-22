@@ -184,16 +184,25 @@ class TeamAdmin(ExportMixin, DjangoObjectActions, admin.ModelAdmin):
 @admin.register(Summit)
 class SummitAdmin(TeamAdmin):
     form = TeamFormFactory(Summit)
+    inlines = [
+        TeamInlineFactory(Summit),
+    ]
 
 
 @admin.register(Sheldon)
 class SheldonAdmin(TeamAdmin):
     form = TeamFormFactory(Sheldon)
+    inlines = [
+        TeamInlineFactory(Sheldon),
+    ]
 
 
 @admin.register(DroidBlitz)
 class DroidBlitzAdmin(TeamAdmin):
     form = TeamFormFactory(DroidBlitz)
+    inlines = [
+        TeamInlineFactory(DroidBlitz),
+    ]
 
 
 @admin.register(Sherlock)
@@ -207,4 +216,7 @@ class SherlockAdmin(TeamAdmin):
 @admin.register(Warehouse)
 class WarehouseAdmin(TeamAdmin):
     form = TeamFormFactory(Warehouse)
+    inlines = [
+        TeamInlineFactory(Warehouse),
+    ]
 
