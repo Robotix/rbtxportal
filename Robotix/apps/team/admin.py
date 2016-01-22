@@ -8,6 +8,14 @@ from django_object_actions import DjangoObjectActions
 from .models import *
 
 
+def TeamInlineFactory(event):
+    class TeamInline(admin.StackedInline):
+        model = event.participant.through
+        extra = 0
+
+    return TeamInline
+
+
 def TeamFormFactory(event):
     class TeamForm(forms.ModelForm):
 
@@ -42,6 +50,7 @@ class TeamAdmin(ExportMixin, DjangoObjectActions, admin.ModelAdmin):
         'verify_this',
         'qualify_this',
         'print_participation',
+        'print_appreciation',
     ]
 
     def get_fieldsets(self, request, obj=None, **kwargs):
@@ -136,6 +145,28 @@ class TeamAdmin(ExportMixin, DjangoObjectActions, admin.ModelAdmin):
         return response
     print_participation.label = 'Print Participation Certificates'
 
+
+    def print_appreciation(self, request, team):
+        from reportlab.pdfgen import canvas
+        from reportlab.lib.units import inch
+        response = HttpResponse(content_type='application/pdf')
+        response['Content-Disposition'] = 'attachment; filename="Certificate-{}.pdf"'.format(team)
+        p = canvas.Canvas(response)
+        for participant in team.participant.all():
+            text_obj = p.beginText()
+            text_obj.setFont('Helvetica-Oblique', 16)
+            text_obj.setTextOrigin(3.5*inch, 6*inch)
+            text_obj.textLine(participant.name.title())
+            text_obj.setTextOrigin(1.5*inch, 5.5*inch)
+            text_obj.textLine(participant.college.name)
+            text_obj.setTextOrigin(4*inch, 5.05*inch)
+            text_obj.textLine(self.form.Meta.model._meta.verbose_name)
+            p.drawText(text_obj)
+            p.showPage()
+        p.save()
+        return response
+    print_appreciation.label = 'Print Appreciation Certificates'
+
     def verify_this(self, request, team):
         team.verification=True
         team.save()
@@ -168,6 +199,9 @@ class DroidBlitzAdmin(TeamAdmin):
 @admin.register(Sherlock)
 class SherlockAdmin(TeamAdmin):
     form = TeamFormFactory(Sherlock)
+    inlines = [
+        TeamInlineFactory(Sherlock),
+    ]
 
 
 @admin.register(Warehouse)
