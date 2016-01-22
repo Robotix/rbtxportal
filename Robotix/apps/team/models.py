@@ -74,32 +74,37 @@ class DroidBlitz(Team):
     max_team_size = 5
 
     class Meta:
-        verbose_name = 'Droid Blitz Team'
+        verbose_name = 'Droid Blitz'
+        verbose_name_plural = verbose_name
 
 
 class Summit(Team):
     event = 'SM'
 
     class Meta:
-        verbose_name = 'Summit Team'
+        verbose_name = 'Summit'
+        verbose_name_plural = verbose_name
 
 
 class Sherlock(Team):
     event = 'SK'
 
     class Meta:
-        verbose_name = 'Sherlock Team'
+        verbose_name = 'Sherlock'
+        verbose_name_plural = verbose_name
 
 
 class Sheldon(Team):
     event ='SD'
 
     class Meta:
-        verbose_name = 'S.H.E.L.D.O.N. Team'
+        verbose_name = 'S.H.E.L.D.O.N.'
+        verbose_name_plural = verbose_name
 
 
 class Warehouse(Team):
     event = 'WR'
 
     class Meta:
-        verbose_name = 'Warehouse Team'
+        verbose_name = 'Warehouse'
+        verbose_name_plural = verbose_name

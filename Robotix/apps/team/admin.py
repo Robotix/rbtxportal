@@ -8,26 +8,24 @@ from django_object_actions import DjangoObjectActions
 from .models import *
 
 
-class TeamForm(forms.ModelForm):
+def TeamFormFactory(event):
+    class TeamForm(forms.ModelForm):
 
-    class Meta:
-        model = Team
-        fields = '__all__'
+        class Meta:
+            model = event
+            fields = '__all__'
 
-    def clean_participant(self):
-        if self.cleaned_data['participant'].count() > self.Meta.model.max_team_size:
-            raise forms.ValidationError(
-                'Max team size is '+str(self.Meta.model.max_team_size),
-                code='invalid'
-            )
-        return self.cleaned_data['participant']
+        def clean_participant(self):
+            if self.cleaned_data['participant'].count() > self.Meta.model.max_team_size:
+                raise forms.ValidationError(
+                    'Max team size is '+str(self.Meta.model.max_team_size),
+                    code='invalid'
+                )
+            return self.cleaned_data['participant']
+
+    return TeamForm
 
 
-@admin.register(Summit)
-@admin.register(Warehouse)
-@admin.register(Sherlock)
-@admin.register(Sheldon)
-@admin.register(DroidBlitz)
 class TeamAdmin(ExportMixin, DjangoObjectActions, admin.ModelAdmin):
     search_fields = [
         '=participant__first_name',
@@ -43,9 +41,8 @@ class TeamAdmin(ExportMixin, DjangoObjectActions, admin.ModelAdmin):
     objectactions = [
         'verify_this',
         'qualify_this',
-        'print_this',
+        'print_participation',
     ]
-    form = TeamForm
 
     def get_fieldsets(self, request, obj=None, **kwargs):
         fieldsets = [
@@ -118,22 +115,26 @@ class TeamAdmin(ExportMixin, DjangoObjectActions, admin.ModelAdmin):
         self.message_user(request, '{} teams are qualified to Round Three')
     qualify_to_round_three.short_description = 'Qualify these teams to Round Three'
 
-    def print_this(self, request, team):
+    def print_participation(self, request, team):
         from reportlab.pdfgen import canvas
         from reportlab.lib.units import inch
         response = HttpResponse(content_type='application/pdf')
         response['Content-Disposition'] = 'attachment; filename="Certificate-{}.pdf"'.format(team)
         p = canvas.Canvas(response)
-        text_obj = p.beginText()
-        text_obj.setFont('Helvetica-Oblique', 14)
-        text_obj.setTextOrigin(2*inch, 6.6*inch)
-        text_obj.textLine(team.participant.first().name)
-
-        p.drawText(text_obj)
-        p.showPage()
+        for participant in team.participant.all():
+            text_obj = p.beginText()
+            text_obj.setFont('Helvetica-Oblique', 16)
+            text_obj.setTextOrigin(3.7*inch, 6*inch)
+            text_obj.textLine(participant.name.title())
+            text_obj.setTextOrigin(1.5*inch, 5.5*inch)
+            text_obj.textLine(participant.college.name)
+            text_obj.setTextOrigin(3*inch, 5*inch)
+            text_obj.textLine(self.form.Meta.model._meta.verbose_name)
+            p.drawText(text_obj)
+            p.showPage()
         p.save()
         return response
-    print_this.label = 'Print Certificates'
+    print_participation.label = 'Print Participation Certificates'
 
     def verify_this(self, request, team):
         team.verification=True
@@ -147,3 +148,29 @@ class TeamAdmin(ExportMixin, DjangoObjectActions, admin.ModelAdmin):
             team.qualify_round_one = True
         team.save()
     qualify_this.label = 'Qualify to the next Round'
+
+
+@admin.register(Summit)
+class SummitAdmin(TeamAdmin):
+    form = TeamFormFactory(Summit)
+
+
+@admin.register(Sheldon)
+class SheldonAdmin(TeamAdmin):
+    form = TeamFormFactory(Sheldon)
+
+
+@admin.register(DroidBlitz)
+class DroidBlitzAdmin(TeamAdmin):
+    form = TeamFormFactory(DroidBlitz)
+
+
+@admin.register(Sherlock)
+class SherlockAdmin(TeamAdmin):
+    form = TeamFormFactory(Sherlock)
+
+
+@admin.register(Warehouse)
+class WarehouseAdmin(TeamAdmin):
+    form = TeamFormFactory(Warehouse)
+
