@@ -1,6 +1,7 @@
 from django.contrib import admin
 
 from import_export.admin import ExportMixin
+from import_export import resources
 from jet.filters import RelatedFieldAjaxListFilter
 
 from .models import Participant
@@ -27,8 +28,19 @@ class TeamListFilter(admin.SimpleListFilter):
         return queryset
 
 
+class ParticipantResource(resources.ModelResource):
+
+    class Meta:
+        model = Participant
+        use_transactions = True
+
+    def dehydrate_college(self, participant):
+        return '{}, {}'.format(participant.college.name, participant.college.city)
+
+
 @admin.register(Participant)
 class ParticipantAdmin(ExportMixin, admin.ModelAdmin):
+    resource_class = ParticipantResource
     fieldsets = (
         (None, {
             'fields': (('first_name', 'last_name'),),

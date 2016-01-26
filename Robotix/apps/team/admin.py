@@ -3,7 +3,7 @@ from django.contrib import admin
 from django import forms
 
 from import_export.admin import ExportMixin
-from import_export import resources, widgets
+from import_export import resources
 from django_object_actions import DjangoObjectActions
 
 from .models import *
@@ -42,10 +42,16 @@ class TeamResource(resources.ModelResource):
 
     def dehydrate_participant(self, team):
         import os
-        p = ''
-        for participant in team.participant.all():
-            p += '{}({}){}'.format(participant.name, participant.mobile, os.linesep)
-        return p
+        return os.linesep.join(
+            '{} ({})'.format(participant.name, participant.mobile) \
+            for participant in team.participant.all()
+        )
+
+    def dehydrate_state(self, team):
+        return team.state.name
+
+    def dehydrate_country(self, team):
+        return team.country.name
 
 
 class TeamAdmin(ExportMixin, DjangoObjectActions, admin.ModelAdmin):
