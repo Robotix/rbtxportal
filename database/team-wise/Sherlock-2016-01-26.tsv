@@ -1,0 +1,69 @@
+id	participant	name	street	locality	city	state	country	pin	certificate	verification	round_one	qualify_round_one	round_two	qualify_round_two	round_three
+23	"Rohit Suri (9038168892)
+Sonali Agrawal (9438372535)
+Prasanmit Nath (9437463212)
+Omprakash Patra (9439156469)"	Rohit Suri	V.S. Hall F-331	NIT Rourkela	Rourkela	Orissa	India	769008	0	1	2210	1		0	
+22	"Mahesh Guin (7077105367)
+Bikash Sahoo (9937580268)
+Sagnik Basu (8337942928)
+Sambeet Sahoo (8763178360)"	MAHESH GUIN	A-222,DBA HALL OF RESIDENCE	NIT ROURKELA	ROURKELA	Orissa	India	769008	0	1		0		0	
+21	"Soumyajit Das (8293958046)
+Niraj Niral (9093816620)
+Muppana Sashi Kumar (9804164360)
+Ankit Kumar (7890155085)"	Ganesh Das	72 Block,Word no-19	Subhaspally	Kharagpur	West Bengal	India	721301	0	1	1040	1		0	
+20	"Sumit Chattoraj (8759778815)
+Neha . (9093679862)
+Tauquir Alam (9748931589)
+Deepika Kumari (7864953303)"	SUMIT CHATTORAJ	S.B. GORAI ROAD	OPPOSITE TULSI RANI SCHOOL,ISMILE MORE	ASANSOL	West Bengal	India	713301	0	1	860	0		0	
+19	"Saurabh Mirani (9881102422)
+Pranit Bauva (9932433282)
+Anubhav Jain (9932553778)"	Pranit Bauva	D-508, LBS Hall	IIT Kharagpur	Kharagpur	West Bengal	India	721302	0	1		0		0	
+18	"Shubham Chakraborty (8013435517)
+Aparajita  (7686870271)"	Shubham Chakraborty	4 No. Khalisakota Pally, P.O. Rajbari	P.O. Rajbari	Kolkata	West Bengal	India	700081	0	1		0		0	
+17	"Swetabh Tripathi (9406852325)
+Yash Shrivastava (8989040303)"	Yash Shrivastava	E-17, New Officer's Colony	Tili Road	Sagar	Madhya Pradesh	India	470001	0	0		0		0	
+16	"Aman Chandra (8987272929)
+Akash Gholap (8433896787)
+Ashish Kumar (9609775739)
+Vivek Anand (8697601042)"	Aman Chandra	Room No BC 302	LBS HALL, IIT KGP	Kharagpur	West Bengal	India	721302	0	1		0		0	
+15	"Shivang Agrawal (9530104509)
+Shubham Arora (9800364888)
+Vinay Shikhar (9932541952)"	Shivang agrawal	BC 503	LBS	Kharagpur	West Bengal	India	721302	0	1	2080	1		0	
+14	Aman` Gupta (9474005270)	Aman Gupta	D 305 RP Hall	IIT	KGP	West Bengal	India	721302	0	1		0		0	
+13	"Faizaan Khan (9832710273)
+Rishav Saigal (9804735299)
+Avinash Chauhan (8013036127)
+Shashank Shekhar (9874695816)"	FAIZAAN AHMED KHAN	195 NEW POORBAYAN	BASUNDHRA , NEAR CHINGRIGHATA	KOLKATA	West Bengal	India	700105	0	1		0		0	
+12	"Milan Mukherjee (9051388663)
+Vishal Dey (7602995238)
+Alokedip Chowdhury (8697376954)
+Arghyanil Dey (7063214601)"	MILAN MUKHERJEE	college road	IIEST CAMPUS,B.GARDEN	SHIBPUR	West Bengal	India	711103	0	1		0		0	
+11	"Tejus Gupta (9547489102)
+Swastik Haldar (7044249864)
+Nilabh Kumar (8436967770)
+Aakash Yadav (8670847013)"	Room no-C215, Lal Bahadur Sastri Hall	Near gymkhana	IIT  campus	Kharagpur	West Bengal	India	721302	0	1		0		0	
+10	"Kaushal Kishore (9556425083)
+Subhashish Bishoyi (9556425083)"	kaushal kishore	c/o-ajit kumar tulo	gunupur	lane 5,niladri bihar,balram nagar,gunupur	Orissa	India	765022	0	1		0		0	
+9	"Soham Poddar (9163642188)
+Deepayan Bardhan (8697857008)
+Souradip Banerjee (8900702744)"	Soham Poddar	Krishnanagar Road	Kalpukur	Barasat	West Bengal	India	700126	0	1		0		0	
+8	"Kaushal Kishore (9556425083)
+Subhashish Bishoyi (9556425083)"	Kaushal Kishore	c/o-ajit kumar tulo lane 5,niladribihar,gunupur	gunupur	rayagada	Orissa	India	765022	0	0		0		0	
+7	"Md Nasirul Haque (9007767313)
+Subham Sinha (8336051578)
+Sabyasachi Nandy (7278643012)"	Md Nasirul Haque	7 A west Row	Park Circus	kolkata	West Bengal	India	700017	0	1		0		0	
+6	"Saswat Khuntia (9932211522)
+Parantap Dansana (9002964111)"	Saswat Khuntia	LBS hall	IIT Kharagpur	Kharagpur	West Bengal	India	721302	0	0		0		0	
+5	"Sayoni Dutta Roy (8981104529)
+Ujan Deb (8902499661)"	sayoni dutta roy	anwar shah road,tollygunge	swiss park	kolkata	West Bengal	India	700033	0	1	2020	1		0	
+4	"Vaibhav Garg (9720647434)
+Siddharth Gupta (9720647434)"	vaibhav garg	Railway Road	Radhapuri	Hapur	Uttar Pradesh	India	245101	0	1		0		0	
+3	"Pranjal Pandey (8512818477)
+Tushar Nand (8826039484)"	Pranjal Pandey	A-704,Exotica Eastern Court	Crossing republik	Ghaziabad	Uttar Pradesh	India	201016	0	1		0		0	
+2	"Subhannita Sarcar (9434254592)
+Somjit Nath (9038095340)
+Paramita Banerjee (8420750903)"	Subhannita Sarcar	20/1A Baishnabghata Road	Naktala	Kolkata	West Bengal	India	700047	0	1	1720	1		0	
+1	"Kumar Aishwary (9124118962)
+Salona Das (9861960287)
+Sambit Sourav (8763073682)
+Subham Sengupta (9502081066)"	Kumar Aishwary	H No. 169, Katra Street	Kanwari Ganj	Aligarh	Uttar Pradesh	India	202001	0	0		0		0	
