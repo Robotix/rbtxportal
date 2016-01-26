@@ -3,6 +3,7 @@ from django.contrib import admin
 from django import forms
 
 from import_export.admin import ExportMixin
+from import_export import resources, widgets
 from django_object_actions import DjangoObjectActions
 
 from .models import *
@@ -33,8 +34,22 @@ def TeamFormFactory(event):
 
     return TeamForm
 
+class TeamResource(resources.ModelResource):
+
+    class Meta:
+        model = Warehouse
+        use_transactions = True
+
+    def dehydrate_participant(self, team):
+        import os
+        p = ''
+        for participant in team.participant.all():
+            p += '{}({}){}'.format(participant.name, participant.mobile, os.linesep)
+        return p
+
 
 class TeamAdmin(ExportMixin, DjangoObjectActions, admin.ModelAdmin):
+    resource_class = TeamResource
     search_fields = [
         '=participant__first_name',
         '=participant__last_name',
@@ -136,6 +151,8 @@ class TeamAdmin(ExportMixin, DjangoObjectActions, admin.ModelAdmin):
             text_obj.setTextOrigin(3.7*inch, 6*inch)
             text_obj.textLine(participant.name.title())
             text_obj.setTextOrigin(1.5*inch, 5.5*inch)
+            if len(participant.college.name) > 60:
+                text_obj.setHorizScale(80)
             text_obj.textLine(participant.college.name)
             text_obj.setTextOrigin(3*inch, 5*inch)
             text_obj.textLine(self.form.Meta.model._meta.verbose_name)
@@ -158,6 +175,8 @@ class TeamAdmin(ExportMixin, DjangoObjectActions, admin.ModelAdmin):
             text_obj.setTextOrigin(3.5*inch, 6*inch)
             text_obj.textLine(participant.name.title())
             text_obj.setTextOrigin(1.5*inch, 5.5*inch)
+            if len(participant.college.name) > 60:
+                text_obj.setHorizScale(80)
             text_obj.textLine(participant.college.name)
             text_obj.setTextOrigin(4*inch, 5.05*inch)
             text_obj.textLine(self.form.Meta.model._meta.verbose_name)
