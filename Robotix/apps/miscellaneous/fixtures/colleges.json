@@ -251,16 +251,6 @@
     },
     {
         "model":"miscellaneous.college",
-        "pk":26,
-        "fields":{
-            "name":"Indian Institute Of Engineering & Science University",
-            "abbv":"IIEST Shibpur",
-            "city":"Shibpur",
-            "state":1
-        }
-    },
-    {
-        "model":"miscellaneous.college",
         "pk":27,
         "fields":{
             "name":"Bengal Institute of Technology",
@@ -935,7 +925,7 @@
         "fields":{
             "name":"Indian Institute of Engineering Science and Technology",
             "abbv":"IIEST Shibpur",
-            "city":"Hawrah",
+            "city":"Shibpur",
             "state":1
         }
     },
@@ -1034,7 +1024,7 @@
         "pk":104,
         "fields":{
             "name":"Indian Institute of Technology Kharagpur",
-            "abbv":"IIT Kharagpur",
+            "abbv":"IIT KGP",
             "city":"Kharagpur",
             "state":1
         }
@@ -1164,8 +1154,8 @@
         "pk":117,
         "fields":{
             "name":"Institute of Technical Education and Research",
-            "abbv":"ITER Bubhneshwar",
-            "city":"Bhubhneswar",
+            "abbv":"ITER Bhubaneswar",
+            "city":"Bhubaneswar",
             "state":25
         }
     },
@@ -1774,8 +1764,8 @@
         "pk":178,
         "fields":{
             "name":"Neotia Institute Of Technology Management And Science",
-            "abbv":"NITMS Bengaluru",
-            "city":"Bengalore",
+            "abbv":"NITMS Bangalore",
+            "city":"Bangalore",
             "state":2
         }
     },
@@ -2557,6 +2547,166 @@
             "abbv":"YCCE Nagpur",
             "city":"Nagpur",
             "state":6
+        }
+    },
+    {
+        "model":"miscellaneous.college",
+        "pk":257,
+        "fields":{
+            "name":"Others",
+            "abbv":"other",
+            "city":"___",
+            "state":36
+        }
+    },
+    {
+        "model":"miscellaneous.college",
+        "pk":258,
+        "fields":{
+            "name":"Gandhi Institute of Engineering Technology",
+            "abbv":"GIET Gunupur",
+            "city":"Gunupur",
+            "state":25
+        }
+    },
+    {
+        "model":"miscellaneous.college",
+        "pk":259,
+        "fields":{
+            "name":"Techno India University",
+            "abbv":"TIU Kolkata",
+            "city":"Kolkata",
+            "state":1
+        }
+    },
+    {
+        "model":"miscellaneous.college",
+        "pk":260,
+        "fields":{
+            "name":"College of Engineering, Roorkee",
+            "abbv":"COE Roorkee",
+            "city":"Roorkee",
+            "state":7
+        }
+    },
+    {
+        "model":"miscellaneous.college",
+        "pk":261,
+        "fields":{
+            "name":"Government College of Engineering Kalahandi",
+            "abbv":"GCEK Bhawanipatna",
+            "city":"Bhawanipatna",
+            "state":25
+        }
+    },
+    {
+        "model":"miscellaneous.college",
+        "pk":262,
+        "fields":{
+            "name":"Indian Institute of Information Technology Kota",
+            "abbv":"IIIT Kota",
+            "city":"Kota",
+            "state":10
+        }
+    },
+    {
+        "model":"miscellaneous.college",
+        "pk":263,
+        "fields":{
+            "name":"Bengal College of Engineering & Technology for Women",
+            "abbv":"BCETW Durgapur",
+            "city":"Durgapur",
+            "state":1
+        }
+    },
+    {
+        "model":"miscellaneous.college",
+        "pk":264,
+        "fields":{
+            "name":"Konark Institute of Science & Technology",
+            "abbv":"KIST Bhubaneswar",
+            "city":"Bhubaneswar",
+            "state":25
+        }
+    },
+    {
+        "model":"miscellaneous.college",
+        "pk":265,
+        "fields":{
+            "name":"Swami Vivekananda Institute of Science & Technology",
+            "abbv":"SVIST Sonarpur",
+            "city":"Sonarpur",
+            "state":1
+        }
+    },
+    {
+        "model":"miscellaneous.college",
+        "pk":266,
+        "fields":{
+            "name":"Techno India Salt Lake",
+            "abbv":"TISL Kolkata",
+            "city":"Kolkata",
+            "state":1
+        }
+    },
+    {
+        "model":"miscellaneous.college",
+        "pk":267,
+        "fields":{
+            "name":"Greater Kolkata College of Engineering & Management",
+            "abbv":"GKCEM Kolkata",
+            "city":"Kolkata",
+            "state":1
+        }
+    },
+    {
+        "model":"miscellaneous.college",
+        "pk":268,
+        "fields":{
+            "name":"Centurion University of Technology & Management",
+            "abbv":"CUTM Bhubaneswar",
+            "city":"Bhubaneswar",
+            "state":25
+        }
+    },
+    {
+        "model":"miscellaneous.college",
+        "pk":269,
+        "fields":{
+            "name":"Future Institute of Technology",
+            "abbv":"FIT Kolkata",
+            "city":"Kolkata",
+            "state":1
+        }
+    },
+    {
+        "model":"miscellaneous.college",
+        "pk":270,
+        "fields":{
+            "name":"Shri Shankaracharya Group of Institutions",
+            "abbv":"SSGI Durg",
+            "city":"Durg",
+            "state":17
+        }
+    },
+    {
+        "model":"miscellaneous.college",
+        "pk":271,
+        "fields":{
+            "name":"National Institute of Technical Teacher's Training & Research",
+            "abbv":"NITTTR Chandigarh",
+            "city":"Chandigarh",
+            "state":31
+        }
+    },
+    {
+        "model":"miscellaneous.college",
+        "pk":272,
+        "fields":{
+            "name":"Birla Institute of Technology Mesra, Patna Campus",
+            "abbv":"BIT Mesra Patna Campus",
+            "city":"Patna",
+            "state":16
         }
     }
 ]
