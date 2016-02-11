@@ -4,6 +4,9 @@ from import_export.admin import ExportMixin
 from import_export import resources
 from jet.filters import RelatedFieldAjaxListFilter
 
+from team.models import *
+from team.admin import TeamInlineFactory
+
 from .models import Participant
 
 
@@ -13,7 +16,7 @@ class TeamListFilter(admin.SimpleListFilter):
 
     def lookups(self, request, model_admin):
         return (
-            ('droidblitz', 'Droid Blitz'), 
+            ('droidblitz', 'Droid Blitz'),
             ('summit', 'Summit'),
             ('sherlock', 'Sherlock'),
             ('sheldon', 'S.H.E.L.D.O.N.'),
@@ -72,4 +75,11 @@ class ParticipantAdmin(ExportMixin, admin.ModelAdmin):
         '=last_name',
         'email',
         'mobile',
+    ]
+    inlines = [
+        TeamInlineFactory(DroidBlitz),
+        TeamInlineFactory(Summit),
+        TeamInlineFactory(Sherlock),
+        TeamInlineFactory(Sheldon),
+        TeamInlineFactory(Warehouse),
     ]

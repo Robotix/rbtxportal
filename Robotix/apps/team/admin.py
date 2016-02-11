@@ -6,6 +6,8 @@ from import_export.admin import ExportMixin
 from import_export import resources
 from django_object_actions import DjangoObjectActions
 
+from miscellaneous.models import College
+
 from .models import *
 
 
@@ -15,6 +17,19 @@ def TeamInlineFactory(event):
         extra = 0
 
     return TeamInline
+
+
+class ParticipantCollegeFilter(admin.SimpleListFilter):
+    title = 'College'
+    parameter_name = 'college'
+
+    def lookups(self, request, model_admin):
+        return College.objects.values_list('pk', 'name')
+
+    def queryset(self, request, queryset):
+        if self.value():
+            return queryset.filter(participant__college=self.value()).distinct()
+        return queryset
 
 
 def TeamFormFactory(event):
@@ -123,6 +138,7 @@ class TeamAdmin(ExportMixin, DjangoObjectActions, admin.ModelAdmin):
 
     def get_list_filter(self, request, obj=None, **kwargs):
         list_filter = [
+            ParticipantCollegeFilter,
             'qualify_round_one',
             'qualify_round_two',
         ]
@@ -244,4 +260,3 @@ class WarehouseAdmin(TeamAdmin):
     inlines = [
         TeamInlineFactory(Warehouse),
     ]
-
