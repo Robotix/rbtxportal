@@ -15,7 +15,7 @@ sys.path.insert(0, root('apps'))
 SECRET_KEY = 'ryewpidEc2ryewpidEc2'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
