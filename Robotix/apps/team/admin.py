@@ -52,7 +52,7 @@ def TeamFormFactory(event):
 class TeamResource(resources.ModelResource):
 
     class Meta:
-        model = Warehouse
+        model = Conquest
         use_transactions = True
 
     def dehydrate_participant(self, team):
@@ -222,41 +222,25 @@ class TeamAdmin(ExportMixin, DjangoObjectActions, admin.ModelAdmin):
     qualify_this.label = 'Qualify to the next Round'
 
 
-@admin.register(Summit)
-class SummitAdmin(TeamAdmin):
-    form = TeamFormFactory(Summit)
+@admin.register(BombDisposal)
+class BombDisposalAdmin(TeamAdmin):
+    form = TeamFormFactory(BombDisposal)
     inlines = [
-        TeamInlineFactory(Summit),
+        TeamInlineFactory(BombDisposal),
     ]
 
 
-@admin.register(Sheldon)
-class SheldonAdmin(TeamAdmin):
-    form = TeamFormFactory(Sheldon)
+@admin.register(Conquest)
+class ConquestAdmin(TeamAdmin):
+    form = TeamFormFactory(Conquest)
     inlines = [
-        TeamInlineFactory(Sheldon),
+        TeamInlineFactory(Conquest),
     ]
 
 
-@admin.register(DroidBlitz)
-class DroidBlitzAdmin(TeamAdmin):
-    form = TeamFormFactory(DroidBlitz)
+@admin.register(Bricks)
+class BricksAdmin(TeamAdmin):
+    form = TeamFormFactory(Bricks)
     inlines = [
-        TeamInlineFactory(DroidBlitz),
-    ]
-
-
-@admin.register(Sherlock)
-class SherlockAdmin(TeamAdmin):
-    form = TeamFormFactory(Sherlock)
-    inlines = [
-        TeamInlineFactory(Sherlock),
-    ]
-
-
-@admin.register(Warehouse)
-class WarehouseAdmin(TeamAdmin):
-    form = TeamFormFactory(Warehouse)
-    inlines = [
-        TeamInlineFactory(Warehouse),
+        TeamInlineFactory(Bricks),
     ]

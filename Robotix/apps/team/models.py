@@ -68,43 +68,24 @@ class Team(models.Model):
     class Meta:
         abstract = True
 
-
-class DroidBlitz(Team):
-    event = 'DB'
-    max_team_size = 5
+class BombDisposal(Team):
+    event = 'BD'
 
     class Meta:
-        verbose_name = 'Droid Blitz'
+        verbose_name = 'BombDisposal'
+        verbose_name_plural = verbose_name
+
+class Conquest(Team):
+    event ='CQ'
+
+    class Meta:
+        verbose_name = 'Conquest'
         verbose_name_plural = verbose_name
 
 
-class Summit(Team):
-    event = 'SM'
+class Bricks(Team):
+    event = 'BR'
 
     class Meta:
-        verbose_name = 'Summit'
-        verbose_name_plural = verbose_name
-
-
-class Sherlock(Team):
-    event = 'SK'
-
-    class Meta:
-        verbose_name = 'Sherlock'
-        verbose_name_plural = verbose_name
-
-
-class Sheldon(Team):
-    event ='SD'
-
-    class Meta:
-        verbose_name = 'S.H.E.L.D.O.N.'
-        verbose_name_plural = verbose_name
-
-
-class Warehouse(Team):
-    event = 'WR'
-
-    class Meta:
-        verbose_name = 'Warehouse'
+        verbose_name = 'B.R.I.C.K.S'
         verbose_name_plural = verbose_name

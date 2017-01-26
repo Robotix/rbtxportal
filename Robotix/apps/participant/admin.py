@@ -16,11 +16,9 @@ class TeamListFilter(admin.SimpleListFilter):
 
     def lookups(self, request, model_admin):
         return (
-            ('droidblitz', 'Droid Blitz'),
-            ('summit', 'Summit'),
-            ('sherlock', 'Sherlock'),
-            ('sheldon', 'S.H.E.L.D.O.N.'),
-            ('warehouse', 'Warehouse'),
+            ('bombdisposal', 'Bomb Disposal'),
+            ('conquest', 'Conquest'),
+            ('bricks', 'B.R.I.C.K.S'),
         )
 
     def queryset(self, request, queryset):
@@ -77,9 +75,7 @@ class ParticipantAdmin(ExportMixin, admin.ModelAdmin):
         'mobile',
     ]
     inlines = [
-        TeamInlineFactory(DroidBlitz),
-        TeamInlineFactory(Summit),
-        TeamInlineFactory(Sherlock),
-        TeamInlineFactory(Sheldon),
-        TeamInlineFactory(Warehouse),
+        TeamInlineFactory(BombDisposal),
+        TeamInlineFactory(Conquest),
+        TeamInlineFactory(Bricks),
     ]
