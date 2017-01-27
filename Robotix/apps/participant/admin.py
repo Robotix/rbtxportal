@@ -43,16 +43,15 @@ class ParticipantResource(resources.ModelResource):
 class ParticipantAdmin(ExportMixin, admin.ModelAdmin):
     resource_class = ParticipantResource
     fieldsets = (
-        (None, {
-            'fields': (('first_name', 'last_name'),),
-            'classes': ('wide',),
-        }),
         ('Contact Information', {
-            'fields': (('mobile', 'email'),),
-            'classes': ('wide',),
-        }),
-        ('Academic Information', {
-            'fields': ('year', 'college'),
+            'fields': (
+		('first_name'),
+		('last_name'),
+		('mobile'),
+		('email'),
+                ('year'),
+		('college'),
+            ),
             'classes': ('wide',),
         }),
     )
