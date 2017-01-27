@@ -120,3 +120,5 @@ CACHES = {
     }
 }
 
+JET_SIDE_MENU_COMPACT = True
+
