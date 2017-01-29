@@ -10,14 +10,12 @@ class CollegeAdmin(ExportMixin, admin.ModelAdmin):
     list_display = [
         'name',
         'abbv',
-        'city',
     ]
     search_fields = [
         'name',
         'abbv',
     ]
     list_filter = [
-        'city',
         'state',
     ]
 

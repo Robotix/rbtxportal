@@ -13,7 +13,7 @@ from sys import path
 SITE_ROOT = dirname(dirname(abspath(__file__)))
 path.append(SITE_ROOT)
 
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "Robotix.settings.base")
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "Robotix.settings.production")
 
 from django.core.wsgi import get_wsgi_application
 

@@ -170,13 +170,13 @@ class TeamAdmin(ExportMixin, DjangoObjectActions, admin.ModelAdmin):
         for participant in team.participant.all():
             text_obj = p.beginText()
             text_obj.setFont('Helvetica-Oblique', 16)
-            text_obj.setTextOrigin(3.7*inch, 6*inch)
+            text_obj.setTextOrigin(3.7*inch, 5.38*inch)
             text_obj.textLine(participant.name.title())
-            text_obj.setTextOrigin(1.5*inch, 5.5*inch)
+            text_obj.setTextOrigin(1.5*inch, 4.94*inch)
             if len(participant.college.name) > 60:
                 text_obj.setHorizScale(80)
             text_obj.textLine(participant.college.name)
-            text_obj.setTextOrigin(3*inch, 5*inch)
+            text_obj.setTextOrigin(3*inch, 4.54*inch)
             text_obj.textLine(self.form.Meta.model._meta.verbose_name)
             p.drawText(text_obj)
             p.showPage()
@@ -194,13 +194,13 @@ class TeamAdmin(ExportMixin, DjangoObjectActions, admin.ModelAdmin):
         for participant in team.participant.all():
             text_obj = p.beginText()
             text_obj.setFont('Helvetica-Oblique', 16)
-            text_obj.setTextOrigin(3.5*inch, 6*inch)
+            text_obj.setTextOrigin(3.5*inch, 5*inch)
             text_obj.textLine(participant.name.title())
-            text_obj.setTextOrigin(1.5*inch, 5.5*inch)
+            text_obj.setTextOrigin(1.5*inch, 4.5*inch)
             if len(participant.college.name) > 60:
                 text_obj.setHorizScale(80)
             text_obj.textLine(participant.college.name)
-            text_obj.setTextOrigin(4*inch, 5.05*inch)
+            text_obj.setTextOrigin(4*inch, 4.5*inch)
             text_obj.textLine(self.form.Meta.model._meta.verbose_name)
             p.drawText(text_obj)
             p.showPage()
@@ -211,6 +211,7 @@ class TeamAdmin(ExportMixin, DjangoObjectActions, admin.ModelAdmin):
     def verify_this(self, request, team):
         team.verification=True
         team.save()
+        self.message_user(request, 'Team {} is marked as verified'.format(team))
     verify_this.label = 'Verify'
 
     def qualify_this(self, request, team):
