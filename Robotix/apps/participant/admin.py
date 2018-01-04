@@ -36,7 +36,7 @@ class ParticipantResource(resources.ModelResource):
         use_transactions = True
 
     def dehydrate_college(self, participant):
-        return '{}, {}'.format(participant.college.name, participant.college.city)
+        return participant.college.name
 
 
 @admin.register(Participant)
