@@ -68,24 +68,24 @@ class Team(models.Model):
     class Meta:
         abstract = True
 
-class BombDisposal(Team):
-    event = 'BD'
+class PolesApart(Team):
+    event = 'PA'
 
     class Meta:
-        verbose_name = 'BombDisposal'
+        verbose_name = 'PolesApart'
         verbose_name_plural = verbose_name
 
-class Conquest(Team):
-    event ='CQ'
+class Fortress(Team):
+    event ='FT'
 
     class Meta:
-        verbose_name = 'Conquest'
+        verbose_name = 'Fortress'
         verbose_name_plural = verbose_name
 
 
-class Bricks(Team):
-    event = 'BR'
+class Stax(Team):
+    event = 'ST'
 
     class Meta:
-        verbose_name = 'B.R.I.C.K.S'
+        verbose_name = 'Stax'
         verbose_name_plural = verbose_name

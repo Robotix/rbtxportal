@@ -52,7 +52,7 @@ def TeamFormFactory(event):
 class TeamResource(resources.ModelResource):
 
     class Meta:
-        model = Conquest
+        model = Fortress
         use_transactions = True
 
     def dehydrate_participant(self, team):
@@ -223,25 +223,25 @@ class TeamAdmin(ExportMixin, DjangoObjectActions, admin.ModelAdmin):
     qualify_this.label = 'Qualify to the next Round'
 
 
-@admin.register(BombDisposal)
-class BombDisposalAdmin(TeamAdmin):
-    form = TeamFormFactory(BombDisposal)
+@admin.register(PolesApart)
+class PolesApartAdmin(TeamAdmin):
+    form = TeamFormFactory(PolesApart)
     inlines = [
-        TeamInlineFactory(BombDisposal),
+        TeamInlineFactory(PolesApart),
     ]
 
 
-@admin.register(Conquest)
-class ConquestAdmin(TeamAdmin):
-    form = TeamFormFactory(Conquest)
+@admin.register(Fortress)
+class FortressAdmin(TeamAdmin):
+    form = TeamFormFactory(Fortress)
     inlines = [
-        TeamInlineFactory(Conquest),
+        TeamInlineFactory(Fortress),
     ]
 
 
-@admin.register(Bricks)
-class BricksAdmin(TeamAdmin):
-    form = TeamFormFactory(Bricks)
+@admin.register(Stax)
+class StaxAdmin(TeamAdmin):
+    form = TeamFormFactory(Stax)
     inlines = [
-        TeamInlineFactory(Bricks),
+        TeamInlineFactory(Stax),
     ]
