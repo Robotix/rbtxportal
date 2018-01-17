@@ -63,7 +63,7 @@ WSGI_APPLICATION = 'Robotix.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': 'Robotix2017.db',
+        'NAME': 'Robotix2018.db',
         'USER': '',
         'PASSWORD': '',
         'HOST': '',
