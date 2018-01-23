@@ -1,0 +1,35 @@
+server {
+    listen 80;
+    server_name 139.59.94.134;
+
+    location = /favicon.ico { access_log off; log_not_found off; }
+    client_max_body_size 4G;
+
+    keepalive_timeout 5;
+
+    # Your Django project's media files - amend as required
+    location /media  {
+        alias /home/django/web-portal/Robotix/media;
+    }
+
+    # your Django project's static files - amend as required
+    location /static {
+        alias /home/django/web-portal/Robotix/static;
+    }
+
+    # Proxy the static assests for the Django Admin panel
+    location /static/admin {
+       alias /home/django/web-portal/portalenv/lib/python2.7/dist-packages/django/contrib/admin/static/admin/;
+    }
+
+    # Proxy the static assets for the Django jet admin
+    location /static/jet {
+       alias /home/django/web-portal/portalenv/lib/python2.7/site-packages/jet/static/jet/;
+    }
+
+    location / {
+        include proxy_params;
+        proxy_pass http://unix:/home/django/web-portal/web-portal.sock;
+    }
+
+}

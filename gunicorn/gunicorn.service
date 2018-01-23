@@ -1,0 +1,12 @@
+[Unit]
+Description=gunicorn daemon
+After=network.target
+
+[Service]
+User=django
+Group=django
+WorkingDirectory=/home/django/web-portal
+ExecStart=/home/django/web-portal/portalenv/bin/gunicorn --access-logfile - --workers 3 --bind unix:/home/django/web-portal/web-portal.sock Robotix.wsgi:application
+
+[Install]
+WantedBy=multi-user.target
