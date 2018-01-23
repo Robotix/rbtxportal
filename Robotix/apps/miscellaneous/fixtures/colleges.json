@@ -5,7 +5,6 @@
         "fields":{
             "name":"Abacus Institute Of Engineering & Management",
             "abbv":"AIEM Natungram",
-            "city":"Natungram",
             "state":1
         }
     },
@@ -15,7 +14,6 @@
         "fields":{
             "name":"ABES Engineering College",
             "abbv":"ABESEC Ghaziabad",
-            "city":"Ghaziabad",
             "state":7
         }
     },
@@ -25,7 +23,6 @@
         "fields":{
             "name":"Academy Of Technology",
             "abbv":"AOT Hooghly",
-            "city":"Hooghly",
             "state":1
         }
     },
@@ -35,7 +32,6 @@
         "fields":{
             "name":"ACE Engineering College",
             "abbv":"ACEEC Ghatkesar",
-            "city":"Ghatkesar",
             "state":3
         }
     },
@@ -45,7 +41,6 @@
         "fields":{
             "name":"Adamas Institute Of  Technology",
             "abbv":"AIT Kolkata",
-            "city":"Kolkata",
             "state":1
         }
     },
@@ -55,7 +50,6 @@
         "fields":{
             "name":"Aditya Institute Of  Technology & Management",
             "abbv":"AITEM Tekkali",
-            "city":"Tekkali",
             "state":3
         }
     },
@@ -65,7 +59,6 @@
         "fields":{
             "name":"Ajmer Institute Of Technology",
             "abbv":"AIT Ajmer",
-            "city":"Ajmer",
             "state":10
         }
     },
@@ -75,7 +68,6 @@
         "fields":{
             "name":"Alagappa College of Technology, Anna University",
             "abbv":"AC Tech Chennai",
-            "city":"Chennai",
             "state":5
         }
     },
@@ -85,7 +77,6 @@
         "fields":{
             "name":"Amicable Knowledge Solution",
             "abbv":"AKS Satna",
-            "city":"Satna",
             "state":20
         }
     },
@@ -95,7 +86,6 @@
         "fields":{
             "name":"Amity Business School",
             "abbv":"ABS Noida",
-            "city":"Noida",
             "state":7
         }
     },
@@ -105,7 +95,6 @@
         "fields":{
             "name":"Andhra University College Of Engineering",
             "abbv":"AUCE Vishakhapatnam",
-            "city":"Vishakhapatnam",
             "state":3
         }
     },
@@ -115,7 +104,6 @@
         "fields":{
             "name":"Andhra University College Of Engineering for Women",
             "abbv":"AUCEW Vishakhapatnam",
-            "city":"Vishakhapatnam",
             "state":3
         }
     },
@@ -125,7 +113,6 @@
         "fields":{
             "name":"Anil Neerukonda Institute Of Technology And Sciences",
             "abbv":"ANITS Vishakhapatnam",
-            "city":"Vishakhapatnam",
             "state":3
         }
     },
@@ -135,7 +122,6 @@
         "fields":{
             "name":"Anna University",
             "abbv":"AU Chennai",
-            "city":"Chennai",
             "state":5
         }
     },
@@ -145,7 +131,6 @@
         "fields":{
             "name":"Apeejay Institute Of Management",
             "abbv":"AIM Jalandar",
-            "city":"Jalandar",
             "state":26
         }
     },
@@ -155,7 +140,6 @@
         "fields":{
             "name":"Apex Institute Of Technology And Management",
             "abbv":"AITM Bhubaneswar",
-            "city":"Bhubaneswar",
             "state":25
         }
     },
@@ -165,7 +149,6 @@
         "fields":{
             "name":"Army Institute Of Technology",
             "abbv":"AIT Pune",
-            "city":"Pune",
             "state":6
         }
     },
@@ -175,7 +158,6 @@
         "fields":{
             "name":"Arya College Of Engineering And IT",
             "abbv":"ACEIT Jaipur",
-            "city":"Jaipur",
             "state":10
         }
     },
@@ -185,7 +167,6 @@
         "fields":{
             "name":"Asansol Engineering College",
             "abbv":"AEC Asansol",
-            "city":"Asansol",
             "state":1
         }
     },
@@ -195,7 +176,6 @@
         "fields":{
             "name":"Atal Bihari Vajpayee Indian Institute of Information Technology and Management",
             "abbv":"ABV-IIITM Gwalior",
-            "city":"Gwalior",
             "state":20
         }
     },
@@ -205,7 +185,6 @@
         "fields":{
             "name":"Avanthi Institute Of Engineering & Technology",
             "abbv":"AIET Vishakhapatnam",
-            "city":"Vishakhapatnam",
             "state":3
         }
     },
@@ -215,7 +194,6 @@
         "fields":{
             "name":"B. P. Poddar Institute Of Management & Technology",
             "abbv":"BPPIMT Kolkata",
-            "city":"Kolkata",
             "state":1
         }
     },
@@ -225,7 +203,6 @@
         "fields":{
             "name":"Baba Institute Of Technology And Science",
             "abbv":"BITS Vishakhapatnam",
-            "city":"Vishakhapatnam",
             "state":3
         }
     },
@@ -235,7 +212,6 @@
         "fields":{
             "name":"Bangalore Institute Of Technology",
             "abbv":"BIT Bangalore",
-            "city":"Bangalore",
             "state":2
         }
     },
@@ -245,7 +221,6 @@
         "fields":{
             "name":"Bengal College Of Engineering & Technology",
             "abbv":"BCET Durgapur",
-            "city":"Durgapur",
             "state":1
         }
     },
@@ -255,7 +230,6 @@
         "fields":{
             "name":"Bengal Institute of Technology",
             "abbv":"BIT Kolkata",
-            "city":"Kolkata",
             "state":1
         }
     },
@@ -265,7 +239,6 @@
         "fields":{
             "name":"Bhawanipur Gujrati Education Society",
             "abbv":"BGES Kolkata",
-            "city":"Kolkata",
             "state":1
         }
     },
@@ -275,7 +248,6 @@
         "fields":{
             "name":"Bhilai Institute Of Technology Durg",
             "abbv":"BIT Durg",
-            "city":"Durg",
             "state":17
         }
     },
@@ -285,7 +257,6 @@
         "fields":{
             "name":"Bhilai Institute Of Technology Raipur",
             "abbv":"BIT Raipur",
-            "city":"Raipur",
             "state":17
         }
     },
@@ -295,7 +266,6 @@
         "fields":{
             "name":"Bhim Rao Ambedkar College",
             "abbv":"BRAC Delhi",
-            "city":"Delhi",
             "state":34
         }
     },
@@ -305,7 +275,6 @@
         "fields":{
             "name":"Biju Patnaik University of Technology",
             "abbv":"BPUT Rourkela",
-            "city":"Rourkela",
             "state":25
         }
     },
@@ -315,7 +284,6 @@
         "fields":{
             "name":"Bikaner Engineering College",
             "abbv":"GEC Bikaner",
-            "city":"Bikaner",
             "state":10
         }
     },
@@ -325,7 +293,6 @@
         "fields":{
             "name":"Birbhum Institute of Engineering and Technology",
             "abbv":"BIET Suri",
-            "city":"Suri",
             "state":1
         }
     },
@@ -335,7 +302,6 @@
         "fields":{
             "name":"Birla Institute of Technology Mesra",
             "abbv":"BIT Mesra",
-            "city":"Mesra",
             "state":19
         }
     },
@@ -345,7 +311,6 @@
         "fields":{
             "name":"Birla Institute of Technology and Science\n",
             "abbv":"BITS Pilani",
-            "city":"Pilani",
             "state":10
         }
     },
@@ -355,7 +320,6 @@
         "fields":{
             "name":"Birsa Institute of Technology ",
             "abbv":"BIT Sindri",
-            "city":"Sindri",
             "state":19
         }
     },
@@ -365,7 +329,6 @@
         "fields":{
             "name":"Brainware Business School",
             "abbv":"BBS Kolkata",
-            "city":"Kolkata",
             "state":1
         }
     },
@@ -375,7 +338,6 @@
         "fields":{
             "name":"Brainware Group of Institutions",
             "abbv":"BGI Kolkata",
-            "city":"Kolkata",
             "state":1
         }
     },
@@ -385,7 +347,6 @@
         "fields":{
             "name":"C R Reddy College Of Engineering",
             "abbv":"CRRCE West Godawari",
-            "city":"West Godawari",
             "state":3
         }
     },
@@ -395,7 +356,6 @@
         "fields":{
             "name":"C V Raman College Of Engineering",
             "abbv":"CVRCE Bhubaneswar",
-            "city":"Bhubaneswar",
             "state":25
         }
     },
@@ -405,7 +365,6 @@
         "fields":{
             "name":"Calcutta Institute Of Engineering & Management",
             "abbv":"CIEM Kolkata",
-            "city":"Kolkata",
             "state":1
         }
     },
@@ -415,7 +374,6 @@
         "fields":{
             "name":"Camellia Institute Of Technology",
             "abbv":"CIT Madhayamgram",
-            "city":"Madhayamgram",
             "state":1
         }
     },
@@ -425,7 +383,6 @@
         "fields":{
             "name":"Centurion School Of Rural Enterprise And Management",
             "abbv":"CSREM Parlakhemundi",
-            "city":"Parlakhemundi",
             "state":25
         }
     },
@@ -435,7 +392,6 @@
         "fields":{
             "name":"Centurion University",
             "abbv":"CUTM Parlakhemundi",
-            "city":"Parlakhemundi",
             "state":25
         }
     },
@@ -445,7 +401,6 @@
         "fields":{
             "name":"Chaitanya Bharathi Institute of Technology",
             "abbv":"CBIT Hyderabad",
-            "city":"Hyderabad",
             "state":13
         }
     },
@@ -455,7 +410,6 @@
         "fields":{
             "name":"Chhatrapati Shivaji Institute of Technology",
             "abbv":"CSIT Durg",
-            "city":"Durg",
             "state":17
         }
     },
@@ -465,7 +419,6 @@
         "fields":{
             "name":"College Of Engineering",
             "abbv":"COER Roorkee",
-            "city":"Roorkee",
             "state":29
         }
     },
@@ -475,7 +428,6 @@
         "fields":{
             "name":"College of Engineering and Management",
             "abbv":"CEM Kolghat",
-            "city":"Kolaghat",
             "state":1
         }
     },
@@ -485,7 +437,6 @@
         "fields":{
             "name":"College of Engineering and Technology",
             "abbv":"CET Bhubaneswar",
-            "city":"Bhubaneswar",
             "state":25
         }
     },
@@ -495,7 +446,6 @@
         "fields":{
             "name":"CVR College Of Engineering",
             "abbv":"CVRCE Hyderabad",
-            "city":"Hyderabad",
             "state":13
         }
     },
@@ -505,7 +455,6 @@
         "fields":{
             "name":"DAV College Of Engineering",
             "abbv":"DAVIET Jalandar",
-            "city":"Jalandar",
             "state":26
         }
     },
@@ -515,7 +464,6 @@
         "fields":{
             "name":"DAV University",
             "abbv":"DAVU Jalandhar",
-            "city":"Jalandar",
             "state":26
         }
     },
@@ -525,7 +473,6 @@
         "fields":{
             "name":"Dayal Bagh College",
             "abbv":"DEI Agra",
-            "city":"Agra",
             "state":7
         }
     },
@@ -535,7 +482,6 @@
         "fields":{
             "name":"Dehradun Institute Of Technology",
             "abbv":"DIT Dehradun",
-            "city":"Dehradun",
             "state":29
         }
     },
@@ -545,7 +491,6 @@
         "fields":{
             "name":"Disha Institute Of Management And Technology",
             "abbv":"DIMAT Raipur",
-            "city":"Raipur",
             "state":17
         }
     },
@@ -555,7 +500,6 @@
         "fields":{
             "name":"Dr. B C Roy Engineering College",
             "abbv":"BCREC Durgapur",
-            "city":"Durgapur",
             "state":1
         }
     },
@@ -565,7 +509,6 @@
         "fields":{
             "name":"Dr. B R Ambedkar National Institute Of Technology",
             "abbv":"NIT Jalandhar",
-            "city":"Jalandar",
             "state":26
         }
     },
@@ -575,7 +518,6 @@
         "fields":{
             "name":"Dumkal Institute Of Technology",
             "abbv":"DIET Murshidabad",
-            "city":"Murshidabad",
             "state":1
         }
     },
@@ -585,7 +527,6 @@
         "fields":{
             "name":"Durgapur Institute Of Advanced Technology & Management",
             "abbv":"DIATM Durgapur",
-            "city":"Durgapur",
             "state":1
         }
     },
@@ -595,7 +536,6 @@
         "fields":{
             "name":"Eastern Academy Of Science & Technology",
             "abbv":"EAST Bhubaneswar",
-            "city":"Bhubaneswar",
             "state":25
         }
     },
@@ -605,7 +545,6 @@
         "fields":{
             "name":"Faculty Of Engineering And Technology, Jadavpur University",
             "abbv":"FET-JU Kolkata",
-            "city":"Kolkata",
             "state":1
         }
     },
@@ -615,7 +554,6 @@
         "fields":{
             "name":"Feroze Gandhi Institute of Engineering and Technology",
             "abbv":"FGIET Raebareli",
-            "city":"Raebareli",
             "state":7
         }
     },
@@ -625,7 +563,6 @@
         "fields":{
             "name":"Future Institute of Engineering and Management",
             "abbv":"FIEM Kolkata",
-            "city":"Kolkata",
             "state":1
         }
     },
@@ -635,7 +572,6 @@
         "fields":{
             "name":"G D Rungta College Of Engineering & Technology",
             "abbv":"GDRCET Bhilai",
-            "city":"Bhilai",
             "state":17
         }
     },
@@ -645,7 +581,6 @@
         "fields":{
             "name":"G M R Institute Of Technology",
             "abbv":"GMRIT Rajam",
-            "city":"Rajam",
             "state":3
         }
     },
@@ -655,7 +590,6 @@
         "fields":{
             "name":"G Pullareddy Engineering College",
             "abbv":"GPREC Kurnool",
-            "city":"Kurnool",
             "state":3
         }
     },
@@ -665,7 +599,6 @@
         "fields":{
             "name":"Galgotia College of Engineering & Technology",
             "abbv":"GCET Noida",
-            "city":"Noida",
             "state":7
         }
     },
@@ -675,7 +608,6 @@
         "fields":{
             "name":"Gandhi Engineering College",
             "abbv":"GEC Bhubaneswar",
-            "city":"Bhubaneswar",
             "state":25
         }
     },
@@ -685,7 +617,6 @@
         "fields":{
             "name":"Gandhi Institute For Technological Advancement",
             "abbv":"GITA Bhubaneswar",
-            "city":"Bhubaneswar",
             "state":25
         }
     },
@@ -695,7 +626,6 @@
         "fields":{
             "name":"Gandhi Institute of Engineering and Technology",
             "abbv":"GIET Gunupur",
-            "city":"Rayagada",
             "state":25
         }
     },
@@ -705,7 +635,6 @@
         "fields":{
             "name":"Gandhi Institute of Technology and Management",
             "abbv":"GITAM Vishakhaptnam",
-            "city":"Vishakhapatnam",
             "state":3
         }
     },
@@ -715,7 +644,6 @@
         "fields":{
             "name":"Gautam Buddha University",
             "abbv":"GBU Noida",
-            "city":"Noida",
             "state":7
         }
     },
@@ -725,7 +653,6 @@
         "fields":{
             "name":"Gayatri Vidhya Parishad College of Engineering",
             "abbv":"GVPCE Vishakhapatnam",
-            "city":"Vishakhapatnam",
             "state":3
         }
     },
@@ -735,7 +662,6 @@
         "fields":{
             "name":"Government Engineering College Ajmer",
             "abbv":"GEC Ajmer",
-            "city":"Ajmer",
             "state":10
         }
     },
@@ -745,7 +671,6 @@
         "fields":{
             "name":"Government Engineering College Bilaspur",
             "abbv":"GEC Bilaspur",
-            "city":"Bilaspur",
             "state":17
         }
     },
@@ -755,7 +680,6 @@
         "fields":{
             "name":"Government Engineering College Jagdalpur",
             "abbv":"GEC Jagdalpur",
-            "city":"Jagdalpur",
             "state":17
         }
     },
@@ -765,7 +689,6 @@
         "fields":{
             "name":"Goyal Institute of Technology and Management",
             "abbv":"GITM Lucknow",
-            "city":"Lucknow",
             "state":7
         }
     },
@@ -775,7 +698,6 @@
         "fields":{
             "name":"Greater Noida Institute of Technology",
             "abbv":"GNIOT Noida",
-            "city":"Noida",
             "state":7
         }
     },
@@ -785,7 +707,6 @@
         "fields":{
             "name":"Gudlavalleru College of Engineering",
             "abbv":"GEC Vijaywada",
-            "city":"Gudlavellru",
             "state":3
         }
     },
@@ -795,7 +716,6 @@
         "fields":{
             "name":"Guru Ghasidas Vishwavidyalaya",
             "abbv":"GGU Bilaspur",
-            "city":"Bilaspur",
             "state":17
         }
     },
@@ -805,7 +725,6 @@
         "fields":{
             "name":"Guru Gobind Singh Indraprastha University",
             "abbv":"GGSIPU Delhi",
-            "city":"Delhi",
             "state":34
         }
     },
@@ -815,7 +734,6 @@
         "fields":{
             "name":"Guru Nanak Dev Engineering College",
             "abbv":"GNE Ludhiana",
-            "city":"Ludhiana",
             "state":26
         }
     },
@@ -825,7 +743,6 @@
         "fields":{
             "name":"Guru Nanak Institute Of Technology",
             "abbv":"GNIS Kolkata",
-            "city":"Kolkata",
             "state":1
         }
     },
@@ -835,7 +752,6 @@
         "fields":{
             "name":"Gyan Ganga Institute of Technology and Management",
             "abbv":"GGITM Bhopal",
-            "city":"Bhopal",
             "state":20
         }
     },
@@ -845,7 +761,6 @@
         "fields":{
             "name":"H R Institute Of Technology",
             "abbv":"HRIT Ghaziabad",
-            "city":"Ghaziabad",
             "state":7
         }
     },
@@ -855,7 +770,6 @@
         "fields":{
             "name":"Haldia Institute Of Technology",
             "abbv":"HIT Haldia",
-            "city":"Haldia",
             "state":1
         }
     },
@@ -865,7 +779,6 @@
         "fields":{
             "name":"Harcourt Butler Technological Institute",
             "abbv":"HBTI Kanpur",
-            "city":"Kanpur",
             "state":7
         }
     },
@@ -875,7 +788,6 @@
         "fields":{
             "name":"Heramba Chandra College",
             "abbv":"HCC Kolkata",
-            "city":"Kolkata",
             "state":1
         }
     },
@@ -885,7 +797,6 @@
         "fields":{
             "name":"Heritage Institute Of Technology",
             "abbv":"HIT Kolkata",
-            "city":"Kolkata",
             "state":1
         }
     },
@@ -895,7 +806,6 @@
         "fields":{
             "name":"Ideal Institute Of Engineering College",
             "abbv":"IIE Kalyani",
-            "city":"Kalyani",
             "state":1
         }
     },
@@ -905,7 +815,6 @@
         "fields":{
             "name":"Ideal Institute of technology",
             "abbv":"IIT-JIU Ghaziabad",
-            "city":"Ghaziabad",
             "state":7
         }
     },
@@ -915,7 +824,6 @@
         "fields":{
             "name":"IEC College Of Engineering And Technology",
             "abbv":"IEC-CET Noida",
-            "city":"Noida",
             "state":7
         }
     },
@@ -925,7 +833,6 @@
         "fields":{
             "name":"Indian Institute of Engineering Science and Technology",
             "abbv":"IIEST Shibpur",
-            "city":"Shibpur",
             "state":1
         }
     },
@@ -935,7 +842,6 @@
         "fields":{
             "name":"Indian Institute of Information Technology Bhubaneswar",
             "abbv":"IIIT Bhubaneswar",
-            "city":"Bhubaneswar",
             "state":25
         }
     },
@@ -945,7 +851,6 @@
         "fields":{
             "name":"Indian Institute of Information Technology Hyderabad",
             "abbv":"IIIT Hyderabad",
-            "city":"Hyderabad",
             "state":13
         }
     },
@@ -955,7 +860,6 @@
         "fields":{
             "name":"Indian Institute of Information Technology Kolkata",
             "abbv":"IIIT Kolkata",
-            "city":"Kolkata",
             "state":1
         }
     },
@@ -965,7 +869,6 @@
         "fields":{
             "name":"Indian Institute of Information Technology and Management",
             "abbv":"IIITM, Gwalior",
-            "city":"Gwalior",
             "state":20
         }
     },
@@ -975,7 +878,6 @@
         "fields":{
             "name":"Indian Institute of Information Technology Design & Manufacturing",
             "abbv":"IIITD&M Kancheepuram",
-            "city":"Chennai",
             "state":5
         }
     },
@@ -985,7 +887,6 @@
         "fields":{
             "name":"Indian Institute of Technology Bhubaneswar",
             "abbv":"IIT Bhubaneswar",
-            "city":"Bhubaneswar",
             "state":25
         }
     },
@@ -995,7 +896,6 @@
         "fields":{
             "name":"Indian Institute of Technology Bombay",
             "abbv":"IIT Bombay",
-            "city":"Mumbai",
             "state":6
         }
     },
@@ -1005,7 +905,6 @@
         "fields":{
             "name":"Indian Institute of Technology Delhi",
             "abbv":"IIT Delhi",
-            "city":"Delhi",
             "state":34
         }
     },
@@ -1015,7 +914,6 @@
         "fields":{
             "name":"Indian Institute of Technology Kanpur",
             "abbv":"IIT Kanpur",
-            "city":"Kanpur",
             "state":7
         }
     },
@@ -1025,7 +923,6 @@
         "fields":{
             "name":"Indian Institute of Technology Kharagpur",
             "abbv":"IIT KGP",
-            "city":"Kharagpur",
             "state":1
         }
     },
@@ -1035,7 +932,6 @@
         "fields":{
             "name":"Indian Institute of Technology Madras",
             "abbv":"IIT Madras",
-            "city":"Chennai",
             "state":5
         }
     },
@@ -1045,7 +941,6 @@
         "fields":{
             "name":"Indian Institute of Technology Ropar",
             "abbv":"IIT Ropar",
-            "city":"Ropar",
             "state":29
         }
     },
@@ -1055,7 +950,6 @@
         "fields":{
             "name":"Indian Institute of Technology, Benaras Hindu University",
             "abbv":"IIT BHU",
-            "city":"Varanasi",
             "state":7
         }
     },
@@ -1065,7 +959,6 @@
         "fields":{
             "name":"Indian School of Mines",
             "abbv":"ISM Dhanbad",
-            "city":"Dhanbad",
             "state":19
         }
     },
@@ -1075,7 +968,6 @@
         "fields":{
             "name":"Indira Gandhi Delhi Techincal University For Women",
             "abbv":"IGDTUW Delhi",
-            "city":"Delhi",
             "state":34
         }
     },
@@ -1085,7 +977,6 @@
         "fields":{
             "name":"Indira Gandhi Institute of Technology",
             "abbv":"IGIT Sarang",
-            "city":"Sarang",
             "state":25
         }
     },
@@ -1095,7 +986,6 @@
         "fields":{
             "name":"Institute Of Engineering & Management",
             "abbv":"IEM Kolkata",
-            "city":"Kolkata",
             "state":1
         }
     },
@@ -1105,7 +995,6 @@
         "fields":{
             "name":"Institute of Engineering & Science IPS Academy",
             "abbv":"IES-IPSA Indore",
-            "city":"Indore",
             "state":20
         }
     },
@@ -1115,7 +1004,6 @@
         "fields":{
             "name":"Institute of Engineering & Technology, Devi Ahilya Vishwavidyalaya",
             "abbv":"IET, DAVV Indore",
-            "city":"Indore",
             "state":20
         }
     },
@@ -1125,7 +1013,6 @@
         "fields":{
             "name":"Institute of Engineering and Rural Technology",
             "abbv":"IERT Allahabad",
-            "city":"Allahabad",
             "state":7
         }
     },
@@ -1135,7 +1022,6 @@
         "fields":{
             "name":"Institute of Engineering and Technology",
             "abbv":"IET Lucknow",
-            "city":"Lucknow",
             "state":7
         }
     },
@@ -1145,7 +1031,6 @@
         "fields":{
             "name":"Institute of Management Technology",
             "abbv":"IMT Ghaziabad",
-            "city":"Ghaziabad",
             "state":7
         }
     },
@@ -1155,7 +1040,6 @@
         "fields":{
             "name":"Institute of Technical Education and Research",
             "abbv":"ITER Bhubaneswar",
-            "city":"Bhubaneswar",
             "state":25
         }
     },
@@ -1165,7 +1049,6 @@
         "fields":{
             "name":"Institute of Technology & Management",
             "abbv":"ITM Gwalior",
-            "city":"Gwalior",
             "state":7
         }
     },
@@ -1175,7 +1058,6 @@
         "fields":{
             "name":"Institute Of Technology And Marine Engineering",
             "abbv":"ITME Kolkata",
-            "city":"Kolkata",
             "state":1
         }
     },
@@ -1185,7 +1067,6 @@
         "fields":{
             "name":"Jabalpur Engineering College",
             "abbv":"JEC Jabalpur",
-            "city":"Jabalpur",
             "state":20
         }
     },
@@ -1195,7 +1076,6 @@
         "fields":{
             "name":"Jadavpur University",
             "abbv":"JU Kolkata",
-            "city":"Kolkata",
             "state":1
         }
     },
@@ -1205,7 +1085,6 @@
         "fields":{
             "name":"Jagannath Institute For Technology & Management",
             "abbv":"JITM Paralakhemundi",
-            "city":"Paralakhemundi",
             "state":25
         }
     },
@@ -1215,7 +1094,6 @@
         "fields":{
             "name":"Jaipur Engg College And Research Centre",
             "abbv":"JECRC Jaipur",
-            "city":"Jaipur",
             "state":10
         }
     },
@@ -1225,7 +1103,6 @@
         "fields":{
             "name":"Jalpaiguri Government College",
             "abbv":"JGEC Jalpaiguri",
-            "city":"Jalpaiguri",
             "state":1
         }
     },
@@ -1235,7 +1112,6 @@
         "fields":{
             "name":"Jawaharlal Nehru Technological University Hyderabad",
             "abbv":"JNTU Hyderabad",
-            "city":"Hyderabad",
             "state":13
         }
     },
@@ -1245,7 +1121,6 @@
         "fields":{
             "name":"Jawaharlal Nehru Technological University Kakinada",
             "abbv":"JNTU Kakinada",
-            "city":"Kakinada",
             "state":3
         }
     },
@@ -1255,7 +1130,6 @@
         "fields":{
             "name":"Jaypee Institute Of Engineering & Technology",
             "abbv":"JUET Guna",
-            "city":"Guna",
             "state":20
         }
     },
@@ -1265,7 +1139,6 @@
         "fields":{
             "name":"Jaypee Institute Of Information Technology",
             "abbv":"JIIT Noida",
-            "city":"Noida",
             "state":7
         }
     },
@@ -1275,7 +1148,6 @@
         "fields":{
             "name":"JIS College Of Engineering",
             "abbv":"JIS Kalyani",
-            "city":"Kalyani",
             "state":1
         }
     },
@@ -1285,7 +1157,6 @@
         "fields":{
             "name":"JSS Academy Of Technical Education Bangalore",
             "abbv":"JSSAT Bangalore",
-            "city":"Bangalore",
             "state":2
         }
     },
@@ -1295,7 +1166,6 @@
         "fields":{
             "name":"JSS Academy Of Technical Education Noida",
             "abbv":"JSSAT Noida",
-            "city":"Noida",
             "state":7
         }
     },
@@ -1305,7 +1175,6 @@
         "fields":{
             "name":"K J Somaiya Institute Of Management Studies And Research",
             "abbv":"KJSIMSR Mumbai",
-            "city":"Mumbai",
             "state":6
         }
     },
@@ -1315,7 +1184,6 @@
         "fields":{
             "name":"Kalinga Institute Of Industrial Technology",
             "abbv":"KIIT Bhubaneswar",
-            "city":"Bhubaneswar",
             "state":25
         }
     },
@@ -1325,7 +1193,6 @@
         "fields":{
             "name":"Kalyani Government Engineering College ",
             "abbv":"KGEC Kalyani",
-            "city":"Kalyani",
             "state":1
         }
     },
@@ -1335,7 +1202,6 @@
         "fields":{
             "name":"Kamla Nehru Institute Of Technology",
             "abbv":"KNIT Sultanpur",
-            "city":"Sultanpur",
             "state":7
         }
     },
@@ -1345,7 +1211,6 @@
         "fields":{
             "name":"Karmavir Dadasaheb Kannamwar College of Engineering",
             "abbv":"KDKCE Nagpur",
-            "city":"Nagpur",
             "state":6
         }
     },
@@ -1355,7 +1220,6 @@
         "fields":{
             "name":"Koneru lakshmaiah college of engineering",
             "abbv":"KLU Guntur",
-            "city":"Guntur",
             "state":3
         }
     },
@@ -1365,7 +1229,6 @@
         "fields":{
             "name":"Krishna Institute of Engineering and Technology",
             "abbv":"KIET Kakinada",
-            "city":"Kakinada",
             "state":3
         }
     },
@@ -1375,7 +1238,6 @@
         "fields":{
             "name":"Krupajal Engineering College",
             "abbv":"KEC, Bhubaneswar",
-            "city":"Bhubaneswar",
             "state":25
         }
     },
@@ -1385,7 +1247,6 @@
         "fields":{
             "name":"Lakshmi Narain College Of Technology",
             "abbv":"LNCT Bhopal",
-            "city":"Bhopal",
             "state":20
         }
     },
@@ -1395,7 +1256,6 @@
         "fields":{
             "name":"LNM Institute of Information Technology",
             "abbv":"LNMIIT, Jaipur",
-            "city":"Jaipur",
             "state":10
         }
     },
@@ -1405,7 +1265,6 @@
         "fields":{
             "name":"Lovely Professional University",
             "abbv":"LPU Pagwara",
-            "city":"Pagwara",
             "state":26
         }
     },
@@ -1415,7 +1274,6 @@
         "fields":{
             "name":"M.M. College Of Technology",
             "abbv":"MMCT Raipur",
-            "city":"Raipur",
             "state":17
         }
     },
@@ -1425,7 +1283,6 @@
         "fields":{
             "name":"M.S.Ramaiah Institute Of Technology",
             "abbv":"MSRIT Bangalore",
-            "city":"Bangalore",
             "state":2
         }
     },
@@ -1435,7 +1292,6 @@
         "fields":{
             "name":"Madan Mohan Malaviya Engineering College",
             "abbv":"MMMEC Gorakpur",
-            "city":"Gorakpur",
             "state":7
         }
     },
@@ -1445,7 +1301,6 @@
         "fields":{
             "name":"Madras Institute Of Technology, Anna University",
             "abbv":"MIT Chennai",
-            "city":"Chennai",
             "state":5
         }
     },
@@ -1455,7 +1310,6 @@
         "fields":{
             "name":"Magadh Mahila College",
             "abbv":"MMC Patna",
-            "city":"Patna",
             "state":16
         }
     },
@@ -1465,7 +1319,6 @@
         "fields":{
             "name":"Mahakal Institute Of Technology",
             "abbv":"MITM Ujjain",
-            "city":"Ujjain",
             "state":20
         }
     },
@@ -1475,7 +1328,6 @@
         "fields":{
             "name":"Maharaj Vijayaram Gajapathiraj College Of Engineering",
             "abbv":"MVGRCE Vizianagaram",
-            "city":"Vizianagaram",
             "state":3
         }
     },
@@ -1485,7 +1337,6 @@
         "fields":{
             "name":"Maharaja Surajmal Institute Of Technology",
             "abbv":"MSIT Delhi",
-            "city":"Delhi",
             "state":34
         }
     },
@@ -1495,7 +1346,6 @@
         "fields":{
             "name":"Mahatma Gandhi Institute ofTechnology",
             "abbv":"MGIT Hyderabad",
-            "city":"Hyderabad",
             "state":13
         }
     },
@@ -1505,7 +1355,6 @@
         "fields":{
             "name":"Malaviya National Institute of Technology",
             "abbv":"MNIT Jaipur",
-            "city":"Jaipur",
             "state":10
         }
     },
@@ -1515,7 +1364,6 @@
         "fields":{
             "name":"Manipal Institute Of Technology ",
             "abbv":"MIT Manipal",
-            "city":"Manipal",
             "state":2
         }
     },
@@ -1525,7 +1373,6 @@
         "fields":{
             "name":"Manoharbhai Patel Institute of Engineering & Technology",
             "abbv":"MIET Nagpur",
-            "city":"Nagpur",
             "state":6
         }
     },
@@ -1535,7 +1382,6 @@
         "fields":{
             "name":"Matrusri Engineering College",
             "abbv":"MEC Hyderabad",
-            "city":"Hyderabad",
             "state":13
         }
     },
@@ -1545,7 +1391,6 @@
         "fields":{
             "name":"Maturi Venkata Subba Rao Engineering College",
             "abbv":"MVSREC Hyderabad",
-            "city":"Hyderabad",
             "state":13
         }
     },
@@ -1555,7 +1400,6 @@
         "fields":{
             "name":"Maulana Abul Kalam Azad University of Technology",
             "abbv":"MAKAUT Kolkata",
-            "city":"Kolkata",
             "state":1
         }
     },
@@ -1565,7 +1409,6 @@
         "fields":{
             "name":"Maulana Azad National Institute of Technology",
             "abbv":"MANIT Bhopal",
-            "city":"Bhopal",
             "state":20
         }
     },
@@ -1575,7 +1418,6 @@
         "fields":{
             "name":"MC Kejriwal Vidyapeeth Institute of Engineering",
             "abbv":"MCKVIE Kolkata",
-            "city":"Kolkata",
             "state":1
         }
     },
@@ -1585,7 +1427,6 @@
         "fields":{
             "name":"Meenakshi College of Engineering",
             "abbv":"MCE Chennai",
-            "city":"Chennai",
             "state":5
         }
     },
@@ -1595,7 +1436,6 @@
         "fields":{
             "name":"Meghnad Saha Institute Of Technology",
             "abbv":"MSIT Kolkata",
-            "city":"Kolkata",
             "state":1
         }
     },
@@ -1605,7 +1445,6 @@
         "fields":{
             "name":"Mittal Group of Institutes",
             "abbv":"MGI Bhopal",
-            "city":"Bhopal",
             "state":20
         }
     },
@@ -1615,7 +1454,6 @@
         "fields":{
             "name":"Modi Institute Of Technology",
             "abbv":"MITS Lakshmangarh",
-            "city":"Lakshmangarh",
             "state":10
         }
     },
@@ -1625,7 +1463,6 @@
         "fields":{
             "name":"Motilal Nehru National Institute of Technology",
             "abbv":"MNNIT Allahabad",
-            "city":"Allahabad",
             "state":7
         }
     },
@@ -1635,7 +1472,6 @@
         "fields":{
             "name":"Nalanda Institute Of Engineering & Technology",
             "abbv":"NIET Sattennapalli",
-            "city":"Sattennapalli",
             "state":3
         }
     },
@@ -1645,7 +1481,6 @@
         "fields":{
             "name":"Narula Institute Of Technology",
             "abbv":"NiT Kolkata",
-            "city":"Kolkata",
             "state":1
         }
     },
@@ -1655,7 +1490,6 @@
         "fields":{
             "name":"National Institute of Foundry and Forge Technology",
             "abbv":"NIFFT Ranchi",
-            "city":"Ranchi",
             "state":19
         }
     },
@@ -1665,7 +1499,6 @@
         "fields":{
             "name":"National Institute of Science and Technology",
             "abbv":"NIST Berhampur",
-            "city":"Berhampur",
             "state":25
         }
     },
@@ -1675,7 +1508,6 @@
         "fields":{
             "name":"National Institute of Technology Durgapur",
             "abbv":"NIT Durgapur",
-            "city":"Durgapur",
             "state":1
         }
     },
@@ -1685,7 +1517,6 @@
         "fields":{
             "name":"National Institute of Technology Jamshedpur",
             "abbv":"NIT Jamshedpur",
-            "city":"Jamshedpur",
             "state":19
         }
     },
@@ -1695,7 +1526,6 @@
         "fields":{
             "name":"National Institute of Technology Patna",
             "abbv":"NIT Patna",
-            "city":"Patna",
             "state":16
         }
     },
@@ -1705,7 +1535,6 @@
         "fields":{
             "name":"National Institute of Technology Raipur",
             "abbv":"NIT Raipur\n",
-            "city":"Raipur",
             "state":17
         }
     },
@@ -1715,7 +1544,6 @@
         "fields":{
             "name":"National Institute of Technology Rourkela",
             "abbv":"NIT Rourkela",
-            "city":"Rourkela",
             "state":25
         }
     },
@@ -1725,7 +1553,6 @@
         "fields":{
             "name":"National Institute of Technology Surat",
             "abbv":"NIT Surat",
-            "city":"Surat",
             "state":9
         }
     },
@@ -1735,7 +1562,6 @@
         "fields":{
             "name":"National Institute of Technology Tiruchirapalli",
             "abbv":"NIT Tiruchirapalli",
-            "city":"Tiruchirapalli",
             "state":5
         }
     },
@@ -1745,7 +1571,6 @@
         "fields":{
             "name":"National Institute of Technology Warangal",
             "abbv":"NIT Warangal",
-            "city":"Warangal",
             "state":13
         }
     },
@@ -1755,7 +1580,6 @@
         "fields":{
             "name":"National Power Training Institute",
             "abbv":"NPTI Durgapur",
-            "city":"Durgapur",
             "state":1
         }
     },
@@ -1765,7 +1589,6 @@
         "fields":{
             "name":"Neotia Institute Of Technology Management And Science",
             "abbv":"NITMS Bangalore",
-            "city":"Bangalore",
             "state":2
         }
     },
@@ -1775,7 +1598,6 @@
         "fields":{
             "name":"Netaji Subhash Engineering College",
             "abbv":"NSEC Kolkata",
-            "city":"Kolkata",
             "state":1
         }
     },
@@ -1785,7 +1607,6 @@
         "fields":{
             "name":"Netaji Subhash Institute Of Technology",
             "abbv":"NSIT Delhi",
-            "city":"Delhi",
             "state":34
         }
     },
@@ -1795,7 +1616,6 @@
         "fields":{
             "name":"NSHM College Of Management and Technology",
             "abbv":"NSHM Durgapur",
-            "city":"Durgapur",
             "state":1
         }
     },
@@ -1805,7 +1625,6 @@
         "fields":{
             "name":"Om Prakash Jindal Institute of Technology",
             "abbv":"OPJIT Raigarh",
-            "city":"Raigarh",
             "state":17
         }
     },
@@ -1815,7 +1634,6 @@
         "fields":{
             "name":"Orissa Engineering College",
             "abbv":"OEC Bhubhaneswar",
-            "city":"Bhubaneswar",
             "state":25
         }
     },
@@ -1825,7 +1643,6 @@
         "fields":{
             "name":"Orissa School Of Mining Engineering",
             "abbv":"OSME Keonjhar",
-            "city":"Keonjhar",
             "state":25
         }
     },
@@ -1835,7 +1652,6 @@
         "fields":{
             "name":"Osmania University College Of Engineering",
             "abbv":"OUCE Hyderabad",
-            "city":"Hyderabad",
             "state":3
         }
     },
@@ -1845,7 +1661,6 @@
         "fields":{
             "name":"P.S.G. College Of Technology",
             "abbv":"PSGCT Coimbatore",
-            "city":"Coimbatore",
             "state":5
         }
     },
@@ -1855,7 +1670,6 @@
         "fields":{
             "name":"Padmanava College Of Engineering",
             "abbv":"PCE Rourkela",
-            "city":"Rourkela",
             "state":25
         }
     },
@@ -1865,7 +1679,6 @@
         "fields":{
             "name":"Panipat Institute of Engineering & Technology College",
             "abbv":"PIET Rourkela",
-            "city":"Rourkela",
             "state":25
         }
     },
@@ -1875,7 +1688,6 @@
         "fields":{
             "name":"Parala Maharaja Engineering College",
             "abbv":"PMEC Berhampur",
-            "city":"Berhampur",
             "state":25
         }
     },
@@ -1885,7 +1697,6 @@
         "fields":{
             "name":"PDPM Indian Institute of Information Technology, Design and Manufacturing",
             "abbv":"PPDM IITDM Jabalpur",
-            "city":"Jabalpur",
             "state":20
         }
     },
@@ -1895,7 +1706,6 @@
         "fields":{
             "name":"Poornima College Of Engineering",
             "abbv":"PCE Jaipur",
-            "city":"Jaipur",
             "state":10
         }
     },
@@ -1905,7 +1715,6 @@
         "fields":{
             "name":"Prabhu Dayal Memorial College of Engineering",
             "abbv":"PDM CE Bahadurgarh",
-            "city":"Bahadurgarh",
             "state":19
         }
     },
@@ -1915,7 +1724,6 @@
         "fields":{
             "name":"Presidency College",
             "abbv":"PC Kolkata",
-            "city":"Kolkata",
             "state":1
         }
     },
@@ -1925,7 +1733,6 @@
         "fields":{
             "name":"Priyadarshini Institute of Engineering & Technology",
             "abbv":"PIET Nagpur",
-            "city":"Nagpur",
             "state":6
         }
     },
@@ -1935,7 +1742,6 @@
         "fields":{
             "name":"R P Sharma Institute of Technology",
             "abbv":"RPSIT Patna",
-            "city":"Patna",
             "state":16
         }
     },
@@ -1945,7 +1751,6 @@
         "fields":{
             "name":"Raghu Institute of Technology",
             "abbv":"RIT Visakhapatnam",
-            "city":"Vishakhapatnam",
             "state":3
         }
     },
@@ -1955,7 +1760,6 @@
         "fields":{
             "name":"Rajiv Gandhi College Of Engineering & Research",
             "abbv":"RGCER Nagpur",
-            "city":"Nagpur",
             "state":20
         }
     },
@@ -1965,7 +1769,6 @@
         "fields":{
             "name":"Ramgarhia Institue Of Engineering And Technology",
             "abbv":"RIET Phagwara",
-            "city":"Phagwara",
             "state":26
         }
     },
@@ -1975,7 +1778,6 @@
         "fields":{
             "name":"Rashtreeya Vidyalaya College of Engineering",
             "abbv":"RVCE Bangalore",
-            "city":"Bangalore",
             "state":2
         }
     },
@@ -1985,7 +1787,6 @@
         "fields":{
             "name":"Ravenshaw University",
             "abbv":"RU Cuttack",
-            "city":"Cuttack",
             "state":25
         }
     },
@@ -1995,7 +1796,6 @@
         "fields":{
             "name":"Rayapati Venkata Rangarao & Jagarlamudi Chandramouli College Of Engineering",
             "abbv":"RVR&JC Guntur",
-            "city":"Guntur",
             "state":3
         }
     },
@@ -2005,7 +1805,6 @@
         "fields":{
             "name":"Rayat Institute Of Engineering & I.T",
             "abbv":"RIEIT Railmajra",
-            "city":"Railmajra",
             "state":26
         }
     },
@@ -2015,7 +1814,6 @@
         "fields":{
             "name":"Regional Computer Centre Institute of Information Technology",
             "abbv":"RCCIIT Kolkata",
-            "city":"Kolkata",
             "state":1
         }
     },
@@ -2025,7 +1823,6 @@
         "fields":{
             "name":"RKDF Institute Of Science & Technology",
             "abbv":"RKDFIST Bhopal",
-            "city":"Bhopal",
             "state":20
         }
     },
@@ -2035,7 +1832,6 @@
         "fields":{
             "name":"Rungta College Of Engineering & Technology",
             "abbv":"RCET Bhilai",
-            "city":"Bhilai",
             "state":17
         }
     },
@@ -2045,7 +1841,6 @@
         "fields":{
             "name":"Sahyadri College of Engineering and Management",
             "abbv":"SCEM Mangalore",
-            "city":"Mangalore",
             "state":2
         }
     },
@@ -2055,7 +1850,6 @@
         "fields":{
             "name":"Sambalpur University Institute of Information Technology",
             "abbv":"SUIIT Sambalpur",
-            "city":"Sambalpur",
             "state":25
         }
     },
@@ -2065,7 +1859,6 @@
         "fields":{
             "name":"Sammilani Mahavidyalaya",
             "abbv":"SM Kolkata",
-            "city":"Kolkata",
             "state":1
         }
     },
@@ -2075,7 +1868,6 @@
         "fields":{
             "name":"Samrat Ashok Technological Institute",
             "abbv":"SATI Vidisha",
-            "city":"Vidisha",
             "state":20
         }
     },
@@ -2085,7 +1877,6 @@
         "fields":{
             "name":"Sardar Vallabhbhai National Institute Of Technology",
             "abbv":"SVNIT Surat",
-            "city":"Surat",
             "state":9
         }
     },
@@ -2095,7 +1886,6 @@
         "fields":{
             "name":"Sardar Vallabhbhai Patel Institute Of Technology",
             "abbv":"SVPIT Vasad",
-            "city":"Vasad",
             "state":9
         }
     },
@@ -2105,7 +1895,6 @@
         "fields":{
             "name":"Saveetha Engineering College",
             "abbv":"SEC Chennai",
-            "city":"Chennai",
             "state":5
         }
     },
@@ -2115,7 +1904,6 @@
         "fields":{
             "name":"Seacom Engineering College",
             "abbv":"SEC Kolkata",
-            "city":"Kolkata",
             "state":1
         }
     },
@@ -2125,7 +1913,6 @@
         "fields":{
             "name":"Seedling Academy",
             "abbv":"SADTM Jaipur",
-            "city":"Jaipur",
             "state":10
         }
     },
@@ -2135,7 +1922,6 @@
         "fields":{
             "name":"Shambhunath Institute Of Engineering & Technology",
             "abbv":"SIET Allahabad",
-            "city":"Allahabad",
             "state":7
         }
     },
@@ -2145,7 +1931,6 @@
         "fields":{
             "name":"Shree Shankaracharya College Of Engineering And Technology",
             "abbv":"SSEC Bhilai",
-            "city":"Bhilai",
             "state":17
         }
     },
@@ -2155,7 +1940,6 @@
         "fields":{
             "name":"Shree Shankaracharya Institute Of Professional Management And Technology",
             "abbv":"SSIPMT Raipur",
-            "city":"Raipur",
             "state":17
         }
     },
@@ -2165,7 +1949,6 @@
         "fields":{
             "name":"Shree Vaishnav Institute Of Technology",
             "abbv":"SVIT Indore",
-            "city":"Indore",
             "state":20
         }
     },
@@ -2175,7 +1958,6 @@
         "fields":{
             "name":"Shri G.S.Institute of Technology and Science",
             "abbv":"SGSITS Indore",
-            "city":"Indore",
             "state":20
         }
     },
@@ -2185,7 +1967,6 @@
         "fields":{
             "name":"Shri Ram Institute of Technology",
             "abbv":"SRIT Jabalpur",
-            "city":"Jabalpur",
             "state":20
         }
     },
@@ -2195,7 +1976,6 @@
         "fields":{
             "name":"Shri Ramdeobaba Kamla Nehru Engineering College",
             "abbv":"SRKNEC Nagpur",
-            "city":"Nagpur",
             "state":6
         }
     },
@@ -2205,7 +1985,6 @@
         "fields":{
             "name":"Shri Ramswaroop Memorial College of Engineering and Management",
             "abbv":"SRMCEM",
-            "city":"Lucknow",
             "state":7
         }
     },
@@ -2215,7 +1994,6 @@
         "fields":{
             "name":"Shri Shankaracharya College of Engineering and Technology",
             "abbv":"SXC",
-            "city":"Kolkata",
             "state":1
         }
     },
@@ -2225,7 +2003,6 @@
         "fields":{
             "name":"Siddaganga Institute Of Technology Banagalore",
             "abbv":"SIT Bangalore",
-            "city":"Bangalore",
             "state":2
         }
     },
@@ -2235,7 +2012,6 @@
         "fields":{
             "name":"Siddaganga Institute Of Technology Tumkur",
             "abbv":"SIT Tumkur",
-            "city":"Tumkur",
             "state":2
         }
     },
@@ -2245,7 +2021,6 @@
         "fields":{
             "name":"Siliguri Institute Of Technology",
             "abbv":"SIT Siliguri",
-            "city":"Siliguri",
             "state":1
         }
     },
@@ -2255,7 +2030,6 @@
         "fields":{
             "name":"Sir M Visvesvaraya Institute Of Technology",
             "abbv":"Sri MVIT Bangalore",
-            "city":"Bangalore",
             "state":2
         }
     },
@@ -2265,7 +2039,6 @@
         "fields":{
             "name":"Smt. Kashibai Navale College Of Engineering",
             "abbv":"SKNCOE Pune",
-            "city":"Pune",
             "state":6
         }
     },
@@ -2275,7 +2048,6 @@
         "fields":{
             "name":"Sri Venkateswara University",
             "abbv":"SVU Tirupati",
-            "city":"Tirupati",
             "state":3
         }
     },
@@ -2285,7 +2057,6 @@
         "fields":{
             "name":"Srinivasa Institute of Engineering and Technology",
             "abbv":"SIET Dhenkanal",
-            "city":"Dhenkanal",
             "state":25
         }
     },
@@ -2295,7 +2066,6 @@
         "fields":{
             "name":"SRM Institute Of Technology",
             "abbv":"SRM Chennai",
-            "city":"Chennai",
             "state":5
         }
     },
@@ -2305,7 +2075,6 @@
         "fields":{
             "name":"St. Thomas College Of Engg & Technology",
             "abbv":"STCET Kolkata",
-            "city":"Kolkata",
             "state":1
         }
     },
@@ -2315,7 +2084,6 @@
         "fields":{
             "name":"St. Xaviers College",
             "abbv":"SXC Kolkata",
-            "city":"Kolkata",
             "state":1
         }
     },
@@ -2325,7 +2093,6 @@
         "fields":{
             "name":"Synergy Institute of Engineering & Technology",
             "abbv":"SIET Dhenkanal",
-            "city":"Dhenkanal",
             "state":25
         }
     },
@@ -2335,7 +2102,6 @@
         "fields":{
             "name":"Techno India College Of Technology",
             "abbv":"TICT Kolkata",
-            "city":"Kolkata",
             "state":1
         }
     },
@@ -2345,7 +2111,6 @@
         "fields":{
             "name":"Technocrats Institute Of Technology",
             "abbv":"TIT Bhopal",
-            "city":"Bhopal",
             "state":20
         }
     },
@@ -2355,7 +2120,6 @@
         "fields":{
             "name":"Thapar Institute of Engineering & Technology",
             "abbv":"TIET Patiala",
-            "city":"Patiala",
             "state":26
         }
     },
@@ -2365,7 +2129,6 @@
         "fields":{
             "name":"The YMCA Institute Of Engineering",
             "abbv":"YMCAUST Faridabad",
-            "city":"Faridabad",
             "state":19
         }
     },
@@ -2375,7 +2138,6 @@
         "fields":{
             "name":"Truba Institute Of Engineering And Information Technology",
             "abbv":"TSEIT Bhopal",
-            "city":"Bhopal",
             "state":20
         }
     },
@@ -2385,7 +2147,6 @@
         "fields":{
             "name":"United College of Engineering and Research",
             "abbv":"UCER Allahabad",
-            "city":"Allahabad",
             "state":7
         }
     },
@@ -2395,7 +2156,6 @@
         "fields":{
             "name":"University College Of Engineering",
             "abbv":"UCE Vishakapatnam",
-            "city":"Vishakhapatnam",
             "state":3
         }
     },
@@ -2405,7 +2165,6 @@
         "fields":{
             "name":"University Institute Of Engineering and Technology",
             "abbv":"UIET Kurukshetra",
-            "city":"Kurukshetra",
             "state":19
         }
     },
@@ -2415,7 +2174,6 @@
         "fields":{
             "name":"University Institute Of Technology",
             "abbv":"UIT Burdwan",
-            "city":"Burdwan",
             "state":1
         }
     },
@@ -2425,7 +2183,6 @@
         "fields":{
             "name":"University Institute of Technology RGPV",
             "abbv":"UIT RGPV Bhopal",
-            "city":"Bhopal",
             "state":20
         }
     },
@@ -2435,7 +2192,6 @@
         "fields":{
             "name":"University Of Petroleum And Energy Studies",
             "abbv":"UPES Dehradun",
-            "city":"Dehradun",
             "state":29
         }
     },
@@ -2445,7 +2201,6 @@
         "fields":{
             "name":"V R Siddhartha Engineering College",
             "abbv":"VRSEC Vijayawada",
-            "city":"Vijayawada",
             "state":3
         }
     },
@@ -2455,7 +2210,6 @@
         "fields":{
             "name":"Valliammai Engineering College",
             "abbv":"VEC Chennai",
-            "city":"Chennai",
             "state":5
         }
     },
@@ -2465,7 +2219,6 @@
         "fields":{
             "name":"Vardhaman College Of Engineering",
             "abbv":"VCE Hyderabad",
-            "city":"Hyderabad",
             "state":13
         }
     },
@@ -2475,7 +2228,6 @@
         "fields":{
             "name":"Vasavi College Of Engineering",
             "abbv":"VCE Hyderabad",
-            "city":"Hyderabad",
             "state":13
         }
     },
@@ -2485,7 +2237,6 @@
         "fields":{
             "name":"Veer Surendra Sai University of Technology",
             "abbv":"VSSUT Burla",
-            "city":"Burla",
             "state":25
         }
     },
@@ -2495,7 +2246,6 @@
         "fields":{
             "name":"Velagapudi Ramakrishna Siddhartha Engineering College",
             "abbv":"VRSEC Vijayawada",
-            "city":"Vijayawada",
             "state":3
         }
     },
@@ -2505,7 +2255,6 @@
         "fields":{
             "name":"Vellore Institute of Technology",
             "abbv":"VIT Vellore",
-            "city":"Vellore",
             "state":5
         }
     },
@@ -2515,7 +2264,6 @@
         "fields":{
             "name":"Vignan Engineering College",
             "abbv":"VEC Kolkata",
-            "city":"Kolkata",
             "state":1
         }
     },
@@ -2525,7 +2273,6 @@
         "fields":{
             "name":"Vignan Institute Of Information Technology",
             "abbv":"VIIT Vishakapatnam",
-            "city":"Vishakhapatnam",
             "state":3
         }
     },
@@ -2535,7 +2282,6 @@
         "fields":{
             "name":"VNR Vignana Jyothi Institute of Engineering and Technology",
             "abbv":"VNR VJIET Bachupally",
-            "city":"Bachupally",
             "state":13
         }
     },
@@ -2545,7 +2291,6 @@
         "fields":{
             "name":"Yashwantrao Chavan College Of Engineering",
             "abbv":"YCCE Nagpur",
-            "city":"Nagpur",
             "state":6
         }
     },
@@ -2555,7 +2300,6 @@
         "fields":{
             "name":"Others",
             "abbv":"other",
-            "city":"___",
             "state":36
         }
     },
@@ -2565,7 +2309,6 @@
         "fields":{
             "name":"Gandhi Institute of Engineering Technology",
             "abbv":"GIET Gunupur",
-            "city":"Gunupur",
             "state":25
         }
     },
@@ -2575,7 +2318,6 @@
         "fields":{
             "name":"Techno India University",
             "abbv":"TIU Kolkata",
-            "city":"Kolkata",
             "state":1
         }
     },
@@ -2585,7 +2327,6 @@
         "fields":{
             "name":"College of Engineering, Roorkee",
             "abbv":"COE Roorkee",
-            "city":"Roorkee",
             "state":7
         }
     },
@@ -2595,7 +2336,6 @@
         "fields":{
             "name":"Government College of Engineering Kalahandi",
             "abbv":"GCEK Bhawanipatna",
-            "city":"Bhawanipatna",
             "state":25
         }
     },
@@ -2605,7 +2345,6 @@
         "fields":{
             "name":"Indian Institute of Information Technology Kota",
             "abbv":"IIIT Kota",
-            "city":"Kota",
             "state":10
         }
     },
@@ -2615,7 +2354,6 @@
         "fields":{
             "name":"Bengal College of Engineering & Technology for Women",
             "abbv":"BCETW Durgapur",
-            "city":"Durgapur",
             "state":1
         }
     },
@@ -2625,7 +2363,6 @@
         "fields":{
             "name":"Konark Institute of Science & Technology",
             "abbv":"KIST Bhubaneswar",
-            "city":"Bhubaneswar",
             "state":25
         }
     },
@@ -2635,7 +2372,6 @@
         "fields":{
             "name":"Swami Vivekananda Institute of Science & Technology",
             "abbv":"SVIST Sonarpur",
-            "city":"Sonarpur",
             "state":1
         }
     },
@@ -2645,7 +2381,6 @@
         "fields":{
             "name":"Techno India Salt Lake",
             "abbv":"TISL Kolkata",
-            "city":"Kolkata",
             "state":1
         }
     },
@@ -2655,7 +2390,6 @@
         "fields":{
             "name":"Greater Kolkata College of Engineering & Management",
             "abbv":"GKCEM Kolkata",
-            "city":"Kolkata",
             "state":1
         }
     },
@@ -2665,7 +2399,6 @@
         "fields":{
             "name":"Centurion University of Technology & Management",
             "abbv":"CUTM Bhubaneswar",
-            "city":"Bhubaneswar",
             "state":25
         }
     },
@@ -2675,7 +2408,6 @@
         "fields":{
             "name":"Future Institute of Technology",
             "abbv":"FIT Kolkata",
-            "city":"Kolkata",
             "state":1
         }
     },
@@ -2685,7 +2417,6 @@
         "fields":{
             "name":"Shri Shankaracharya Group of Institutions",
             "abbv":"SSGI Durg",
-            "city":"Durg",
             "state":17
         }
     },
@@ -2695,7 +2426,6 @@
         "fields":{
             "name":"National Institute of Technical Teacher's Training & Research",
             "abbv":"NITTTR Chandigarh",
-            "city":"Chandigarh",
             "state":31
         }
     },
@@ -2705,7 +2435,6 @@
         "fields":{
             "name":"Birla Institute of Technology Mesra, Patna Campus",
             "abbv":"BIT Mesra Patna Campus",
-            "city":"Patna",
             "state":16
         }
     }
