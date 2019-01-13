@@ -17,7 +17,7 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.CreateModel(
-            name='BombDisposal',
+            name='Zenith',
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('name', models.CharField(help_text="Provide Team leader's or caretaker's full name", max_length=50, verbose_name="Receiver's Name")),
@@ -33,16 +33,16 @@ class Migration(migrations.Migration):
                 ('qualify_round_two', models.BooleanField(default=False, verbose_name='Qualified for Round Three')),
                 ('round_three', models.IntegerField(blank=True, null=True, verbose_name='Round Three Score')),
                 ('country', models.ForeignKey(default=1, on_delete=django.db.models.deletion.CASCADE, to='miscellaneous.Country')),
-                ('participant', models.ManyToManyField(help_text="<strong>Type in team member's name, mobile or e-mail to begin a search</strong><br>", related_name='team_bombdisposal_related', to='participant.Participant', verbose_name='Team Members')),
+                ('participant', models.ManyToManyField(help_text="<strong>Type in team member's name, mobile or e-mail to begin a search</strong><br>", related_name='team_Zenith_related', to='participant.Participant', verbose_name='Team Members')),
                 ('state', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='miscellaneous.State')),
             ],
             options={
-                'verbose_name': 'BombDisposal',
-                'verbose_name_plural': 'BombDisposal',
+                'verbose_name': 'Zenith',
+                'verbose_name_plural': 'Zenith',
             },
         ),
         migrations.CreateModel(
-            name='Bricks',
+            name='Cubiscan',
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('name', models.CharField(help_text="Provide Team leader's or caretaker's full name", max_length=50, verbose_name="Receiver's Name")),
@@ -58,16 +58,16 @@ class Migration(migrations.Migration):
                 ('qualify_round_two', models.BooleanField(default=False, verbose_name='Qualified for Round Three')),
                 ('round_three', models.IntegerField(blank=True, null=True, verbose_name='Round Three Score')),
                 ('country', models.ForeignKey(default=1, on_delete=django.db.models.deletion.CASCADE, to='miscellaneous.Country')),
-                ('participant', models.ManyToManyField(help_text="<strong>Type in team member's name, mobile or e-mail to begin a search</strong><br>", related_name='team_bricks_related', to='participant.Participant', verbose_name='Team Members')),
+                ('participant', models.ManyToManyField(help_text="<strong>Type in team member's name, mobile or e-mail to begin a search</strong><br>", related_name='team_Cubiscan_related', to='participant.Participant', verbose_name='Team Members')),
                 ('state', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='miscellaneous.State')),
             ],
             options={
-                'verbose_name': 'B.R.I.C.K.S',
-                'verbose_name_plural': 'B.R.I.C.K.S',
+                'verbose_name': 'Cubiscan',
+                'verbose_name_plural': 'Cubiscan',
             },
         ),
         migrations.CreateModel(
-            name='Conquest',
+            name='Crusade',
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('name', models.CharField(help_text="Provide Team leader's or caretaker's full name", max_length=50, verbose_name="Receiver's Name")),
@@ -83,12 +83,12 @@ class Migration(migrations.Migration):
                 ('qualify_round_two', models.BooleanField(default=False, verbose_name='Qualified for Round Three')),
                 ('round_three', models.IntegerField(blank=True, null=True, verbose_name='Round Three Score')),
                 ('country', models.ForeignKey(default=1, on_delete=django.db.models.deletion.CASCADE, to='miscellaneous.Country')),
-                ('participant', models.ManyToManyField(help_text="<strong>Type in team member's name, mobile or e-mail to begin a search</strong><br>", related_name='team_conquest_related', to='participant.Participant', verbose_name='Team Members')),
+                ('participant', models.ManyToManyField(help_text="<strong>Type in team member's name, mobile or e-mail to begin a search</strong><br>", related_name='team_Crusade_related', to='participant.Participant', verbose_name='Team Members')),
                 ('state', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='miscellaneous.State')),
             ],
             options={
-                'verbose_name': 'Conquest',
-                'verbose_name_plural': 'Conquest',
+                'verbose_name': 'Crusade',
+                'verbose_name_plural': 'Crusade',
             },
         ),
     ]
